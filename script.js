@@ -1,9 +1,13 @@
 // Pokémon JSON data
-const pokemonData = {
-    "001": { "name": "Bulbasaur", "generation-number": 1, "generation-name": "Kanto", "in-game": true },
+//const pokemonData = {
+//    "001": { "name": "Bulbasaur", "generation-number": 1, "generation-name": "Kanto", "in-game": true },
     // ... (include the full JSON data from your previous response here for brevity)
-    "151": { "name": "Mew", "generation-number": 1, "generation-name": "Kanto", "in-game": true }
-};
+//    "151": { "name": "Mew", "generation-number": 1, "generation-name": "Kanto", "in-game": true }
+//};
+const pokemonData = fetch('pokemon.json')
+    .then(response => response.json())
+    .then(data => console.log())
+    .catch(error => console.error('Error:', error));
 
 // State to track cell colors
 const cellStates = {};
