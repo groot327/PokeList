@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon Table</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Pokémon Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Kanto Pokémon</h1>
-        <button id="saveButton">Save</button>
-        <table id="pokemonTable"></table>
-        <div id="toast" class="toast">URL saved to clipboard</div>
+        <h1>Pokémon Tracker</h1>
+        <div id="tabs">
+            <button class="tab-button active" onclick="switchTab('shiny')">Shiny</button>
+            <button class="tab-button" onclick="switchTab('xxl')">XXL</button>
+            <button class="tab-button" onclick="switchTab('xxs')">XXS</button>
+        </div>
+        <div id="loading">Loading Pokémon data...</div>
+        <div id="content"></div>
+        <div id="debug"></div>
+        <div id="toast" class="toast">URL copied to clipboard</div>
+        <div id="draggableBar">
+            <span class="grip">☰</span>
+            <button id="saveButton">Save</button>
+            <button id="topButton">Top</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
