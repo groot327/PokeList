@@ -7,12 +7,12 @@
                 ""
             ],
             "001-Bulbasaur-002": [
-                "Pikachu Visor",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9850_6.png&amp;w=120"
-            ],
-            "001-Bulbasaur-003": [
                 "Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9011_6.png&amp;w=120"
+            ],
+            "001-Bulbasaur-003": [
+                "Pikachu Visor",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9850_6.png&amp;w=120"
             ],
             "001-Bulbasaur-004": [
                 "Shedinja",
@@ -39,12 +39,12 @@
                 ""
             ],
             "004-Charmander-002": [
-                "Pikachu Visor",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9851_6.png&amp;w=120"
-            ],
-            "004-Charmander-003": [
                 "Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9009_6.png&amp;w=120"
+            ],
+            "004-Charmander-003": [
+                "Pikachu Visor",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9851_6.png&amp;w=120"
             ],
             "004-Charmander-004": [
                 "Cubone",
@@ -71,44 +71,44 @@
                 ""
             ],
             "007-Squirtle-002": [
-                "Pikachu Visor",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9852_6.png&amp;w=120"
+                "Sunglasses",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6433_6.png&amp;w=120"
             ],
             "007-Squirtle-003": [
                 "Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9010_6.png&amp;w=120"
             ],
             "007-Squirtle-004": [
-                "Halloween",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg7%2Fimg7985_6.png&amp;w=120"
+                "Pikachu Visor",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9852_6.png&amp;w=120"
             ],
             "007-Squirtle-005": [
-                "Sunglasses",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6433_6.png&amp;w=120"
+                "Halloween",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg7%2Fimg7985_6.png&amp;w=120"
             ],
             "008-Wartortle-001": [
                 "normal",
                 ""
             ],
             "008-Wartortle-002": [
-                "Party Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15559_6.png&amp;w=120"
-            ],
-            "008-Wartortle-003": [
                 "Sunglasses",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6435_6.png&amp;w=120"
+            ],
+            "008-Wartortle-003": [
+                "Party Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15559_6.png&amp;w=120"
             ],
             "009-Blastoise-001": [
                 "normal",
                 ""
             ],
             "009-Blastoise-002": [
-                "Party Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15560_6.png&amp;w=120"
-            ],
-            "009-Blastoise-003": [
                 "Sunglasses",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6436_6.png&amp;w=120"
+            ],
+            "009-Blastoise-003": [
+                "Party Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15560_6.png&amp;w=120"
             ],
             "010-Caterpie-001": [
                 "normal",
@@ -183,344 +183,376 @@
                 ""
             ],
             "025-Pikachu-002": [
-                "Formal Yellow Accents",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22555_6.png&amp;w=120"
+                "Santa Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6437_6.png&amp;w=120"
             ],
             "025-Pikachu-003": [
-                "Formal Red Accents",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22554_6.png&amp;w=120"
+                "Purple Party Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6439_6.png&amp;w=120"
             ],
             "025-Pikachu-004": [
-                "Formal Blue Accents",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22553_6.png&amp;w=120"
+                "Original Ash Cap",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6440_6.png&amp;w=120"
             ],
             "025-Pikachu-005": [
-                "Dapper Yellow Accents",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22552_6.png&amp;w=120"
+                "Witch Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6438_6.png&amp;w=120"
             ],
             "025-Pikachu-006": [
-                "Dapper Red Accents",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22551_6.png&amp;w=120"
+                "Summer",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6441_6.png&amp;w=120"
             ],
             "025-Pikachu-007": [
-                "Dapper Blue Accents",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22550_6.png&amp;w=120"
+                "Fragment Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6443_6.png&amp;w=120"
             ],
             "025-Pikachu-008": [
-                "Kurta",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22068_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6442_6.png&amp;w=120"
             ],
             "025-Pikachu-009": [
-                "Rosa Visor",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21246_6.png&amp;w=120"
+                "Beanie",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6445_6.png&amp;w=120"
             ],
             "025-Pikachu-010": [
-                "Nate Visor",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21245_6.png&amp;w=120"
+                "Detective",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6444_6.png&amp;w=120"
             ],
             "025-Pikachu-011": [
-                "Hilda Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21244_6.png&amp;w=120"
+                "Straw Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg8%2Fimg8971_6.png&amp;w=120"
             ],
             "025-Pikachu-012": [
-                "Hilbert Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21243_6.png&amp;w=120"
+                "Party Hat 2020",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9012_6.png&amp;w=120"
             ],
             "025-Pikachu-013": [
-                "Saree",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg20%2Fimg20737_6.png&amp;w=120"
+                "Flower Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9186_6.png&amp;w=120"
             ],
             "025-Pikachu-014": [
-                "WCS 2024",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg20%2Fimg20089_6.png&amp;w=120"
+                "Safari",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9159_6.png&amp;w=120"
             ],
             "025-Pikachu-015": [
-                "Sun Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18938_6.png&amp;w=120"
+                "Charizard Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9362_6.png&amp;w=120"
             ],
             "025-Pikachu-016": [
-                "Moon Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18937_6.png&amp;w=120"
+                "Umbreon Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9363_6.png&amp;w=120"
             ],
             "025-Pikachu-017": [
-                "Horizons",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17927_6.png&amp;w=120"
+                "Rayquaza Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9489_6.png&amp;w=120"
             ],
             "025-Pikachu-018": [
-                "Batik Shirt",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17926_6.png&amp;w=120"
+                "Lucario Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9490_6.png&amp;w=120"
             ],
             "025-Pikachu-019": [
-                "Flying 04",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17925_6.png&amp;w=120"
+                "World Cap",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10076_6.png&amp;w=120"
             ],
             "025-Pikachu-020": [
-                "Akari Kerchief",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17809_6.png&amp;w=120"
+                "New Year Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10753_6.png&amp;w=120"
             ],
             "025-Pikachu-021": [
-                "Rei Cap",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17808_6.png&amp;w=120"
+                "GO Fest 2021",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11861_6.png&amp;w=120"
             ],
             "025-Pikachu-022": [
-                "Holiday 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17485_6.png&amp;w=120"
+                "Halloween Mischief",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12366_6.png&amp;w=120"
             ],
             "025-Pikachu-023": [
-                "Dawn Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17406_6.png&amp;w=120"
+                "TCG Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13569_6.png&amp;w=120"
             ],
             "025-Pikachu-024": [
-                "Lucas Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17405_6.png&amp;w=120"
+                "Gracidea",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13508_6.png&amp;w=120"
             ],
             "025-Pikachu-025": [
-                "Fall 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17091_6.png&amp;w=120"
+                "Cake Costume",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13666_6.png&amp;w=120"
             ],
             "025-Pikachu-026": [
-                "WCS 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15802_6.png&amp;w=120"
-            ],
-            "025-Pikachu-027": [
-                "Flying 03",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15561_6.png&amp;w=120"
-            ],
-            "025-Pikachu-028": [
-                "Amethyst Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15543_6.png&amp;w=120"
-            ],
-            "025-Pikachu-029": [
-                "Aquamarine Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15542_6.png&amp;w=120"
-            ],
-            "025-Pikachu-030": [
-                "Malachite Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15541_6.png&amp;w=120"
-            ],
-            "025-Pikachu-031": [
-                "Pyrite Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15540_6.png&amp;w=120"
-            ],
-            "025-Pikachu-032": [
-                "Quartz Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15539_6.png&amp;w=120"
-            ],
-            "025-Pikachu-033": [
-                "Berry Shirt",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15534_6.png&amp;w=120"
-            ],
-            "025-Pikachu-034": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15087_6.png&amp;w=120"
-            ],
-            "025-Pikachu-035": [
-                "May Bow",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14734_6.png&amp;w=120"
-            ],
-            "025-Pikachu-036": [
-                "Brendan Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14733_6.png&amp;w=120"
-            ],
-            "025-Pikachu-037": [
                 "Party Top Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14495_6.png&amp;w=120"
             ],
+            "025-Pikachu-027": [
+                "May Bow",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14734_6.png&amp;w=120"
+            ],
+            "025-Pikachu-028": [
+                "Brendan Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14733_6.png&amp;w=120"
+            ],
+            "025-Pikachu-029": [
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15087_6.png&amp;w=120"
+            ],
+            "025-Pikachu-030": [
+                "Detective 2",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6444_6.png&amp;w=120"
+            ],
+            "025-Pikachu-031": [
+                "Fall 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17091_6.png&amp;w=120"
+            ],
+            "025-Pikachu-032": [
+                "Holiday 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17485_6.png&amp;w=120"
+            ],
+            "025-Pikachu-033": [
+                "Mimikyu Costume",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg7%2Fimg7983_6.png&amp;w=120"
+            ],
+            "025-Pikachu-034": [
+                "Libre",
+                ""
+            ],
+            "025-Pikachu-035": [
+                "Clone",
+                ""
+            ],
+            "025-Pikachu-036": [
+                "Explorer",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10679_6.png&amp;w=120"
+            ],
+            "025-Pikachu-037": [
+                "Winter Carnival Outfit",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10750_6.png&amp;w=120"
+            ],
             "025-Pikachu-038": [
-                "Berry Shirt",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14028_6.png&amp;w=120"
+                "Okinawa Shirt",
+                ""
             ],
             "025-Pikachu-039": [
-                "Flying 02",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14027_6.png&amp;w=120"
+                "Pop Star",
+                ""
             ],
             "025-Pikachu-040": [
-                "Berry Shirt",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14026_6.png&amp;w=120"
+                "Rock Star",
+                ""
             ],
             "025-Pikachu-041": [
-                "Flying 01",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14025_6.png&amp;w=120"
+                "Flying 5th Anniv",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11864_6.png&amp;w=120"
             ],
             "025-Pikachu-042": [
-                "WCS 2022",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13816_6.png&amp;w=120"
+                "Flying Okinawa",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13371_6.png&amp;w=120"
             ],
             "025-Pikachu-043": [
                 "Shaymin Scarf",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13815_6.png&amp;w=120"
             ],
             "025-Pikachu-044": [
-                "Cake Costume",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13666_6.png&amp;w=120"
+                "London WCS 2022",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13816_6.png&amp;w=120"
             ],
             "025-Pikachu-045": [
-                "TCG Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13569_6.png&amp;w=120"
+                "Taiwan Berry Shirt",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15534_6.png&amp;w=120"
             ],
             "025-Pikachu-046": [
-                "Gracidea",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13508_6.png&amp;w=120"
+                "Singapore Berry Shirt",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14028_6.png&amp;w=120"
             ],
             "025-Pikachu-047": [
-                "Flying Okinawa",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13371_6.png&amp;w=120"
+                "Taiwan Flying 01",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14025_6.png&amp;w=120"
             ],
             "025-Pikachu-048": [
-                "Halloween Mischief",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12366_6.png&amp;w=120"
+                "Singapore Flying 02",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14027_6.png&amp;w=120"
             ],
             "025-Pikachu-049": [
-                "Flying 5th Anniv",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11864_6.png&amp;w=120"
+                "Lucas Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17405_6.png&amp;w=120"
             ],
             "025-Pikachu-050": [
-                "GO Fest 2021",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11861_6.png&amp;w=120"
+                "Rei Cap",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17808_6.png&amp;w=120"
             ],
             "025-Pikachu-051": [
-                "New Year Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10753_6.png&amp;w=120"
+                "Dawn Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17406_6.png&amp;w=120"
             ],
             "025-Pikachu-052": [
-                "Winter Carnival Outfit",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10750_6.png&amp;w=120"
+                "Akari Kerchief",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17809_6.png&amp;w=120"
             ],
             "025-Pikachu-053": [
-                "Explorer",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10679_6.png&amp;w=120"
+                "Indonesia Batik Shirt",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17926_6.png&amp;w=120"
             ],
             "025-Pikachu-054": [
-                "World Cap",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10076_6.png&amp;w=120"
+                "Indonesia Flying 04",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17925_6.png&amp;w=120"
             ],
             "025-Pikachu-055": [
-                "Lucario Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9490_6.png&amp;w=120"
+                "Captain Horizons",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17927_6.png&amp;w=120"
             ],
             "025-Pikachu-056": [
-                "Rayquaza Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9489_6.png&amp;w=120"
+                "Sun Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18938_6.png&amp;w=120"
             ],
             "025-Pikachu-057": [
-                "Umbreon Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9363_6.png&amp;w=120"
+                "Moon Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18937_6.png&amp;w=120"
             ],
             "025-Pikachu-058": [
-                "Charizard Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9362_6.png&amp;w=120"
+                "F India Saree",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg20%2Fimg20737_6.png&amp;w=120"
             ],
             "025-Pikachu-059": [
-                "Flower Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9186_6.png&amp;w=120"
+                "Hilbert Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21243_6.png&amp;w=120"
             ],
             "025-Pikachu-060": [
-                "Safari",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9159_6.png&amp;w=120"
+                "Nate Visor",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21245_6.png&amp;w=120"
             ],
             "025-Pikachu-061": [
-                "Party Hat 2020",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9012_6.png&amp;w=120"
+                "Hilda Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21244_6.png&amp;w=120"
             ],
             "025-Pikachu-062": [
-                "Straw Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg8%2Fimg8971_6.png&amp;w=120"
+                "Rosa Visor",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg21%2Fimg21246_6.png&amp;w=120"
             ],
             "025-Pikachu-063": [
-                "Mimikyu Costume",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg7%2Fimg7983_6.png&amp;w=120"
+                "Kurta",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22068_6.png&amp;w=120"
             ],
             "025-Pikachu-064": [
-                "Beanie",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6445_6.png&amp;w=120"
+                "Red Goggles",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22551_6.png&amp;w=120"
             ],
             "025-Pikachu-065": [
-                "Detective",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6444_6.png&amp;w=120"
+                "Blue Goggles",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22550_6.png&amp;w=120"
             ],
             "025-Pikachu-066": [
-                "Fragment Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6443_6.png&amp;w=120"
+                "Yellow Goggles",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22552_6.png&amp;w=120"
             ],
             "025-Pikachu-067": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6442_6.png&amp;w=120"
+                "Red Monacle",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22554_6.png&amp;w=120"
             ],
             "025-Pikachu-068": [
-                "Summer",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6441_6.png&amp;w=120"
+                "Blue Monacle",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22553_6.png&amp;w=120"
             ],
             "025-Pikachu-069": [
-                "Original Cap",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6440_6.png&amp;w=120"
+                "Yellow Monacle",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg22%2Fimg22555_6.png&amp;w=120"
             ],
             "025-Pikachu-070": [
-                "Party Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6439_6.png&amp;w=120"
+                "Malachite Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15541_6.png&amp;w=120"
             ],
             "025-Pikachu-071": [
-                "Witch Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6438_6.png&amp;w=120"
+                "Aquamarine Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15542_6.png&amp;w=120"
             ],
             "025-Pikachu-072": [
-                "Santa Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6437_6.png&amp;w=120"
+                "Quartz Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15539_6.png&amp;w=120"
+            ],
+            "025-Pikachu-073": [
+                "Pyrite Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15540_6.png&amp;w=120"
+            ],
+            "025-Pikachu-074": [
+                "Amethyst Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15543_6.png&amp;w=120"
+            ],
+            "025-Pikachu-075": [
+                "South Korea Flying 03",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15561_6.png&amp;w=120"
+            ],
+            "025-Pikachu-076": [
+                "South Korea Berry Shirt",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14026_6.png&amp;w=120"
+            ],
+            "025-Pikachu-077": [
+                "Professor",
+                ""
+            ],
+            "025-Pikachu-078": [
+                "WCS 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15802_6.png&amp;w=120"
+            ],
+            "025-Pikachu-079": [
+                "Diver WCS 2024",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg20%2Fimg20089_6.png&amp;w=120"
             ],
             "026-Raichu-001": [
                 "normal",
                 ""
             ],
             "026-Raichu-002": [
-                "Holiday 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17486_6.png&amp;w=120"
+                "Santa Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6446_6.png&amp;w=120"
             ],
             "026-Raichu-003": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15090_6.png&amp;w=120"
-            ],
-            "026-Raichu-004": [
-                "New Year",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10754_6.png&amp;w=120"
-            ],
-            "026-Raichu-005": [
-                "World Cap",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10117_6.png&amp;w=120"
-            ],
-            "026-Raichu-006": [
-                "Beanie",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6454_6.png&amp;w=120"
-            ],
-            "026-Raichu-007": [
-                "Detective",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6453_6.png&amp;w=120"
-            ],
-            "026-Raichu-008": [
-                "Fragment Cap",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6452_6.png&amp;w=120"
-            ],
-            "026-Raichu-009": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6451_6.png&amp;w=120"
-            ],
-            "026-Raichu-010": [
-                "Summer Style",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6450_6.png&amp;w=120"
-            ],
-            "026-Raichu-011": [
-                "Original Cap",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6449_6.png&amp;w=120"
-            ],
-            "026-Raichu-012": [
-                "Party Hat",
+                "Purple Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6448_6.png&amp;w=120"
             ],
-            "026-Raichu-013": [
+            "026-Raichu-004": [
+                "Original Ash Cap",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6449_6.png&amp;w=120"
+            ],
+            "026-Raichu-005": [
                 "Witch Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6447_6.png&amp;w=120"
             ],
+            "026-Raichu-006": [
+                "Summer Style",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6450_6.png&amp;w=120"
+            ],
+            "026-Raichu-007": [
+                "Fragment Cap",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6452_6.png&amp;w=120"
+            ],
+            "026-Raichu-008": [
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6451_6.png&amp;w=120"
+            ],
+            "026-Raichu-009": [
+                "Beanie",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6454_6.png&amp;w=120"
+            ],
+            "026-Raichu-010": [
+                "Detective",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6453_6.png&amp;w=120"
+            ],
+            "026-Raichu-011": [
+                "World Cap",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10117_6.png&amp;w=120"
+            ],
+            "026-Raichu-012": [
+                "New Year",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10754_6.png&amp;w=120"
+            ],
+            "026-Raichu-013": [
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15090_6.png&amp;w=120"
+            ],
             "026-Raichu-014": [
-                "Santa Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6446_6.png&amp;w=120"
+                "Small Santa Hat Holiday 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17486_6.png&amp;w=120"
+            ],
+            "026-Raichu-015": [
+                "Alolan",
+                ""
             ],
             "027-Sandshrew-001": [
                 "normal",
@@ -581,6 +613,10 @@
             "037-Vulpix-002": [
                 "Spooky Festival",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14129_6.png&amp;w=120"
+            ],
+            "037-Vulpix-003": [
+                "Alolan",
+                ""
             ],
             "038-Ninetales-001": [
                 "normal",
@@ -650,6 +686,10 @@
                 "Fashionable Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13940_6.png&amp;w=120"
             ],
+            "050-Diglett-003": [
+                "Alolan",
+                ""
+            ],
             "051-Dugtrio-001": [
                 "normal",
                 ""
@@ -657,6 +697,10 @@
             "051-Dugtrio-002": [
                 "Fashionable Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13939_6.png&amp;w=120"
+            ],
+            "051-Dugtrio-003": [
+                "Alolan",
+                ""
             ],
             "052-Meowth-001": [
                 "normal",
@@ -671,7 +715,7 @@
                 ""
             ],
             "054-Psyduck-002": [
-                "Holiday Attire",
+                "Holiday 2023",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17487_6.png&amp;w=120"
             ],
             "055-Golduck-001": [
@@ -775,7 +819,11 @@
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15252_6.png&amp;w=120"
             ],
             "077-Ponyta-003": [
-                "Galarian GO Fest 2021",
+                "Galarian",
+                ""
+            ],
+            "077-Ponyta-004": [
+                "Galarian Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11860_6.png&amp;w=120"
             ],
             "078-Rapidash-001": [
@@ -786,25 +834,37 @@
                 "Candela Scarf",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15253_6.png&amp;w=120"
             ],
+            "078-Rapidash-003": [
+                "Galarian",
+                ""
+            ],
             "079-Slowpoke-001": [
                 "normal",
                 ""
             ],
             "079-Slowpoke-002": [
-                "Hat",
+                "Detective",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17010_6.png&amp;w=120"
             ],
             "079-Slowpoke-003": [
-                "2020",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10756_6.png&amp;w=120"
+                "Galarian",
+                ""
             ],
             "079-Slowpoke-004": [
-                "2021",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10757_6.png&amp;w=120"
+                "2020",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10756_6.png&amp;w=120"
             ],
             "080-Slowbro-001": [
                 "normal",
                 ""
+            ],
+            "080-Slowbro-002": [
+                "Galarian",
+                ""
+            ],
+            "080-Slowbro-003": [
+                "2021",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10757_6.png&amp;w=120"
             ],
             "081-Magnemite-001": [
                 "normal",
@@ -842,6 +902,10 @@
                 "Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg19%2Fimg19611_6.png&amp;w=120"
             ],
+            "088-Grimer-003": [
+                "Alolan",
+                ""
+            ],
             "089-Muk-001": [
                 "normal",
                 ""
@@ -849,6 +913,10 @@
             "089-Muk-002": [
                 "Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg19%2Fimg19612_6.png&amp;w=120"
+            ],
+            "089-Muk-003": [
+                "Alolan",
+                ""
             ],
             "090-Shellder-001": [
                 "normal",
@@ -871,20 +939,20 @@
                 ""
             ],
             "094-Gengar-002": [
-                "Fall 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17092_6.png&amp;w=120"
+                "Party Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9014_6.png&amp;w=120"
             ],
             "094-Gengar-003": [
-                "Spooky Festival",
+                "Witch Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14128_6.png&amp;w=120"
             ],
             "094-Gengar-004": [
-                "Halloween",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10214_6.png&amp;w=120"
+                "Fall 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17092_6.png&amp;w=120"
             ],
             "094-Gengar-005": [
-                "Party Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9014_6.png&amp;w=120"
+                "Halloween",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10214_6.png&amp;w=120"
             ],
             "095-Onix-001": [
                 "normal",
@@ -937,6 +1005,10 @@
             "105-Marowak-002": [
                 "Marigold Crown",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg17%2Fimg17167_6.png&amp;w=120"
+            ],
+            "105-Marowak-003": [
+                "Alolan",
+                ""
             ],
             "106-Hitmonlee-001": [
                 "normal",
@@ -1067,92 +1139,92 @@
                 ""
             ],
             "133-Eevee-002": [
-                "Sun Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18940_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6466_6.png&amp;w=120"
             ],
             "133-Eevee-003": [
-                "Moon Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18939_6.png&amp;w=120"
+                "Party Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9015_6.png&amp;w=120"
             ],
             "133-Eevee-004": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15754_6.png&amp;w=120"
+                "Holiday 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14496_6.png&amp;w=120"
             ],
             "133-Eevee-005": [
                 "Cherry Blossoms",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15086_6.png&amp;w=120"
             ],
             "133-Eevee-006": [
-                "Holiday 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14496_6.png&amp;w=120"
+                "Sun Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18940_6.png&amp;w=120"
             ],
             "133-Eevee-007": [
-                "Party Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9015_6.png&amp;w=120"
+                "Moon Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18939_6.png&amp;w=120"
             ],
             "133-Eevee-008": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6466_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15754_6.png&amp;w=120"
             ],
             "134-Vaporeon-001": [
                 "normal",
                 ""
             ],
             "134-Vaporeon-002": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15755_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6467_6.png&amp;w=120"
             ],
             "134-Vaporeon-003": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15091_6.png&amp;w=120"
-            ],
-            "134-Vaporeon-004": [
                 "Holiday 2023",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14501_6.png&amp;w=120"
             ],
+            "134-Vaporeon-004": [
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15091_6.png&amp;w=120"
+            ],
             "134-Vaporeon-005": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6467_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15755_6.png&amp;w=120"
             ],
             "135-Jolteon-001": [
                 "normal",
                 ""
             ],
             "135-Jolteon-002": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15756_6.png&amp;w=120"
+                "Flower crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6468_6.png&amp;w=120"
             ],
             "135-Jolteon-003": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15092_6.png&amp;w=120"
-            ],
-            "135-Jolteon-004": [
                 "Holiday 2023",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14502_6.png&amp;w=120"
             ],
+            "135-Jolteon-004": [
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15092_6.png&amp;w=120"
+            ],
             "135-Jolteon-005": [
-                "Flower crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6468_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15756_6.png&amp;w=120"
             ],
             "136-Flareon-001": [
                 "normal",
                 ""
             ],
             "136-Flareon-002": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15757_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6469_6.png&amp;w=120"
             ],
             "136-Flareon-003": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15093_6.png&amp;w=120"
-            ],
-            "136-Flareon-004": [
                 "Holiday 2023",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14503_6.png&amp;w=120"
             ],
+            "136-Flareon-004": [
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15093_6.png&amp;w=120"
+            ],
             "136-Flareon-005": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6469_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15757_6.png&amp;w=120"
             ],
             "137-Porygon-001": [
                 "normal",
@@ -1187,27 +1259,39 @@
                 ""
             ],
             "143-Snorlax-002": [
-                "Studded Jacket",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg20%2Fimg20664_6.png&amp;w=120"
+                "Cowboy Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13623_6.png&amp;w=120"
             ],
             "143-Snorlax-003": [
                 "Night Cap",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15591_6.png&amp;w=120"
             ],
             "143-Snorlax-004": [
-                "Cowboy Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg13%2Fimg13623_6.png&amp;w=120"
+                "Studded Jacket",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg20%2Fimg20664_6.png&amp;w=120"
             ],
             "144-Articuno-001": [
                 "normal",
+                ""
+            ],
+            "144-Articuno-002": [
+                "Galarian",
                 ""
             ],
             "145-Zapdos-001": [
                 "normal",
                 ""
             ],
+            "145-Zapdos-002": [
+                "Galarian",
+                ""
+            ],
             "146-Moltres-001": [
                 "normal",
+                ""
+            ],
+            "146-Moltres-002": [
+                "Galarian",
                 ""
             ],
             "147-Dratini-001": [
@@ -1540,6 +1624,159 @@
             "149-Dragonite-xxs",
             "150-Mewtwo-xxs",
             "151-Mew-xxs"
+        ],
+        "hundo": [
+            "001-Bulbasaur-hundo",
+            "002-Ivysaur-hundo",
+            "003-Venusaur-hundo",
+            "004-Charmander-hundo",
+            "005-Charmeleon-hundo",
+            "006-Charizard-hundo",
+            "007-Squirtle-hundo",
+            "008-Wartortle-hundo",
+            "009-Blastoise-hundo",
+            "010-Caterpie-hundo",
+            "011-Metapod-hundo",
+            "012-Butterfree-hundo",
+            "013-Weedle-hundo",
+            "014-Kakuna-hundo",
+            "015-Beedrill-hundo",
+            "016-Pidgey-hundo",
+            "017-Pidgeotto-hundo",
+            "018-Pidgeot-hundo",
+            "019-Rattata-hundo",
+            "020-Raticate-hundo",
+            "021-Spearow-hundo",
+            "022-Fearow-hundo",
+            "023-Ekans-hundo",
+            "024-Arbok-hundo",
+            "025-Pikachu-hundo",
+            "026-Raichu-hundo",
+            "027-Sandshrew-hundo",
+            "028-Sandslash-hundo",
+            "029-Nidoran♀-hundo",
+            "030-Nidorina-hundo",
+            "031-Nidoqueen-hundo",
+            "032-Nidoran♂-hundo",
+            "033-Nidorino-hundo",
+            "034-Nidoking-hundo",
+            "035-Clefairy-hundo",
+            "036-Clefable-hundo",
+            "037-Vulpix-hundo",
+            "038-Ninetales-hundo",
+            "039-Jigglypuff-hundo",
+            "040-Wigglytuff-hundo",
+            "041-Zubat-hundo",
+            "042-Golbat-hundo",
+            "043-Oddish-hundo",
+            "044-Gloom-hundo",
+            "045-Vileplume-hundo",
+            "046-Paras-hundo",
+            "047-Parasect-hundo",
+            "048-Venonat-hundo",
+            "049-Venomoth-hundo",
+            "050-Diglett-hundo",
+            "051-Dugtrio-hundo",
+            "052-Meowth-hundo",
+            "053-Persian-hundo",
+            "054-Psyduck-hundo",
+            "055-Golduck-hundo",
+            "056-Mankey-hundo",
+            "057-Primeape-hundo",
+            "058-Growlithe-hundo",
+            "059-Arcanine-hundo",
+            "060-Poliwag-hundo",
+            "061-Poliwhirl-hundo",
+            "062-Poliwrath-hundo",
+            "063-Abra-hundo",
+            "064-Kadabra-hundo",
+            "065-Alakazam-hundo",
+            "066-Machop-hundo",
+            "067-Machoke-hundo",
+            "068-Machamp-hundo",
+            "069-Bellsprout-hundo",
+            "070-Weepinbell-hundo",
+            "071-Victreebel-hundo",
+            "072-Tentacool-hundo",
+            "073-Tentacruel-hundo",
+            "074-Geodude-hundo",
+            "075-Graveler-hundo",
+            "076-Golem-hundo",
+            "077-Ponyta-hundo",
+            "078-Rapidash-hundo",
+            "079-Slowpoke-hundo",
+            "080-Slowbro-hundo",
+            "081-Magnemite-hundo",
+            "082-Magneton-hundo",
+            "083-Farfetch'd-hundo",
+            "084-Doduo-hundo",
+            "085-Dodrio-hundo",
+            "086-Seel-hundo",
+            "087-Dewgong-hundo",
+            "088-Grimer-hundo",
+            "089-Muk-hundo",
+            "090-Shellder-hundo",
+            "091-Cloyster-hundo",
+            "092-Gastly-hundo",
+            "093-Haunter-hundo",
+            "094-Gengar-hundo",
+            "095-Onix-hundo",
+            "096-Drowzee-hundo",
+            "097-Hypno-hundo",
+            "098-Krabby-hundo",
+            "099-Kingler-hundo",
+            "100-Voltorb-hundo",
+            "101-Electrode-hundo",
+            "102-Exeggcute-hundo",
+            "103-Exeggutor-hundo",
+            "104-Cubone-hundo",
+            "105-Marowak-hundo",
+            "106-Hitmonlee-hundo",
+            "107-Hitmonchan-hundo",
+            "108-Lickitung-hundo",
+            "109-Koffing-hundo",
+            "110-Weezing-hundo",
+            "111-Rhyhorn-hundo",
+            "112-Rhydon-hundo",
+            "113-Chansey-hundo",
+            "114-Tangela-hundo",
+            "115-Kangaskhan-hundo",
+            "116-Horsea-hundo",
+            "117-Seadra-hundo",
+            "118-Goldeen-hundo",
+            "119-Seaking-hundo",
+            "120-Staryu-hundo",
+            "121-Starmie-hundo",
+            "122-Mr. Mime-hundo",
+            "123-Scyther-hundo",
+            "124-Jynx-hundo",
+            "125-Electabuzz-hundo",
+            "126-Magmar-hundo",
+            "127-Pinsir-hundo",
+            "128-Tauros-hundo",
+            "129-Magikarp-hundo",
+            "130-Gyarados-hundo",
+            "131-Lapras-hundo",
+            "132-Ditto-hundo",
+            "133-Eevee-hundo",
+            "134-Vaporeon-hundo",
+            "135-Jolteon-hundo",
+            "136-Flareon-hundo",
+            "137-Porygon-hundo",
+            "138-Omanyte-hundo",
+            "139-Omastar-hundo",
+            "140-Kabuto-hundo",
+            "141-Kabutops-hundo",
+            "142-Aerodactyl-hundo",
+            "143-Snorlax-hundo",
+            "144-Articuno-hundo",
+            "145-Zapdos-hundo",
+            "146-Moltres-hundo",
+            "147-Dratini-hundo",
+            "148-Dragonair-hundo",
+            "149-Dragonite-hundo",
+            "150-Mewtwo-hundo",
+            "151-Mew-hundo"
         ]
     },
     "2": {
@@ -1638,40 +1875,40 @@
                 ""
             ],
             "172-Pichu-002": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15088_6.png&amp;w=120"
+                "Santa Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6455_6.png&amp;w=120"
             ],
             "172-Pichu-003": [
-                "New Year",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10755_6.png&amp;w=120"
-            ],
-            "172-Pichu-004": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9187_6.png&amp;w=120"
-            ],
-            "172-Pichu-005": [
-                "Summer Style",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6460_6.png&amp;w=120"
-            ],
-            "172-Pichu-006": [
-                "Beanie",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6459_6.png&amp;w=120"
-            ],
-            "172-Pichu-007": [
-                "Original Cap",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6458_6.png&amp;w=120"
-            ],
-            "172-Pichu-008": [
                 "Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6457_6.png&amp;w=120"
             ],
-            "172-Pichu-009": [
+            "172-Pichu-004": [
+                "Original Ash Cap",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6458_6.png&amp;w=120"
+            ],
+            "172-Pichu-005": [
                 "Witch Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6456_6.png&amp;w=120"
             ],
+            "172-Pichu-006": [
+                "Summer Style",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6460_6.png&amp;w=120"
+            ],
+            "172-Pichu-007": [
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg9%2Fimg9187_6.png&amp;w=120"
+            ],
+            "172-Pichu-008": [
+                "Beanie",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6459_6.png&amp;w=120"
+            ],
+            "172-Pichu-009": [
+                "New Year",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg10%2Fimg10755_6.png&amp;w=120"
+            ],
             "172-Pichu-010": [
-                "Santa Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6455_6.png&amp;w=120"
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15088_6.png&amp;w=120"
             ],
             "173-Cleffa-001": [
                 "normal",
@@ -1786,48 +2023,48 @@
                 ""
             ],
             "196-Espeon-002": [
-                "Day Scarf",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18941_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6470_6.png&amp;w=120"
             ],
             "196-Espeon-003": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15758_6.png&amp;w=120"
+                "Holiday 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14504_6.png&amp;w=120"
             ],
             "196-Espeon-004": [
                 "Cherry Blossoms",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15094_6.png&amp;w=120"
             ],
             "196-Espeon-005": [
-                "Holiday 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14504_6.png&amp;w=120"
+                "Day Scarf",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18941_6.png&amp;w=120"
             ],
             "196-Espeon-006": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6470_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15758_6.png&amp;w=120"
             ],
             "197-Umbreon-001": [
                 "normal",
                 ""
             ],
             "197-Umbreon-002": [
-                "Night Scarf",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18942_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6471_6.png&amp;w=120"
             ],
             "197-Umbreon-003": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15759_6.png&amp;w=120"
+                "Holiday 2023",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14497_6.png&amp;w=120"
             ],
             "197-Umbreon-004": [
                 "Cherry Blossoms",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15095_6.png&amp;w=120"
             ],
             "197-Umbreon-005": [
-                "Holiday 2023",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14497_6.png&amp;w=120"
+                "Night Scarf",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg18%2Fimg18942_6.png&amp;w=120"
             ],
             "197-Umbreon-006": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6471_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15759_6.png&amp;w=120"
             ],
             "198-Murkrow-001": [
                 "normal",
@@ -1838,6 +2075,10 @@
                 ""
             ],
             "199-Slowking-002": [
+                "Galarian",
+                ""
+            ],
+            "199-Slowking-003": [
                 "2022",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12619_6.png&amp;w=120"
             ],
@@ -1845,7 +2086,115 @@
                 "normal",
                 ""
             ],
-            "201-Unown-001": [
+            "201-Unown A-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown B-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown C-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown D-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown E-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown F-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown G-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown H-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown I-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown J-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown K-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown L-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown M-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown N-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown O-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown P-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown Q-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown R-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown S-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown T-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown U-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown V-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown W-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown X-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown Y-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown Z-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown !-001": [
+                "normal",
+                ""
+            ],
+            "201-Unown ?-001": [
                 "normal",
                 ""
             ],
@@ -1854,7 +2203,11 @@
                 ""
             ],
             "202-Wobbuffet-002": [
-                "Party Hat",
+                "Party Hat M",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg8%2Fimg8508_6.png&amp;w=120"
+            ],
+            "202-Wobbuffet-003": [
+                "Party Hat F",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg8%2Fimg8508_6.png&amp;w=120"
             ],
             "203-Girafarig-001": [
@@ -1939,6 +2292,10 @@
             ],
             "222-Corsola-001": [
                 "normal",
+                ""
+            ],
+            "222-Corsola-002": [
+                "White Form",
                 ""
             ],
             "223-Remoraid-001": [
@@ -2128,7 +2485,34 @@
             "198-Murkrow-xxl",
             "199-Slowking-xxl",
             "200-Misdreavus-xxl",
-            "201-Unown-xxl",
+            "201-Unown A-xxl",
+            "201-Unown B-xxl",
+            "201-Unown C-xxl",
+            "201-Unown D-xxl",
+            "201-Unown E-xxl",
+            "201-Unown F-xxl",
+            "201-Unown G-xxl",
+            "201-Unown H-xxl",
+            "201-Unown I-xxl",
+            "201-Unown J-xxl",
+            "201-Unown K-xxl",
+            "201-Unown L-xxl",
+            "201-Unown M-xxl",
+            "201-Unown N-xxl",
+            "201-Unown O-xxl",
+            "201-Unown P-xxl",
+            "201-Unown Q-xxl",
+            "201-Unown R-xxl",
+            "201-Unown S-xxl",
+            "201-Unown T-xxl",
+            "201-Unown U-xxl",
+            "201-Unown V-xxl",
+            "201-Unown W-xxl",
+            "201-Unown X-xxl",
+            "201-Unown Y-xxl",
+            "201-Unown Z-xxl",
+            "201-Unown !-xxl",
+            "201-Unown ?-xxl",
             "202-Wobbuffet-xxl",
             "203-Girafarig-xxl",
             "204-Pineco-xxl",
@@ -2230,7 +2614,34 @@
             "198-Murkrow-xxs",
             "199-Slowking-xxs",
             "200-Misdreavus-xxs",
-            "201-Unown-xxs",
+            "201-Unown A-xxs",
+            "201-Unown B-xxs",
+            "201-Unown C-xxs",
+            "201-Unown D-xxs",
+            "201-Unown E-xxs",
+            "201-Unown F-xxs",
+            "201-Unown G-xxs",
+            "201-Unown H-xxs",
+            "201-Unown I-xxs",
+            "201-Unown J-xxs",
+            "201-Unown K-xxs",
+            "201-Unown L-xxs",
+            "201-Unown M-xxs",
+            "201-Unown N-xxs",
+            "201-Unown O-xxs",
+            "201-Unown P-xxs",
+            "201-Unown Q-xxs",
+            "201-Unown R-xxs",
+            "201-Unown S-xxs",
+            "201-Unown T-xxs",
+            "201-Unown U-xxs",
+            "201-Unown V-xxs",
+            "201-Unown W-xxs",
+            "201-Unown X-xxs",
+            "201-Unown Y-xxs",
+            "201-Unown Z-xxs",
+            "201-Unown !-xxs",
+            "201-Unown ?-xxs",
             "202-Wobbuffet-xxs",
             "203-Girafarig-xxs",
             "204-Pineco-xxs",
@@ -2281,6 +2692,135 @@
             "249-Lugia-xxs",
             "250-Ho-oh-xxs",
             "251-Celebi-xxs"
+        ],
+        "hundo": [
+            "152-Chikorita-hundo",
+            "153-Bayleef-hundo",
+            "154-Meganium-hundo",
+            "155-Cyndaquil-hundo",
+            "156-Quilava-hundo",
+            "157-Typhlosion-hundo",
+            "158-Totodile-hundo",
+            "159-Croconaw-hundo",
+            "160-Feraligatr-hundo",
+            "161-Sentret-hundo",
+            "162-Furret-hundo",
+            "163-Hoothoot-hundo",
+            "164-Noctowl-hundo",
+            "165-Ledyba-hundo",
+            "166-Ledian-hundo",
+            "167-Spinarak-hundo",
+            "168-Ariados-hundo",
+            "169-Crobat-hundo",
+            "170-Chinchou-hundo",
+            "171-Lanturn-hundo",
+            "172-Pichu-hundo",
+            "173-Cleffa-hundo",
+            "174-Igglybuff-hundo",
+            "175-Togepi-hundo",
+            "176-Togetic-hundo",
+            "177-Natu-hundo",
+            "178-Xatu-hundo",
+            "179-Mareep-hundo",
+            "180-Flaaffy-hundo",
+            "181-Ampharos-hundo",
+            "182-Bellossom-hundo",
+            "183-Marill-hundo",
+            "184-Azumarill-hundo",
+            "185-Sudowoodo-hundo",
+            "186-Politoed-hundo",
+            "187-Hoppip-hundo",
+            "188-Skiploom-hundo",
+            "189-Jumpluff-hundo",
+            "190-Aipom-hundo",
+            "191-Sunkern-hundo",
+            "192-Sunflora-hundo",
+            "193-Yanma-hundo",
+            "194-Wooper-hundo",
+            "195-Quagsire-hundo",
+            "196-Espeon-hundo",
+            "197-Umbreon-hundo",
+            "198-Murkrow-hundo",
+            "199-Slowking-hundo",
+            "200-Misdreavus-hundo",
+            "201-Unown A-hundo",
+            "201-Unown B-hundo",
+            "201-Unown C-hundo",
+            "201-Unown D-hundo",
+            "201-Unown E-hundo",
+            "201-Unown F-hundo",
+            "201-Unown G-hundo",
+            "201-Unown H-hundo",
+            "201-Unown I-hundo",
+            "201-Unown J-hundo",
+            "201-Unown K-hundo",
+            "201-Unown L-hundo",
+            "201-Unown M-hundo",
+            "201-Unown N-hundo",
+            "201-Unown O-hundo",
+            "201-Unown P-hundo",
+            "201-Unown Q-hundo",
+            "201-Unown R-hundo",
+            "201-Unown S-hundo",
+            "201-Unown T-hundo",
+            "201-Unown U-hundo",
+            "201-Unown V-hundo",
+            "201-Unown W-hundo",
+            "201-Unown X-hundo",
+            "201-Unown Y-hundo",
+            "201-Unown Z-hundo",
+            "201-Unown !-hundo",
+            "201-Unown ?-hundo",
+            "202-Wobbuffet-hundo",
+            "203-Girafarig-hundo",
+            "204-Pineco-hundo",
+            "205-Forretress-hundo",
+            "206-Dunsparce-hundo",
+            "207-Gligar-hundo",
+            "208-Steelix-hundo",
+            "209-Snubbull-hundo",
+            "210-Granbull-hundo",
+            "211-Qwilfish-hundo",
+            "212-Scizor-hundo",
+            "213-Shuckle-hundo",
+            "214-Heracross-hundo",
+            "215-Sneasel-hundo",
+            "216-Teddiursa-hundo",
+            "217-Ursaring-hundo",
+            "218-Slugma-hundo",
+            "219-Magcargo-hundo",
+            "220-Swinub-hundo",
+            "221-Piloswine-hundo",
+            "222-Corsola-hundo",
+            "223-Remoraid-hundo",
+            "224-Octillery-hundo",
+            "225-Delibird-hundo",
+            "226-Mantine-hundo",
+            "227-Skarmory-hundo",
+            "228-Houndour-hundo",
+            "229-Houndoom-hundo",
+            "230-Kingdra-hundo",
+            "231-Phanpy-hundo",
+            "232-Donphan-hundo",
+            "233-Porygon2-hundo",
+            "234-Stantler-hundo",
+            "235-Smeargle-hundo",
+            "236-Tyrogue-hundo",
+            "237-Hitmontop-hundo",
+            "238-Smoochum-hundo",
+            "239-Elekid-hundo",
+            "240-Magby-hundo",
+            "241-Miltank-hundo",
+            "242-Blissey-hundo",
+            "243-Raikou-hundo",
+            "244-Entei-hundo",
+            "245-Suicune-hundo",
+            "246-Larvitar-hundo",
+            "247-Pupitar-hundo",
+            "248-Tyranitar-hundo",
+            "249-Lugia-hundo",
+            "250-Ho-oh-hundo",
+            "251-Celebi-hundo"
         ]
     },
     "3": {
@@ -2335,7 +2875,11 @@
                 ""
             ],
             "263-Zigzagoon-002": [
-                "Galarian GO Fest 2021",
+                "Galarian",
+                ""
+            ],
+            "263-Zigzagoon-003": [
+                "Galarian Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11859_6.png&amp;w=120"
             ],
             "264-Linoone-001": [
@@ -2347,7 +2891,7 @@
                 ""
             ],
             "265-Wurmple-002": [
-                "Party",
+                "Party Hat",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg8%2Fimg8509_6.png&amp;w=120"
             ],
             "266-Silcoon-001": [
@@ -2710,7 +3254,19 @@
                 "normal",
                 ""
             ],
-            "351-Castform-001": [
+            "351-Castform Normal-001": [
+                "normal",
+                ""
+            ],
+            "351-Castform Sun-001": [
+                "normal",
+                ""
+            ],
+            "351-Castformi Rain-001": [
+                "normal",
+                ""
+            ],
+            "351-Castform Snow-001": [
                 "normal",
                 ""
             ],
@@ -2971,7 +3527,10 @@
             "348-Armaldo-xxl",
             "349-Feebas-xxl",
             "350-Milotic-xxl",
-            "351-Castform-xxl",
+            "351-Castform Normal-xxl",
+            "351-Castform Sun-xxl",
+            "351-Castformi Rain-xxl",
+            "351-Castform Snow-xxl",
             "352-Kecleon-xxl",
             "353-Shuppet-xxl",
             "354-Banette-xxl",
@@ -3108,7 +3667,10 @@
             "348-Armaldo-xxs",
             "349-Feebas-xxs",
             "350-Milotic-xxs",
-            "351-Castform-xxs",
+            "351-Castform Normal-xxs",
+            "351-Castform Sun-xxs",
+            "351-Castformi Rain-xxs",
+            "351-Castform Snow-xxs",
             "352-Kecleon-xxs",
             "353-Shuppet-xxs",
             "354-Banette-xxs",
@@ -3144,6 +3706,146 @@
             "384-Rayquaza-xxs",
             "385-Jirachi-xxs",
             "386-Deoxys-xxs"
+        ],
+        "hundo": [
+            "252-Treecko-hundo",
+            "253-Grovyle-hundo",
+            "254-Sceptile-hundo",
+            "255-Torchic-hundo",
+            "256-Combusken-hundo",
+            "257-Blaziken-hundo",
+            "258-Mudkip-hundo",
+            "259-Marshtomp-hundo",
+            "260-Swampert-hundo",
+            "261-Poochyena-hundo",
+            "262-Mightyena-hundo",
+            "263-Zigzagoon-hundo",
+            "264-Linoone-hundo",
+            "265-Wurmple-hundo",
+            "266-Silcoon-hundo",
+            "267-Beautifly-hundo",
+            "268-Cascoon-hundo",
+            "269-Dustox-hundo",
+            "270-Lotad-hundo",
+            "271-Lombre-hundo",
+            "272-Ludicolo-hundo",
+            "273-Seedot-hundo",
+            "274-Nuzleaf-hundo",
+            "275-Shiftry-hundo",
+            "276-Taillow-hundo",
+            "277-Swellow-hundo",
+            "278-Wingull-hundo",
+            "279-Pelipper-hundo",
+            "280-Ralts-hundo",
+            "281-Kirlia-hundo",
+            "282-Gardevoir-hundo",
+            "283-Surskit-hundo",
+            "284-Masquerain-hundo",
+            "285-Shroomish-hundo",
+            "286-Breloom-hundo",
+            "287-Slakoth-hundo",
+            "288-Vigoroth-hundo",
+            "289-Slaking-hundo",
+            "290-Nincada-hundo",
+            "291-Ninjask-hundo",
+            "292-Shedinja-hundo",
+            "293-Whismur-hundo",
+            "294-Loudred-hundo",
+            "295-Exploud-hundo",
+            "296-Makuhita-hundo",
+            "297-Hariyama-hundo",
+            "298-Azurill-hundo",
+            "299-Nosepass-hundo",
+            "300-Skitty-hundo",
+            "301-Delcatty-hundo",
+            "302-Sableye-hundo",
+            "303-Mawile-hundo",
+            "304-Aron-hundo",
+            "305-Lairon-hundo",
+            "306-Aggron-hundo",
+            "307-Meditite-hundo",
+            "308-Medicham-hundo",
+            "309-Electrike-hundo",
+            "310-Manectric-hundo",
+            "311-Plusle-hundo",
+            "312-Minun-hundo",
+            "313-Volbeat-hundo",
+            "314-Illumise-hundo",
+            "315-Roselia-hundo",
+            "316-Gulpin-hundo",
+            "317-Swalot-hundo",
+            "318-Carvanha-hundo",
+            "319-Sharpedo-hundo",
+            "320-Wailmer-hundo",
+            "321-Wailord-hundo",
+            "322-Numel-hundo",
+            "323-Camerupt-hundo",
+            "324-Torkoal-hundo",
+            "325-Spoink-hundo",
+            "326-Grumpig-hundo",
+            "327-Spinda-hundo",
+            "328-Trapinch-hundo",
+            "329-Vibrava-hundo",
+            "330-Flygon-hundo",
+            "331-Cacnea-hundo",
+            "332-Cacturne-hundo",
+            "333-Swablu-hundo",
+            "334-Altaria-hundo",
+            "335-Zangoose-hundo",
+            "336-Seviper-hundo",
+            "337-Lunatone-hundo",
+            "338-Solrock-hundo",
+            "339-Barboach-hundo",
+            "340-Whiscash-hundo",
+            "341-Corphish-hundo",
+            "342-Crawdaunt-hundo",
+            "343-Baltoy-hundo",
+            "344-Claydol-hundo",
+            "345-Lileep-hundo",
+            "346-Cradily-hundo",
+            "347-Anorith-hundo",
+            "348-Armaldo-hundo",
+            "349-Feebas-hundo",
+            "350-Milotic-hundo",
+            "351-Castform Normal-hundo",
+            "351-Castform Sun-hundo",
+            "351-Castformi Rain-hundo",
+            "351-Castform Snow-hundo",
+            "352-Kecleon-hundo",
+            "353-Shuppet-hundo",
+            "354-Banette-hundo",
+            "355-Duskull-hundo",
+            "356-Dusclops-hundo",
+            "357-Tropius-hundo",
+            "358-Chimecho-hundo",
+            "359-Absol-hundo",
+            "360-Wynaut-hundo",
+            "361-Snorunt-hundo",
+            "362-Glalie-hundo",
+            "363-Spheal-hundo",
+            "364-Sealeo-hundo",
+            "365-Walrein-hundo",
+            "366-Clamperl-hundo",
+            "367-Huntail-hundo",
+            "368-Gorebyss-hundo",
+            "369-Relicanth-hundo",
+            "370-Luvdisc-hundo",
+            "371-Bagon-hundo",
+            "372-Shelgon-hundo",
+            "373-Salamence-hundo",
+            "374-Beldum-hundo",
+            "375-Metang-hundo",
+            "376-Metagross-hundo",
+            "377-Regirock-hundo",
+            "378-Regice-hundo",
+            "379-Registeel-hundo",
+            "380-Latias-hundo",
+            "381-Latios-hundo",
+            "382-Kyogre-hundo",
+            "383-Groudon-hundo",
+            "384-Rayquaza-hundo",
+            "385-Jirachi-hundo",
+            "386-Deoxys-hundo"
         ]
     },
     "4": {
@@ -3154,12 +3856,12 @@
                 ""
             ],
             "387-Turtwig-002": [
-                "Dawn Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12447_6.png&amp;w=120"
+                "Lucas Hat Red",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12446_6.png&amp;w=120"
             ],
             "387-Turtwig-003": [
-                "Lucas Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12446_6.png&amp;w=120"
+                "Dawn Hat White",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12447_6.png&amp;w=120"
             ],
             "388-Grotle-001": [
                 "normal",
@@ -3174,12 +3876,12 @@
                 ""
             ],
             "390-Chimchar-002": [
-                "Dawn Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12449_6.png&amp;w=120"
+                "Lucas Hat Red",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12448_6.png&amp;w=120"
             ],
             "390-Chimchar-003": [
-                "Lucas Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12448_6.png&amp;w=120"
+                "Dawn Hat White",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12449_6.png&amp;w=120"
             ],
             "391-Monferno-001": [
                 "normal",
@@ -3194,16 +3896,16 @@
                 ""
             ],
             "393-Piplup-002": [
-                "Dawn Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12445_6.png&amp;w=120"
+                "Halloween Mischief Pumpkin Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12365_6.png&amp;w=120"
             ],
             "393-Piplup-003": [
-                "Lucas Hat",
+                "Lucas Hat Red",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12444_6.png&amp;w=120"
             ],
             "393-Piplup-004": [
-                "Halloween Mischief",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12365_6.png&amp;w=120"
+                "Dawn Hat White",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12445_6.png&amp;w=120"
             ],
             "394-Prinplup-001": [
                 "normal",
@@ -3281,11 +3983,27 @@
                 "normal",
                 ""
             ],
-            "412-Burmy-001": [
+            "412-Burmy Green-001": [
                 "normal",
                 ""
             ],
-            "413-Wormadam-001": [
+            "412-Burmy White-001": [
+                "normal",
+                ""
+            ],
+            "412-Burmy Red-001": [
+                "normal",
+                ""
+            ],
+            "413-Wormadam Green-001": [
+                "normal",
+                ""
+            ],
+            "413-Wormadam White-001": [
+                "normal",
+                ""
+            ],
+            "413-Wormadam Red-001": [
                 "normal",
                 ""
             ],
@@ -3317,11 +4035,19 @@
                 "normal",
                 ""
             ],
-            "421-Cherrim-001": [
+            "421-Cherrim Purple-001": [
                 "normal",
                 ""
             ],
-            "422-Shellos-001": [
+            "421-Cherrim Pink-001": [
+                "normal",
+                ""
+            ],
+            "422-Shellos Pink-001": [
+                "normal",
+                ""
+            ],
+            "422-Shellos Blue-001": [
                 "normal",
                 ""
             ],
@@ -3445,11 +4171,19 @@
                 "normal",
                 ""
             ],
-            "449-Hippopotas-001": [
+            "449-Hippopotas F-001": [
                 "normal",
                 ""
             ],
-            "450-Hippowdon-001": [
+            "449-Hippopotas M-001": [
+                "normal",
+                ""
+            ],
+            "450-Hippowdon F-001": [
+                "normal",
+                ""
+            ],
+            "450-Hippowdon M-001": [
                 "normal",
                 ""
             ],
@@ -3550,44 +4284,44 @@
                 ""
             ],
             "470-Leafeon-002": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15761_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6517_6.png&amp;w=120"
             ],
             "470-Leafeon-003": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15096_6.png&amp;w=120"
-            ],
-            "470-Leafeon-004": [
                 "Holiday 2023",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14499_6.png&amp;w=120"
             ],
+            "470-Leafeon-004": [
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15096_6.png&amp;w=120"
+            ],
             "470-Leafeon-005": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6517_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15761_6.png&amp;w=120"
             ],
             "471-Glaceon-001": [
                 "normal",
                 ""
             ],
             "471-Glaceon-002": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15760_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6518_6.png&amp;w=120"
             ],
             "471-Glaceon-003": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15097_6.png&amp;w=120"
+                "Holiday Scarf",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12593_6.png&amp;w=120"
             ],
             "471-Glaceon-004": [
                 "Holiday 2023",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14500_6.png&amp;w=120"
             ],
             "471-Glaceon-005": [
-                "Holiday",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg12%2Fimg12593_6.png&amp;w=120"
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15097_6.png&amp;w=120"
             ],
             "471-Glaceon-006": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg6%2Fimg6518_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15760_6.png&amp;w=120"
             ],
             "472-Gliscor-001": [
                 "normal",
@@ -3688,8 +4422,12 @@
             "409-Rampardos-xxl",
             "410-Shieldon-xxl",
             "411-Bastiodon-xxl",
-            "412-Burmy-xxl",
-            "413-Wormadam-xxl",
+            "412-Burmy Green-xxl",
+            "412-Burmy White-xxl",
+            "412-Burmy Red-xxl",
+            "413-Wormadam Green-xxl",
+            "413-Wormadam White-xxl",
+            "413-Wormadam Red-xxl",
             "414-Mothim-xxl",
             "415-Combee-xxl",
             "416-Vespiquen-xxl",
@@ -3697,8 +4435,10 @@
             "418-Buizel-xxl",
             "419-Floatzel-xxl",
             "420-Cherubi-xxl",
-            "421-Cherrim-xxl",
-            "422-Shellos-xxl",
+            "421-Cherrim Purple-xxl",
+            "421-Cherrim Pink-xxl",
+            "422-Shellos Pink-xxl",
+            "422-Shellos Blue-xxl",
             "423-Gastrodon-xxl",
             "424-Ambipom-xxl",
             "425-Drifloon-xxl",
@@ -3725,8 +4465,10 @@
             "446-Munchlax-xxl",
             "447-Riolu-xxl",
             "448-Lucario-xxl",
-            "449-Hippopotas-xxl",
-            "450-Hippowdon-xxl",
+            "449-Hippopotas F-xxl",
+            "449-Hippopotas M-xxl",
+            "450-Hippowdon F-xxl",
+            "450-Hippowdon M-xxl",
             "451-Skorupi-xxl",
             "452-Drapion-xxl",
             "453-Croagunk-xxl",
@@ -3794,8 +4536,12 @@
             "409-Rampardos-xxs",
             "410-Shieldon-xxs",
             "411-Bastiodon-xxs",
-            "412-Burmy-xxs",
-            "413-Wormadam-xxs",
+            "412-Burmy Green-xxs",
+            "412-Burmy White-xxs",
+            "412-Burmy Red-xxs",
+            "413-Wormadam Green-xxs",
+            "413-Wormadam White-xxs",
+            "413-Wormadam Red-xxs",
             "414-Mothim-xxs",
             "415-Combee-xxs",
             "416-Vespiquen-xxs",
@@ -3803,8 +4549,10 @@
             "418-Buizel-xxs",
             "419-Floatzel-xxs",
             "420-Cherubi-xxs",
-            "421-Cherrim-xxs",
-            "422-Shellos-xxs",
+            "421-Cherrim Purple-xxs",
+            "421-Cherrim Pink-xxs",
+            "422-Shellos Pink-xxs",
+            "422-Shellos Blue-xxs",
             "423-Gastrodon-xxs",
             "424-Ambipom-xxs",
             "425-Drifloon-xxs",
@@ -3831,8 +4579,10 @@
             "446-Munchlax-xxs",
             "447-Riolu-xxs",
             "448-Lucario-xxs",
-            "449-Hippopotas-xxs",
-            "450-Hippowdon-xxs",
+            "449-Hippopotas F-xxs",
+            "449-Hippopotas M-xxs",
+            "450-Hippowdon F-xxs",
+            "450-Hippowdon M-xxs",
             "451-Skorupi-xxs",
             "452-Drapion-xxs",
             "453-Croagunk-xxs",
@@ -3873,6 +4623,120 @@
             "488-Cresselia-xxs",
             "491-Darkrai-xxs",
             "492-Shaymin-xxs"
+        ],
+        "hundo": [
+            "387-Turtwig-hundo",
+            "388-Grotle-hundo",
+            "389-Torterra-hundo",
+            "390-Chimchar-hundo",
+            "391-Monferno-hundo",
+            "392-Infernape-hundo",
+            "393-Piplup-hundo",
+            "394-Prinplup-hundo",
+            "395-Empoleon-hundo",
+            "396-Starly-hundo",
+            "397-Staravia-hundo",
+            "398-Staraptor-hundo",
+            "399-Bidoof-hundo",
+            "400-Bibarel-hundo",
+            "401-Kricketot-hundo",
+            "402-Kricketune-hundo",
+            "403-Shinx-hundo",
+            "404-Luxio-hundo",
+            "405-Luxray-hundo",
+            "406-Budew-hundo",
+            "407-Roserade-hundo",
+            "408-Cranidos-hundo",
+            "409-Rampardos-hundo",
+            "410-Shieldon-hundo",
+            "411-Bastiodon-hundo",
+            "412-Burmy Green-hundo",
+            "412-Burmy White-hundo",
+            "412-Burmy Red-hundo",
+            "413-Wormadam Green-hundo",
+            "413-Wormadam White-hundo",
+            "413-Wormadam Red-hundo",
+            "414-Mothim-hundo",
+            "415-Combee-hundo",
+            "416-Vespiquen-hundo",
+            "417-Pachirisu-hundo",
+            "418-Buizel-hundo",
+            "419-Floatzel-hundo",
+            "420-Cherubi-hundo",
+            "421-Cherrim Purple-hundo",
+            "421-Cherrim Pink-hundo",
+            "422-Shellos Pink-hundo",
+            "422-Shellos Blue-hundo",
+            "423-Gastrodon-hundo",
+            "424-Ambipom-hundo",
+            "425-Drifloon-hundo",
+            "426-Drifblim-hundo",
+            "427-Buneary-hundo",
+            "428-Lopunny-hundo",
+            "429-Mismagius-hundo",
+            "430-Honchkrow-hundo",
+            "431-Glameow-hundo",
+            "432-Purugly-hundo",
+            "433-Chingling-hundo",
+            "434-Stunky-hundo",
+            "435-Skuntank-hundo",
+            "436-Bronzor-hundo",
+            "437-Bronzong-hundo",
+            "438-Bonsly-hundo",
+            "439-Mime Jr.-hundo",
+            "440-Happiny-hundo",
+            "441-Chatot-hundo",
+            "442-Spiritomb-hundo",
+            "443-Gible-hundo",
+            "444-Gabite-hundo",
+            "445-Garchomp-hundo",
+            "446-Munchlax-hundo",
+            "447-Riolu-hundo",
+            "448-Lucario-hundo",
+            "449-Hippopotas F-hundo",
+            "449-Hippopotas M-hundo",
+            "450-Hippowdon F-hundo",
+            "450-Hippowdon M-hundo",
+            "451-Skorupi-hundo",
+            "452-Drapion-hundo",
+            "453-Croagunk-hundo",
+            "454-Toxicroak-hundo",
+            "455-Carnivine-hundo",
+            "456-Finneon-hundo",
+            "457-Lumineon-hundo",
+            "458-Mantyke-hundo",
+            "459-Snover-hundo",
+            "460-Abomasnow-hundo",
+            "461-Weavile-hundo",
+            "462-Magnezone-hundo",
+            "463-Lickilicky-hundo",
+            "464-Rhyperior-hundo",
+            "465-Tangrowth-hundo",
+            "466-Electivire-hundo",
+            "467-Magmortar-hundo",
+            "468-Togekiss-hundo",
+            "469-Yanmega-hundo",
+            "470-Leafeon-hundo",
+            "471-Glaceon-hundo",
+            "472-Gliscor-hundo",
+            "473-Mamoswine-hundo",
+            "474-Porygon-Z-hundo",
+            "475-Gallade-hundo",
+            "476-Probopass-hundo",
+            "477-Dusknoir-hundo",
+            "478-Froslass-hundo",
+            "479-Rotom-hundo",
+            "480-Uxie-hundo",
+            "481-Mesprit-hundo",
+            "482-Azelf-hundo",
+            "483-Dialga-hundo",
+            "484-Palkia-hundo",
+            "485-Heatran-hundo",
+            "486-Regigigas-hundo",
+            "487-Giratina-hundo",
+            "488-Cresselia-hundo",
+            "491-Darkrai-hundo",
+            "492-Shaymin-hundo"
         ]
     },
     "5": {
@@ -4258,11 +5122,35 @@
                 "normal",
                 ""
             ],
-            "585-Deerling-001": [
+            "585-Deerling Spring-001": [
                 "normal",
                 ""
             ],
-            "586-Sawsbuck-001": [
+            "585-Deerling Summer-001": [
+                "normal",
+                ""
+            ],
+            "585-Deerling Autumn-001": [
+                "normal",
+                ""
+            ],
+            "585-Deerling Winter-001": [
+                "normal",
+                ""
+            ],
+            "586-Sawsbuck Spring-001": [
+                "normal",
+                ""
+            ],
+            "586-Sawsbuck Summer-001": [
+                "normal",
+                ""
+            ],
+            "586-Sawsbuck Autumn-001": [
+                "normal",
+                ""
+            ],
+            "586-Sawsbuck Winter-001": [
                 "normal",
                 ""
             ],
@@ -4619,8 +5507,14 @@
             "582-Vanillite-xxl",
             "583-Vanillish-xxl",
             "584-Vanilluxe-xxl",
-            "585-Deerling-xxl",
-            "586-Sawsbuck-xxl",
+            "585-Deerling Spring-xxl",
+            "585-Deerling Summer-xxl",
+            "585-Deerling Autumn-xxl",
+            "585-Deerling Winter-xxl",
+            "586-Sawsbuck Spring-xxl",
+            "586-Sawsbuck Summer-xxl",
+            "586-Sawsbuck Autumn-xxl",
+            "586-Sawsbuck Winter-xxl",
             "587-Emolga-xxl",
             "588-Karrablast-xxl",
             "589-Escavalier-xxl",
@@ -4777,8 +5671,14 @@
             "582-Vanillite-xxs",
             "583-Vanillish-xxs",
             "584-Vanilluxe-xxs",
-            "585-Deerling-xxs",
-            "586-Sawsbuck-xxs",
+            "585-Deerling Spring-xxs",
+            "585-Deerling Summer-xxs",
+            "585-Deerling Autumn-xxs",
+            "585-Deerling Winter-xxs",
+            "586-Sawsbuck Spring-xxs",
+            "586-Sawsbuck Summer-xxs",
+            "586-Sawsbuck Autumn-xxs",
+            "586-Sawsbuck Winter-xxs",
             "587-Emolga-xxs",
             "588-Karrablast-xxs",
             "589-Escavalier-xxs",
@@ -4842,6 +5742,170 @@
             "647-Keldeo-xxs",
             "648-Meloetta-xxs",
             "649-Genesect-xxs"
+        ],
+        "hundo": [
+            "494-Victini-hundo",
+            "495-Snivy-hundo",
+            "496-Servine-hundo",
+            "497-Serperior-hundo",
+            "498-Tepig-hundo",
+            "499-Pignite-hundo",
+            "500-Emboar-hundo",
+            "501-Oshawott-hundo",
+            "502-Dewott-hundo",
+            "503-Samurott-hundo",
+            "504-Patrat-hundo",
+            "505-Watchog-hundo",
+            "506-Lillipup-hundo",
+            "507-Herdier-hundo",
+            "508-Stoutland-hundo",
+            "509-Purrloin-hundo",
+            "510-Liepard-hundo",
+            "511-Pansage-hundo",
+            "512-Simisage-hundo",
+            "513-Pansear-hundo",
+            "514-Simisear-hundo",
+            "515-Panpour-hundo",
+            "516-Simipour-hundo",
+            "517-Munna-hundo",
+            "518-Musharna-hundo",
+            "519-Pidove-hundo",
+            "520-Tranquill-hundo",
+            "521-Unfezant-hundo",
+            "522-Blitzle-hundo",
+            "523-Zebstrika-hundo",
+            "524-Roggenrola-hundo",
+            "525-Boldore-hundo",
+            "526-Gigalith-hundo",
+            "527-Woobat-hundo",
+            "528-Swoobat-hundo",
+            "529-Drilbur-hundo",
+            "530-Excadrill-hundo",
+            "531-Audino-hundo",
+            "532-Timburr-hundo",
+            "533-Gurdurr-hundo",
+            "534-Conkeldurr-hundo",
+            "535-Tympole-hundo",
+            "536-Palpitoad-hundo",
+            "537-Seismitoad-hundo",
+            "538-Throh-hundo",
+            "539-Sawk-hundo",
+            "540-Sewaddle-hundo",
+            "541-Swadloon-hundo",
+            "542-Leavanny-hundo",
+            "543-Venipede-hundo",
+            "544-Whirlipede-hundo",
+            "545-Scolipede-hundo",
+            "546-Cottonee-hundo",
+            "547-Whimsicott-hundo",
+            "548-Petilil-hundo",
+            "549-Lilligant-hundo",
+            "550-Basculin-hundo",
+            "551-Sandile-hundo",
+            "552-Krokorok-hundo",
+            "553-Krookodile-hundo",
+            "554-Darumaka-hundo",
+            "555-Darmanitan-hundo",
+            "556-Maractus-hundo",
+            "557-Dwebble-hundo",
+            "558-Crustle-hundo",
+            "559-Scraggy-hundo",
+            "560-Scrafty-hundo",
+            "561-Sigilyph-hundo",
+            "562-Yamask-hundo",
+            "563-Cofagrigus-hundo",
+            "564-Tirtouga-hundo",
+            "565-Carracosta-hundo",
+            "566-Archen-hundo",
+            "567-Archeops-hundo",
+            "568-Trubbish-hundo",
+            "569-Garbodor-hundo",
+            "570-Zorua-hundo",
+            "571-Zoroark-hundo",
+            "572-Minccino-hundo",
+            "573-Cinccino-hundo",
+            "574-Gothita-hundo",
+            "575-Gothorita-hundo",
+            "576-Gothitelle-hundo",
+            "577-Solosis-hundo",
+            "578-Duosion-hundo",
+            "579-Reuniclus-hundo",
+            "580-Ducklett-hundo",
+            "581-Swanna-hundo",
+            "582-Vanillite-hundo",
+            "583-Vanillish-hundo",
+            "584-Vanilluxe-hundo",
+            "585-Deerling Spring-hundo",
+            "585-Deerling Summer-hundo",
+            "585-Deerling Autumn-hundo",
+            "585-Deerling Winter-hundo",
+            "586-Sawsbuck Spring-hundo",
+            "586-Sawsbuck Summer-hundo",
+            "586-Sawsbuck Autumn-hundo",
+            "586-Sawsbuck Winter-hundo",
+            "587-Emolga-hundo",
+            "588-Karrablast-hundo",
+            "589-Escavalier-hundo",
+            "590-Foongus-hundo",
+            "591-Amoonguss-hundo",
+            "592-Frillish-hundo",
+            "593-Jellicent-hundo",
+            "594-Alomomola-hundo",
+            "595-Joltik-hundo",
+            "596-Galvantula-hundo",
+            "597-Ferroseed-hundo",
+            "598-Ferrothorn-hundo",
+            "599-Klink-hundo",
+            "600-Klang-hundo",
+            "601-Klinklang-hundo",
+            "602-Tynamo-hundo",
+            "603-Eelektrik-hundo",
+            "604-Eelektross-hundo",
+            "605-Elgyem-hundo",
+            "606-Beheeyem-hundo",
+            "607-Litwick-hundo",
+            "608-Lampent-hundo",
+            "609-Chandelure-hundo",
+            "610-Axew-hundo",
+            "611-Fraxure-hundo",
+            "612-Haxorus-hundo",
+            "613-Cubchoo-hundo",
+            "614-Beartic-hundo",
+            "615-Cryogonal-hundo",
+            "616-Shelmet-hundo",
+            "617-Accelgor-hundo",
+            "618-Stunfisk-hundo",
+            "619-Mienfoo-hundo",
+            "620-Mienshao-hundo",
+            "621-Druddigon-hundo",
+            "622-Golett-hundo",
+            "623-Golurk-hundo",
+            "624-Pawniard-hundo",
+            "625-Bisharp-hundo",
+            "626-Bouffalant-hundo",
+            "627-Rufflet-hundo",
+            "628-Braviary-hundo",
+            "629-Vullaby-hundo",
+            "630-Mandibuzz-hundo",
+            "631-Heatmor-hundo",
+            "632-Durant-hundo",
+            "633-Deino-hundo",
+            "634-Zweilous-hundo",
+            "635-Hydreigon-hundo",
+            "636-Larvesta-hundo",
+            "637-Volcarona-hundo",
+            "638-Cobalion-hundo",
+            "639-Terrakion-hundo",
+            "640-Virizion-hundo",
+            "641-Tornadus-hundo",
+            "642-Thundurus-hundo",
+            "643-Reshiram-hundo",
+            "644-Zekrom-hundo",
+            "645-Landorus-hundo",
+            "646-Kyurem-hundo",
+            "647-Keldeo-hundo",
+            "648-Meloetta-hundo",
+            "649-Genesect-hundo"
         ]
     },
     "6": {
@@ -4923,7 +5987,75 @@
                 "normal",
                 ""
             ],
-            "666-Vivillon-001": [
+            "666-Vivillon Icy Snow-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Polar-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Tundra-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Continental-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Garden-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Elegant-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Meadow-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Modern-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Marine-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Archepelago-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon High Plains-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Sandstorm-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon River-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Monsoon-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Savannah-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Sun-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Ocean-001": [
+                "normal",
+                ""
+            ],
+            "666-Vivillon Jungle-001": [
                 "normal",
                 ""
             ],
@@ -4935,11 +6067,43 @@
                 "normal",
                 ""
             ],
-            "669-Flabébé-001": [
+            "669-Flabébé Red-001": [
                 "normal",
                 ""
             ],
-            "671-Florges-001": [
+            "669-Flabébé Yellow-001": [
+                "normal",
+                ""
+            ],
+            "669-Flabébé Organe-001": [
+                "normal",
+                ""
+            ],
+            "669-Flabébé Blue-001": [
+                "normal",
+                ""
+            ],
+            "669-Flabébé White-001": [
+                "normal",
+                ""
+            ],
+            "671-Florges Red-001": [
+                "normal",
+                ""
+            ],
+            "671-Florges Yellow-001": [
+                "normal",
+                ""
+            ],
+            "671-Florges Orange-001": [
+                "normal",
+                ""
+            ],
+            "671-Florges Blue-001": [
+                "normal",
+                ""
+            ],
+            "671-Florges White-001": [
                 "normal",
                 ""
             ],
@@ -4961,6 +6125,42 @@
             ],
             "676-Furfrou-001": [
                 "normal",
+                ""
+            ],
+            "676-Furfrou-002": [
+                "Heart Trim",
+                ""
+            ],
+            "676-Furfrou-003": [
+                "Star Trim",
+                ""
+            ],
+            "676-Furfrou-004": [
+                "Diamond Trim",
+                ""
+            ],
+            "676-Furfrou-005": [
+                "Debutante Trim",
+                ""
+            ],
+            "676-Furfrou-006": [
+                "Matron Trim",
+                ""
+            ],
+            "676-Furfrou-007": [
+                "Dandy Trim",
+                ""
+            ],
+            "676-Furfrou-008": [
+                "La Reine Trim",
+                ""
+            ],
+            "676-Furfrou-009": [
+                "Kabuki Trim",
+                ""
+            ],
+            "676-Furfrou-010": [
+                "Pharaoh Trim",
                 ""
             ],
             "677-Espurr-001": [
@@ -5060,20 +6260,20 @@
                 ""
             ],
             "700-Sylveon-002": [
-                "Explorer Hat",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15762_6.png&amp;w=120"
+                "Flower Crown",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11454_6.png&amp;w=120"
             ],
             "700-Sylveon-003": [
-                "Cherry Blossoms",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15098_6.png&amp;w=120"
-            ],
-            "700-Sylveon-004": [
                 "Holiday",
                 "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14498_6.png&amp;w=120"
             ],
+            "700-Sylveon-004": [
+                "Cherry Blossoms",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15098_6.png&amp;w=120"
+            ],
             "700-Sylveon-005": [
-                "Flower Crown",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg11%2Fimg11454_6.png&amp;w=120"
+                "Explorer Hat",
+                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg15%2Fimg15762_6.png&amp;w=120"
             ],
             "701-Hawlucha-001": [
                 "normal",
@@ -5115,45 +6315,37 @@
                 "normal",
                 ""
             ],
-            "710-Pumpkaboo-001": [
+            "710-Pumpkaboo Small Size-001": [
                 "normal",
                 ""
             ],
-            "710-Pumpkaboo-002": [
-                "Small Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14146_6.png&amp;w=120"
-            ],
-            "710-Pumpkaboo-003": [
-                "Average Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14138_6.png&amp;w=120"
-            ],
-            "710-Pumpkaboo-004": [
-                "Large Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14149_6.png&amp;w=120"
-            ],
-            "710-Pumpkaboo-005": [
-                "Super Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14144_6.png&amp;w=120"
-            ],
-            "711-Gourgeist-001": [
+            "710-Pumpkaboo Average Size-001": [
                 "normal",
                 ""
             ],
-            "711-Gourgeist-002": [
-                "Small Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14145_6.png&amp;w=120"
+            "710-Pumpkaboo Large Size-001": [
+                "normal",
+                ""
             ],
-            "711-Gourgeist-003": [
-                "Average Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14143_6.png&amp;w=120"
+            "710-Pumpkaboo Super Size-001": [
+                "normal",
+                ""
             ],
-            "711-Gourgeist-004": [
-                "Large Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14147_6.png&amp;w=120"
+            "711-Gourgeist Small Size-001": [
+                "normal",
+                ""
             ],
-            "711-Gourgeist-005": [
-                "Super Size",
-                "https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg14%2Fimg14132_6.png&amp;w=120"
+            "711-Gourgeist Average Size-001": [
+                "normal",
+                ""
+            ],
+            "711-Gourgeist Large Size-001": [
+                "normal",
+                ""
+            ],
+            "711-Gourgeist Super Size-001": [
+                "normal",
+                ""
             ],
             "712-Bergmite-001": [
                 "normal",
@@ -5197,12 +6389,41 @@
             "663-Talonflame-xxl",
             "664-Scatterbug-xxl",
             "665-Spewpa-xxl",
-            "666-Vivillon-xxl",
+            "666-Vivillon Icy Snow-xxl",
+            "666-Vivillon Polar-xxl",
+            "666-Vivillon Tundra-xxl",
+            "666-Vivillon Continental-xxl",
+            "666-Vivillon Garden-xxl",
+            "666-Vivillon Elegant-xxl",
+            "666-Vivillon Meadow-xxl",
+            "666-Vivillon Modern-xxl",
+            "666-Vivillon Marine-xxl",
+            "666-Vivillon Archepelago-xxl",
+            "666-Vivillon High Plains-xxl",
+            "666-Vivillon Sandstorm-xxl",
+            "666-Vivillon River-xxl",
+            "666-Vivillon Monsoon-xxl",
+            "666-Vivillon Savannah-xxl",
+            "666-Vivillon Sun-xxl",
+            "666-Vivillon Ocean-xxl",
+            "666-Vivillon Jungle-xxl",
             "667-Litleo-xxl",
             "668-Pyroar-xxl",
-            "669-Flabébé-xxl",
-            "670-Floette-xxl",
-            "671-Florges-xxl",
+            "669-Flabébé Red-xxl",
+            "669-Flabébé Yellow-xxl",
+            "669-Flabébé Organe-xxl",
+            "669-Flabébé Blue-xxl",
+            "669-Flabébé White-xxl",
+            "670-Floette Red-xxl",
+            "670-Floette Yellow-xxl",
+            "670-Floette Orange-xxl",
+            "670-Floette Blue-xxl",
+            "670-Floette White-xxl",
+            "671-Florges Red-xxl",
+            "671-Florges Yellow-xxl",
+            "671-Florges Orange-xxl",
+            "671-Florges Blue-xxl",
+            "671-Florges White-xxl",
             "672-Skiddo-xxl",
             "673-Gogoat-xxl",
             "674-Pancham-xxl",
@@ -5241,8 +6462,14 @@
             "707-Klefki-xxl",
             "708-Phantump-xxl",
             "709-Trevenant-xxl",
-            "710-Pumpkaboo-xxl",
-            "711-Gourgeist-xxl",
+            "710-Pumpkaboo Small Size-xxl",
+            "710-Pumpkaboo Average Size-xxl",
+            "710-Pumpkaboo Large Size-xxl",
+            "710-Pumpkaboo Super Size-xxl",
+            "711-Gourgeist Small Size-xxl",
+            "711-Gourgeist Average Size-xxl",
+            "711-Gourgeist Large Size-xxl",
+            "711-Gourgeist Super Size-xxl",
             "712-Bergmite-xxl",
             "713-Avalugg-xxl",
             "714-Noibat-xxl",
@@ -5271,12 +6498,41 @@
             "663-Talonflame-xxs",
             "664-Scatterbug-xxs",
             "665-Spewpa-xxs",
-            "666-Vivillon-xxs",
+            "666-Vivillon Icy Snow-xxs",
+            "666-Vivillon Polar-xxs",
+            "666-Vivillon Tundra-xxs",
+            "666-Vivillon Continental-xxs",
+            "666-Vivillon Garden-xxs",
+            "666-Vivillon Elegant-xxs",
+            "666-Vivillon Meadow-xxs",
+            "666-Vivillon Modern-xxs",
+            "666-Vivillon Marine-xxs",
+            "666-Vivillon Archepelago-xxs",
+            "666-Vivillon High Plains-xxs",
+            "666-Vivillon Sandstorm-xxs",
+            "666-Vivillon River-xxs",
+            "666-Vivillon Monsoon-xxs",
+            "666-Vivillon Savannah-xxs",
+            "666-Vivillon Sun-xxs",
+            "666-Vivillon Ocean-xxs",
+            "666-Vivillon Jungle-xxs",
             "667-Litleo-xxs",
             "668-Pyroar-xxs",
-            "669-Flabébé-xxs",
-            "670-Floette-xxs",
-            "671-Florges-xxs",
+            "669-Flabébé Red-xxs",
+            "669-Flabébé Yellow-xxs",
+            "669-Flabébé Organe-xxs",
+            "669-Flabébé Blue-xxs",
+            "669-Flabébé White-xxs",
+            "670-Floette Red-xxs",
+            "670-Floette Yellow-xxs",
+            "670-Floette Orange-xxs",
+            "670-Floette Blue-xxs",
+            "670-Floette White-xxs",
+            "671-Florges Red-xxs",
+            "671-Florges Yellow-xxs",
+            "671-Florges Orange-xxs",
+            "671-Florges Blue-xxs",
+            "671-Florges White-xxs",
             "672-Skiddo-xxs",
             "673-Gogoat-xxs",
             "674-Pancham-xxs",
@@ -5315,8 +6571,14 @@
             "707-Klefki-xxs",
             "708-Phantump-xxs",
             "709-Trevenant-xxs",
-            "710-Pumpkaboo-xxs",
-            "711-Gourgeist-xxs",
+            "710-Pumpkaboo Small Size-xxs",
+            "710-Pumpkaboo Average Size-xxs",
+            "710-Pumpkaboo Large Size-xxs",
+            "710-Pumpkaboo Super Size-xxs",
+            "711-Gourgeist Small Size-xxs",
+            "711-Gourgeist Average Size-xxs",
+            "711-Gourgeist Large Size-xxs",
+            "711-Gourgeist Super Size-xxs",
             "712-Bergmite-xxs",
             "713-Avalugg-xxs",
             "714-Noibat-xxs",
@@ -5327,6 +6589,115 @@
             "719-Diancie-xxs",
             "720-Hoopa-xxs",
             "721-Volcanion-xxs"
+        ],
+        "hundo": [
+            "650-Chespin-hundo",
+            "651-Quilladin-hundo",
+            "652-Chesnaught-hundo",
+            "653-Fennekin-hundo",
+            "654-Braixen-hundo",
+            "655-Delphox-hundo",
+            "656-Froakie-hundo",
+            "657-Frogadier-hundo",
+            "658-Greninja-hundo",
+            "659-Bunnelby-hundo",
+            "660-Diggersby-hundo",
+            "661-Fletchling-hundo",
+            "662-Fletchinder-hundo",
+            "663-Talonflame-hundo",
+            "664-Scatterbug-hundo",
+            "665-Spewpa-hundo",
+            "666-Vivillon Icy Snow-hundo",
+            "666-Vivillon Polar-hundo",
+            "666-Vivillon Tundra-hundo",
+            "666-Vivillon Continental-hundo",
+            "666-Vivillon Garden-hundo",
+            "666-Vivillon Elegant-hundo",
+            "666-Vivillon Meadow-hundo",
+            "666-Vivillon Modern-hundo",
+            "666-Vivillon Marine-hundo",
+            "666-Vivillon Archepelago-hundo",
+            "666-Vivillon High Plains-hundo",
+            "666-Vivillon Sandstorm-hundo",
+            "666-Vivillon River-hundo",
+            "666-Vivillon Monsoon-hundo",
+            "666-Vivillon Savannah-hundo",
+            "666-Vivillon Sun-hundo",
+            "666-Vivillon Ocean-hundo",
+            "666-Vivillon Jungle-hundo",
+            "667-Litleo-hundo",
+            "668-Pyroar-hundo",
+            "669-Flabébé Red-hundo",
+            "669-Flabébé Yellow-hundo",
+            "669-Flabébé Organe-hundo",
+            "669-Flabébé Blue-hundo",
+            "669-Flabébé White-hundo",
+            "670-Floette Red-hundo",
+            "670-Floette Yellow-hundo",
+            "670-Floette Orange-hundo",
+            "670-Floette Blue-hundo",
+            "670-Floette White-hundo",
+            "671-Florges Red-hundo",
+            "671-Florges Yellow-hundo",
+            "671-Florges Orange-hundo",
+            "671-Florges Blue-hundo",
+            "671-Florges White-hundo",
+            "672-Skiddo-hundo",
+            "673-Gogoat-hundo",
+            "674-Pancham-hundo",
+            "675-Pangoro-hundo",
+            "676-Furfrou-hundo",
+            "677-Espurr-hundo",
+            "678-Meowstic-hundo",
+            "679-Honedge-hundo",
+            "680-Doublade-hundo",
+            "681-Aegislash-hundo",
+            "682-Spritzee-hundo",
+            "683-Aromatisse-hundo",
+            "684-Swirlix-hundo",
+            "685-Slurpuff-hundo",
+            "686-Inkay-hundo",
+            "687-Malamar-hundo",
+            "688-Binacle-hundo",
+            "689-Barbaracle-hundo",
+            "690-Skrelp-hundo",
+            "691-Dragalge-hundo",
+            "692-Clauncher-hundo",
+            "693-Clawitzer-hundo",
+            "694-Helioptile-hundo",
+            "695-Heliolisk-hundo",
+            "696-Tyrunt-hundo",
+            "697-Tyrantrum-hundo",
+            "698-Amaura-hundo",
+            "699-Aurorus-hundo",
+            "700-Sylveon-hundo",
+            "701-Hawlucha-hundo",
+            "702-Dedenne-hundo",
+            "703-Carbink-hundo",
+            "704-Goomy-hundo",
+            "705-Sliggoo-hundo",
+            "706-Goodra-hundo",
+            "707-Klefki-hundo",
+            "708-Phantump-hundo",
+            "709-Trevenant-hundo",
+            "710-Pumpkaboo Small Size-hundo",
+            "710-Pumpkaboo Average Size-hundo",
+            "710-Pumpkaboo Large Size-hundo",
+            "710-Pumpkaboo Super Size-hundo",
+            "711-Gourgeist Small Size-hundo",
+            "711-Gourgeist Average Size-hundo",
+            "711-Gourgeist Large Size-hundo",
+            "711-Gourgeist Super Size-hundo",
+            "712-Bergmite-hundo",
+            "713-Avalugg-hundo",
+            "714-Noibat-hundo",
+            "715-Noivern-hundo",
+            "716-Xerneas-hundo",
+            "717-Yveltal-hundo",
+            "718-Zygarde-hundo",
+            "719-Diancie-hundo",
+            "720-Hoopa-hundo",
+            "721-Volcanion-hundo"
         ]
     },
     "7": {
@@ -5420,7 +6791,19 @@
                 "normal",
                 ""
             ],
-            "741-Oricorio-001": [
+            "741-Oricorio Baile Style-001": [
+                "normal",
+                ""
+            ],
+            "741-Oricorio Pom-Pom Style-001": [
+                "normal",
+                ""
+            ],
+            "741-Oricorio Pa'u Style-001": [
+                "normal",
+                ""
+            ],
+            "741-Oricorio Sensu Style-001": [
                 "normal",
                 ""
             ],
@@ -5436,7 +6819,15 @@
                 "normal",
                 ""
             ],
-            "745-Lycanroc-001": [
+            "745-Lycanroc Midday Form-001": [
+                "normal",
+                ""
+            ],
+            "745-Lycanroc Midnight Form-001": [
+                "normal",
+                ""
+            ],
+            "745-Lycanroc Dusk Form-001": [
                 "normal",
                 ""
             ],
@@ -5504,10 +6895,6 @@
                 "normal",
                 ""
             ],
-            "764-Comfey-001": [
-                "normal",
-                ""
-            ],
             "765-Oranguru-001": [
                 "normal",
                 ""
@@ -5549,10 +6936,6 @@
                 ""
             ],
             "780-Drampa-001": [
-                "normal",
-                ""
-            ],
-            "781-Dhelmise-001": [
                 "normal",
                 ""
             ],
@@ -5669,11 +7052,16 @@
             "738-Vikavolt-xxl",
             "739-Crabrawler-xxl",
             "740-Crabominable-xxl",
-            "741-Oricorio-xxl",
+            "741-Oricorio Baile Style-xxl",
+            "741-Oricorio Pom-Pom Style-xxl",
+            "741-Oricorio Pa'u Style-xxl",
+            "741-Oricorio Sensu Style-xxl",
             "742-Cutiefly-xxl",
             "743-Ribombee-xxl",
             "744-Rockruff-xxl",
-            "745-Lycanroc-xxl",
+            "745-Lycanroc Midday Form-xxl",
+            "745-Lycanroc Midnight Form-xxl",
+            "745-Lycanroc Dusk Form-xxl",
             "746-Wishiwashi-xxl",
             "747-Mareanie-xxl",
             "748-Toxapex-xxl",
@@ -5752,11 +7140,16 @@
             "738-Vikavolt-xxs",
             "739-Crabrawler-xxs",
             "740-Crabominable-xxs",
-            "741-Oricorio-xxs",
+            "741-Oricorio Baile Style-xxs",
+            "741-Oricorio Pom-Pom Style-xxs",
+            "741-Oricorio Pa'u Style-xxs",
+            "741-Oricorio Sensu Style-xxs",
             "742-Cutiefly-xxs",
             "743-Ribombee-xxs",
             "744-Rockruff-xxs",
-            "745-Lycanroc-xxs",
+            "745-Lycanroc Midday Form-xxs",
+            "745-Lycanroc Midnight Form-xxs",
+            "745-Lycanroc Dusk Form-xxs",
             "746-Wishiwashi-xxs",
             "747-Mareanie-xxs",
             "748-Toxapex-xxs",
@@ -5814,6 +7207,94 @@
             "806-Blacephalon-xxs",
             "808-Meltan-xxs",
             "809-Melmetal-xxs"
+        ],
+        "hundo": [
+            "722-Rowlet-hundo",
+            "723-Dartrix-hundo",
+            "724-Decidueye-hundo",
+            "725-Litten-hundo",
+            "726-Torracat-hundo",
+            "727-Incineroar-hundo",
+            "728-Popplio-hundo",
+            "729-Brionne-hundo",
+            "730-Primarina-hundo",
+            "731-Pikipek-hundo",
+            "732-Trumbeak-hundo",
+            "733-Toucannon-hundo",
+            "734-Yungoos-hundo",
+            "735-Gumshoos-hundo",
+            "736-Grubbin-hundo",
+            "737-Charjabug-hundo",
+            "738-Vikavolt-hundo",
+            "739-Crabrawler-hundo",
+            "740-Crabominable-hundo",
+            "741-Oricorio Baile Style-hundo",
+            "741-Oricorio Pom-Pom Style-hundo",
+            "741-Oricorio Pa'u Style-hundo",
+            "741-Oricorio Sensu Style-hundo",
+            "742-Cutiefly-hundo",
+            "743-Ribombee-hundo",
+            "744-Rockruff-hundo",
+            "745-Lycanroc Midday Form-hundo",
+            "745-Lycanroc Midnight Form-hundo",
+            "745-Lycanroc Dusk Form-hundo",
+            "746-Wishiwashi-hundo",
+            "747-Mareanie-hundo",
+            "748-Toxapex-hundo",
+            "749-Mudbray-hundo",
+            "750-Mudsdale-hundo",
+            "751-Dewpider-hundo",
+            "752-Araquanid-hundo",
+            "753-Fomantis-hundo",
+            "754-Lurantis-hundo",
+            "755-Morelull-hundo",
+            "756-Shiinotic-hundo",
+            "757-Salandit-hundo",
+            "758-Salazzle-hundo",
+            "759-Stufful-hundo",
+            "760-Bewear-hundo",
+            "761-Bounsweet-hundo",
+            "762-Steenee-hundo",
+            "763-Tsareena-hundo",
+            "764-Comfey-hundo",
+            "765-Oranguru-hundo",
+            "766-Passimian-hundo",
+            "767-Wimpod-hundo",
+            "768-Golisopod-hundo",
+            "769-Sandygast-hundo",
+            "770-Palossand-hundo",
+            "775-Komala-hundo",
+            "776-Turtonator-hundo",
+            "777-Togedemaru-hundo",
+            "779-Bruxish-hundo",
+            "780-Drampa-hundo",
+            "781-Dhelmise-hundo",
+            "782-Jangmo-o-hundo",
+            "783-Hakamo-o-hundo",
+            "784-Kommo-o-hundo",
+            "785-Tapu Koko-hundo",
+            "786-Tapu Lele-hundo",
+            "787-Tapu Bulu-hundo",
+            "788-Tapu Fini-hundo",
+            "789-Cosmog-hundo",
+            "790-Cosmoem-hundo",
+            "791-Solgaleo-hundo",
+            "792-Lunala-hundo",
+            "793-Nihilego-hundo",
+            "794-Buzzwole-hundo",
+            "795-Pheromosa-hundo",
+            "796-Xurkitree-hundo",
+            "797-Celesteela-hundo",
+            "798-Kartana-hundo",
+            "799-Guzzlord-hundo",
+            "800-Necrozma-hundo",
+            "802-Marshadow-hundo",
+            "803-Poipole-hundo",
+            "804-Naganadel-hundo",
+            "805-Stakataka-hundo",
+            "806-Blacephalon-hundo",
+            "808-Meltan-hundo",
+            "809-Melmetal-hundo"
         ]
     },
     "8": {
@@ -5931,7 +7412,11 @@
                 "normal",
                 ""
             ],
-            "849-Toxtricity-001": [
+            "849-Toxtricity Low Key Form-001": [
+                "normal",
+                ""
+            ],
+            "849-Toxtricity Amped Form-001": [
                 "normal",
                 ""
             ],
@@ -6091,7 +7576,8 @@
             "841-Flapple-xxl",
             "842-Appletun-xxl",
             "848-Toxel-xxl",
-            "849-Toxtricity-xxl",
+            "849-Toxtricity Low Key Form-xxl",
+            "849-Toxtricity Amped Form-xxl",
             "850-Sizzlipede-xxl",
             "851-Centiskorch-xxl",
             "854-Sinistea-xxl",
@@ -6152,7 +7638,8 @@
             "841-Flapple-xxs",
             "842-Appletun-xxs",
             "848-Toxel-xxs",
-            "849-Toxtricity-xxs",
+            "849-Toxtricity Low Key Form-xxs",
+            "849-Toxtricity Amped Form-xxs",
             "850-Sizzlipede-xxs",
             "851-Centiskorch-xxs",
             "854-Sinistea-xxs",
@@ -6185,6 +7672,68 @@
             "903-Sneasler-xxs",
             "904-Overqwil-xxs",
             "905-Enamorus-xxs"
+        ],
+        "hundo": [
+            "810-Grookey-hundo",
+            "811-Thwackey-hundo",
+            "812-Rillaboom-hundo",
+            "813-Scorbunny-hundo",
+            "814-Raboot-hundo",
+            "815-Cinderace-hundo",
+            "816-Sobble-hundo",
+            "817-Drizzile-hundo",
+            "818-Inteleon-hundo",
+            "819-Skwovet-hundo",
+            "820-Greedent-hundo",
+            "821-Rookidee-hundo",
+            "822-Corvisquire-hundo",
+            "823-Corviknight-hundo",
+            "827-Nickit-hundo",
+            "828-Thievul-hundo",
+            "829-Gossifleur-hundo",
+            "830-Eldegoss-hundo",
+            "831-Wooloo-hundo",
+            "832-Dubwool-hundo",
+            "835-Yamper-hundo",
+            "836-Boltund-hundo",
+            "840-Applin-hundo",
+            "841-Flapple-hundo",
+            "842-Appletun-hundo",
+            "848-Toxel-hundo",
+            "849-Toxtricity Low Key Form-hundo",
+            "849-Toxtricity Amped Form-hundo",
+            "850-Sizzlipede-hundo",
+            "851-Centiskorch-hundo",
+            "854-Sinistea-hundo",
+            "855-Polteageist-hundo",
+            "856-Hatenna-hundo",
+            "857-Hattrem-hundo",
+            "858-Hatterene-hundo",
+            "862-Obstagoon-hundo",
+            "863-Perrserker-hundo",
+            "864-Cursola-hundo",
+            "865-Sirfetch'd-hundo",
+            "866-Mr. Rime-hundo",
+            "867-Runerigus-hundo",
+            "870-Falinks-hundo",
+            "874-Stonjourner-hundo",
+            "877-Morpeko-hundo",
+            "885-Dreepy-hundo",
+            "886-Drakloak-hundo",
+            "887-Dragapult-hundo",
+            "888-Zacian-hundo",
+            "889-Zamazenta-hundo",
+            "891-Kubfu-hundo",
+            "892-Urshifu-hundo",
+            "893-Zarude-hundo",
+            "894-Regieleki-hundo",
+            "895-Regidrago-hundo",
+            "899-Wyrdeer-hundo",
+            "900-Kleavor-hundo",
+            "901-Ursaluna-hundo",
+            "903-Sneasler-hundo",
+            "904-Overqwil-hundo",
+            "905-Enamorus-hundo"
         ]
     },
     "9": {
@@ -6482,6 +8031,58 @@
             "998-Baxcalibur-xxs",
             "999-Gimmighoul-xxs",
             "1000-Gholdengo-xxs"
+        ],
+        "hundo": [
+            "906-Sprigatito-hundo",
+            "907-Floragato-hundo",
+            "908-Meowscarada-hundo",
+            "909-Fuecoco-hundo",
+            "910-Crocalor-hundo",
+            "911-Skeledirge-hundo",
+            "912-Quaxly-hundo",
+            "913-Quaxwell-hundo",
+            "914-Quaquaval-hundo",
+            "915-Lechonk-hundo",
+            "916-Oinkologne-hundo",
+            "919-Nymble-hundo",
+            "921-Pawmi-hundo",
+            "922-Pawmo-hundo",
+            "923-Pawmot-hundo",
+            "924-Tandemaus-hundo",
+            "925-Maushold-hundo",
+            "926-Fidough-hundo",
+            "927-Dachsbun-hundo",
+            "928-Smoliv-hundo",
+            "929-Dolliv-hundo",
+            "930-Arboliva-hundo",
+            "935-Charcadet-hundo",
+            "936-Armarouge-hundo",
+            "937-Ceruledge-hundo",
+            "938-Tadbulb-hundo",
+            "939-Bellibolt-hundo",
+            "944-Shroodle-hundo",
+            "945-Grafaiai-hundo",
+            "957-Tinkatink-hundo",
+            "958-Tinkatuff-hundo",
+            "959-Tinkaton-hundo",
+            "960-Wiglett-hundo",
+            "961-Wugtrio-hundo",
+            "962-Bombirdier-hundo",
+            "965-Varoom-hundo",
+            "966-Revavroom-hundo",
+            "971-Greavard-hundo",
+            "972-Houndstone-hundo",
+            "974-Cetoddle-hundo",
+            "975-Cetitan-hundo",
+            "978-Tatsugiri-hundo",
+            "979-Annihilape-hundo",
+            "980-Clodsire-hundo",
+            "983-Kingambit-hundo",
+            "996-Frigibax-hundo",
+            "997-Arctibax-hundo",
+            "998-Baxcalibur-hundo",
+            "999-Gimmighoul-hundo",
+            "1000-Gholdengo-hundo"
         ]
     }
 }

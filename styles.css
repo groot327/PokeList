@@ -20,17 +20,27 @@ h1 {
 }
 
 .tab-button {
+    display: inline-block;
     padding: 10px 20px;
-    margin: 0 5px;
+    margin: 0 10px;
     border: none;
     background-color: #ddd;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
+    font-family: inherit;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
 }
 
 .tab-button.active {
     background-color: #007bff;
+    color: white;
+}
+
+.tab-button.hundo-active {
+    background-color: #28a745; /* Green for Hundo tab */
     color: white;
 }
 
@@ -40,29 +50,33 @@ h1 {
 
 .tab-content h2 {
     color: #333;
-    margin: 10px 0;
+    margin: 2px 0 20px;
 }
 
 table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 4px;
-    margin: 2px;
-    margin-top: 10px;
+    border-spacing: 2px;
+    margin: 0;
     table-layout: auto;
 }
 
 td {
-    border: 2px solid #cccccc;
-    padding: 10px;
+    border: 1px solid #cccccc;
+    padding: 6px; /* Reverted to original */
     text-align: center;
     cursor: pointer;
-    transition: border-color 0.3s, background-color 0.3s;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     box-sizing: border-box;
     width: 20%;
-    min-width: 80px;
-    font-size: 14px;
-    vertical-align: top; /* Added to align content to the top */
+    min-width: 60px; /* Reverted to original */
+    font-size: 12px;
+    vertical-align: top;
+    line-height: 1.2;
+    touch-action: manipulation; /* Prevent pinch-zoom or double-tap zoom */
+    -webkit-user-select: none; /* Disable text selection */
+    user-select: none;
+    position: relative;
 }
 
 td:hover {
@@ -76,22 +90,27 @@ td.yellow {
 }
 
 td.blue {
-    border-color: #0066ff;
+    border-color: #0066cc;
     border-width: 2px;
-    background-color: #aaccff;
+    background-color: #e6e6ff;
 }
 
 td.red {
-    border-color: #ff3333;
+    border-color: #cc3333;
     border-width: 2px;
-    background-color: #ffcccc;
+    background-color: #ffe6e6;
+}
+
+td img,
+td div {
+    pointer-events: none; /* Prevent image/text from capturing touches */
 }
 
 td img {
-    max-width: 50px;
+    max-width: 40px;
     height: auto;
     display: block;
-    margin: 0 auto 5px;
+    margin: 0 auto 4px;
 }
 
 #draggableBar {
@@ -101,10 +120,9 @@ td img {
     background-color: #f0f0f0;
     padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     cursor: move;
     z-index: 1000;
-    user-select: none;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -115,35 +133,105 @@ td img {
     color: #333;
     cursor: move;
     padding: 0 5px;
+    user-select: none;
 }
 
-#saveButton, #topButton {
-    padding: 10px 20px;
+.filter-label {
     font-size: 16px;
-    color: white;
+    color: #333;
+    margin-left: 8px;
+    margin-right: 3px;
+    user-select: none;
+}
+
+#saveButton, #topButton, #clearButton {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #333;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
 }
 
 #saveButton {
-    background-color: #007bff;
+    background-color: #4CAF50;
+    color: white;
 }
 
 #saveButton:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
 
 #topButton {
-    background-color: #282828;
+    background-color: #d0d0d0;
+    color: #333;
 }
 
 #topButton:hover {
-    background-color: #202020;
+    background-color: #c0c0c0;
 }
 
-#saveButton:active, #topButton:active, td:active {
-    opacity: 0.7;
+#clearButton {
+    background-color: #ffaa1d;
+    border: 1px solid #ffaa1d;
+    color: #333;
+}
+
+#clearButton:hover {
+    background-color: #ffeeaa;
+}
+
+.filter-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+#filterGrey {
+    border: 2px solid #999999;
+    background-color: transparent;
+}
+
+#filterGrey.active {
+    background-color: #999999 !important;
+}
+
+#filterYellow {
+    border: 2px solid #ffaa1d;
+    background-color: transparent;
+}
+
+#filterYellow.active {
+    background-color: #ffaa1d;
+}
+
+#filterBlue {
+    border: 2px solid #0066cc;
+    background-color: transparent;
+}
+
+#filterBlue.active {
+    background-color: #0066cc;
+}
+
+#filterRed {
+    border: 2px solid #cc3333;
+    background-color: transparent;
+}
+
+#filterRed.active {
+    background-color: #cc3333;
+}
+
+.filter-button:hover {
+    opacity: 0.8;
+}
+
+#saveButton:active, #topButton:active, #clearButton:active, .filter-button:active {
+    opacity: 0.6;
 }
 
 #loading {
@@ -158,35 +246,101 @@ td img {
     display: none;
 }
 
-.toast {
+#toast {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #4CBB17;
+    background-color: #4CAF50;
     color: white;
     padding: 12px 24px;
-    border-radius: 5px;
+    border-radius: 4px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    z-index: 1200;
-    min-width: 250px;
+    z-index: 1000;
+    min-width: 200px;
     text-align: center;
     font-size: 16px;
 }
 
-.toast.show {
+#toast.show {
     opacity: 1;
 }
 
-@media (max-width: 600px) {
-    td {
-        width: 33.33%;
-        font-size: 12px;
-        padding: 8px;
+@media (max-width: 601px) {
+    .tab-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 5px;
     }
     table {
+        border-spacing: 4px;
         margin-top: 10px;
+    }
+    td {
+        width: 20%;
+        min-width: 80px; /* Original value */
+        font-size: 14px;
+        padding: 8px; /* Original value */
+        touch-action: manipulation;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    td img {
+        max-width: 50px;
+        margin-bottom: 5px;
+        pointer-events: none;
+    }
+    #draggableBar {
+        padding: 5px 10px;
+    }
+    .grip {
+        font-size: 20px;
+        padding: 0 5px;
+    }
+    .filter-label {
+        font-size: 16px;
+        margin-left: 8px;
+        margin-right: 4px;
+    }
+    #saveButton, #topButton, #clearButton {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .filter-button {
+        width: 24px;
+        height: 24px;
+    }
+    #toast {
+        min-width: 250px;
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tab-button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 3px;
+    }
+    table {
+        border-spacing: 2px;
+        margin-top: 8px;
+    }
+    td {
+        width: 33.33%;
+        min-width: 60px; /* Original value */
+        font-size: 12px;
+        padding: 6px; /* Original value */
+        touch-action: manipulation;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    td img {
+        max-width: 40px;
+        margin-bottom: 4px;
+        pointer-events: none;
     }
     #draggableBar {
         bottom: 10px;
@@ -197,17 +351,22 @@ td img {
         font-size: 18px;
         padding: 0 4px;
     }
-    #saveButton, #topButton {
+    .filter-label {
         font-size: 14px;
-        padding: 8px 16px;
+        margin-left: 6px;
+        margin-right: 2px;
     }
-    .toast {
+    #saveButton, #topButton, #clearButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .filter-button {
+        width: 20px;
+        height: 20px;
+    }
+    #toast {
         min-width: 200px;
         font-size: 14px;
         padding: 10px 20px;
-    }
-    .tab-button {
-        padding: 8px 16px;
-        font-size: 14px;
     }
 }

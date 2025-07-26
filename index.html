@@ -16,6 +16,7 @@
             <button class="tab-button active" onclick="switchTab('shiny')">Shiny</button>
             <button class="tab-button" onclick="switchTab('xxl')">XXL</button>
             <button class="tab-button" onclick="switchTab('xxs')">XXS</button>
+            <button class="tab-button" onclick="switchTab('hundo')">100 IV</button>
         </div>
         <div id="loading">Loading Pokémon data...</div>
         <div id="content"></div>
@@ -25,6 +26,12 @@
             <span class="grip">☰</span>
             <button id="saveButton">Save</button>
             <button id="topButton">Top</button>
+            <button id="clearButton">Clear</button>
+            <span class="filter-label">Show only:</span>
+            <button id="filterGrey" class="filter-button" title="Filter Grey"></button>
+            <button id="filterYellow" class="filter-button" title="Filter Yellow"></button>
+            <button id="filterBlue" class="filter-button" title="Filter Blue"></button>
+            <button id="filterRed" class="filter-button" title="Filter Red"></button>
         </div>
     </div>
     <script src="script.js"></script>

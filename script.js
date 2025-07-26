@@ -1,23 +1,22 @@
 // Pokémon JSON data
 let pokemonData = null;
 let currentTab = 'shiny';
+let currentFilter = null; // Track active filter (grey, yellow, blue, red, or null)
 const cellStates = {};
+let isProcessingTap = false; // Flag to prevent double taps
 
 // Load saved states from localStorage and merge with URL parameters
 function loadCellStates() {
-    // Load from localStorage
     const savedStates = localStorage.getItem('pokemonCellStates');
     if (savedStates) {
         Object.assign(cellStates, JSON.parse(savedStates));
     }
-    // Merge with URL parameters (URL takes precedence)
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.forEach((value, key) => {
         if (['grey', 'yellow', 'blue', 'red'].includes(value)) {
             cellStates[key] = value;
         }
     });
-    // Save merged states back to localStorage
     saveCellStates();
 }
 
@@ -39,6 +38,8 @@ fetch('pokemon.json')
         pokemonData = data;
         loadCellStates();
         initTabs();
+        initFilterButtons();
+        initClearButton();
         document.getElementById('loading').style.display = 'none';
     })
     .catch(error => {
@@ -58,12 +59,63 @@ function initTabs() {
     switchTab(currentTab);
 }
 
+// Initialize filter buttons
+function initFilterButtons() {
+    const filters = ['grey', 'yellow', 'blue', 'red'];
+    filters.forEach(color => {
+        const button = document.getElementById(`filter${color.charAt(0).toUpperCase() + color.slice(1)}`);
+        button.addEventListener('click', () => toggleFilter(color));
+    });
+}
+
+// Initialize clear button
+function initClearButton() {
+    const clearButton = document.getElementById('clearButton');
+    clearButton.addEventListener('click', clearAllStates);
+}
+
+// Clear all cell states and filters
+function clearAllStates() {
+    Object.keys(cellStates).forEach(key => {
+        cellStates[key] = 'grey';
+    });
+    currentFilter = null;
+    const filters = ['grey', 'yellow', 'blue', 'red'];
+    filters.forEach(c => {
+        document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`).classList.remove('active');
+    });
+    saveCellStates();
+    renderTabContent(currentTab);
+}
+
+// Toggle filter
+function toggleFilter(color) {
+    const filters = ['grey', 'yellow', 'blue', 'red'];
+    if (currentFilter === color) {
+        currentFilter = null;
+        filters.forEach(c => {
+            document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`).classList.remove('active');
+        });
+    } else {
+        currentFilter = color;
+        filters.forEach(c => {
+            const btn = document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`);
+            btn.classList.toggle('active', c === color);
+        });
+    }
+    renderTabContent(currentTab);
+}
+
 // Switch between tabs
 function switchTab(tab) {
     currentTab = tab;
     const buttons = document.querySelectorAll('.tab-button');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.tab-button[onclick="switchTab('${tab}')"]`).classList.add('active');
+    buttons.forEach(btn => {
+        btn.classList.remove('active', 'hundo-active');
+        if (btn.getAttribute('onclick') === `switchTab('${tab}')`) {
+            btn.classList.add(tab === 'hundo' ? 'hundo-active' : 'active');
+        }
+    });
     renderTabContent(tab);
 }
 
@@ -72,67 +124,86 @@ function renderTabContent(tab) {
     const content = document.getElementById('content');
     content.innerHTML = '';
     
-    const sortedKeys = Object.keys(pokemonData).sort((a, b) => parseInt(a) - parseInt(b));
+    const sortedKeys = Object.keys(pokemonData).sort((a, b) => Number(a) - Number(b));
     
     sortedKeys.forEach(fileNumber => {
         const generation = pokemonData[fileNumber];
-        const generationName = generation['generation-name'];
-        const data = generation[tab] || (tab === 'shiny' ? {} : []);
+        const generationName = generation['generation-name'] || `Generation ${fileNumber}`;
+        const data = generation[tab] || [];
         
         const section = document.createElement('div');
         section.className = 'tab-content';
-        section.innerHTML = `<h2>${generationName} - ${tab.toUpperCase()}</h2>`;
+        section.innerHTML = `<h2>Gen ${fileNumber} - ${generationName} - ${tab.toUpperCase()}${currentFilter ? ` (${currentFilter.toUpperCase()} Filter)` : ''}</h2>`;
         const table = document.createElement('table');
         let row;
+        let cellCount = 0;
         
+        let entries = [];
         if (tab === 'shiny') {
-            const entries = Object.keys(data).sort();
-            entries.forEach((key, index) => {
-                if (index % 5 === 0) {
-                    row = table.insertRow();
-                }
-                const [number, name, variant] = key.split('-');
-                const [form, imageUrl] = data[key];
-                const displayNumber = number.padStart(3, '0');
-                const imageSrc = imageUrl || `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${displayNumber}.png`;
-                const displayForm = form === 'normal' ? '' : form;
-                
-                const cell = row.insertCell();
-                cell.innerHTML = `
-                    <div><strong>#${displayNumber}</strong></div>
-                    <div><img src="${imageSrc}" alt="${name} ${form}"></div>
-                    <div>${name}</div>
-                    <div>${displayForm}</div>
-                `;
-                cell.dataset.key = key;
-                cell.dataset.tab = tab;
-                // Apply saved state or default to grey
-                cellStates[key] = cellStates[key] || 'grey';
-                updateCellColor(cell, cellStates[key]);
-                cell.addEventListener('click', () => handleCellClick(key, cell));
+            entries = Object.keys(data).sort((a, b) => {
+                const numA = parseInt(a.split('-')[0], 10);
+                const numB = parseInt(b.split('-')[0], 10);
+                return numA - numB;
             });
         } else {
-            data.sort().forEach((key, index) => {
-                if (index % 5 === 0) {
-                    row = table.insertRow();
-                }
-                const [number, name, variant] = key.split('-');
-                const displayNumber = number.padStart(3, '0');
-                const cell = row.insertCell();
-                cell.innerHTML = `
-                    <div><strong>#${displayNumber}</strong></div>
-                    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${displayNumber}.png" alt="${name} ${variant.toUpperCase()}"></div>
-                    <div>${name}</div>
-                    <div>${variant.toUpperCase()}</div>
-                `;
-                cell.dataset.key = key;
-                cell.dataset.tab = tab;
-                // Apply saved state or default to grey
-                cellStates[key] = cellStates[key] || 'grey';
-                updateCellColor(cell, cellStates[key]);
-                cell.addEventListener('click', () => handleCellClick(key, cell));
+            if (!Array.isArray(data)) {
+                console.warn(`Data for tab "${tab}" in generation ${generationName} is not an array.`);
+                return;
+            }
+            entries = data.sort((a, b) => {
+                const numA = parseInt(a.split('-')[0], 10);
+                const numB = parseInt(b.split('-')[0], 10);
+                return numA - numB;
             });
         }
+
+        entries.forEach((key, index) => {
+            const state = cellStates[key] || 'grey';
+            if (currentFilter && state !== currentFilter) {
+                return;
+            }
+
+            if (cellCount % 5 === 0) {
+                row = table.insertRow();
+            }
+
+            let number, name, variant, form, imageUrl, displayNumber, displayVariant, imageSrc, displayForm;
+            if (tab === 'shiny') {
+                [number, name, variant] = key.split('-');
+                [form, imageUrl] = data[key] || ['normal', ''];
+                displayNumber = number.padStart(3, '0');
+                imageSrc = imageUrl || `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${displayNumber}.png`;
+                displayForm = form === 'normal' ? '' : form;
+            } else {
+                [number, name, variant] = key.split('-');
+                displayNumber = number.padStart(3, '0');
+                displayVariant = variant ? variant.toUpperCase() : '';
+                imageSrc = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${displayNumber}.png`;
+                displayForm = displayVariant;
+            }
+
+            const cell = row.insertCell();
+            cell.innerHTML = `
+                <div><strong>#${displayNumber}</strong></div>
+                <div><img src="${imageSrc}" alt="${name} ${displayForm}"></div>
+                <div>${name}</div>
+                <div>${displayForm}</div>
+            `;
+            cell.dataset.key = key;
+            cell.dataset.tab = tab;
+            cellStates[key] = cellStates[key] || 'grey';
+            updateCellColor(cell, cellStates[key]);
+            
+            // Single event listener for click, with touchstart fallback
+            cell.addEventListener('click', (e) => {
+                if (isProcessingTap) return;
+                isProcessingTap = true;
+                handleCellClick(key, cell);
+                setTimeout(() => { isProcessingTap = false; }, 100); // Reset flag after 100ms
+            });
+            
+            cellCount++;
+        });
         
         if (table.rows.length > 0) {
             section.appendChild(table);
@@ -151,7 +222,7 @@ function updateCellColor(cell, state) {
 
 // Handle cell click to cycle colors
 function handleCellClick(key, cell) {
-    const currentState = cellStates[key];
+    const currentState = cellStates[key] || 'grey';
     let nextState;
     if (currentState === 'grey') nextState = 'yellow';
     else if (currentState === 'yellow') nextState = 'blue';
@@ -159,7 +230,8 @@ function handleCellClick(key, cell) {
     else nextState = 'grey';
     cellStates[key] = nextState;
     updateCellColor(cell, nextState);
-    saveCellStates(); // Save to localStorage after each click
+    saveCellStates();
+    renderTabContent(currentTab);
 }
 
 // Save button to generate URL and copy to clipboard
@@ -205,7 +277,7 @@ document.addEventListener('mouseup', stopDragging);
 document.addEventListener('touchend', stopDragging);
 
 function startDragging(e) {
-    if (e.target.id === 'saveButton' || e.target.id === 'topButton' || e.target.classList.contains('grip')) return;
+    if (e.target.id === 'saveButton' || e.target.id === 'topButton' || e.target.id === 'clearButton' || e.target.classList.contains('grip') || e.target.classList.contains('filter-button')) return;
     initialX = e.type === 'touchstart' ? e.touches[0].clientX - xOffset : e.clientX - xOffset;
     isDragging = true;
 }
