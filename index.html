@@ -3,37 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <!-- Comment out the following no-cache headers before deployment for better performance -->
+    <!-- meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" -->
+    <!-- meta http-equiv="Pragma" content="no-cache" -->
+    <!-- meta http-equiv="Expires" content="0" -->
     <title>Pokémon Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Pokémon Tracker</h1>
-        <div id="tabs">
-            <button class="tab-button active" onclick="switchTab('shiny')">Shiny</button>
-            <button class="tab-button" onclick="switchTab('xxl')">XXL</button>
-            <button class="tab-button" onclick="switchTab('xxs')">XXS</button>
-            <button class="tab-button" onclick="switchTab('hundo')">100 IV</button>
+    <header class="header">
+        <button id="hamburger" class="hamburger" aria-label="Open side menu">☰</button>
+        <div id="side-menu" class="side-menu">
+            <button id="closeMenu" class="close-menu" aria-label="Close side menu">✖</button>
+            <button id="menuSaveButton" class="menu-button" aria-label="Save Pokémon states">Save</button>
+            <button id="menuClearButton" class="menu-button" aria-label="Clear all Pokémon states">Clear</button>
+            <button id="menuExportButton" class="menu-button" aria-label="Export Pokémon states">Export</button>
+            <button id="menuImportButton" class="menu-button" aria-label="Import Pokémon states">Import</button>
         </div>
+        <div class="container">
+            <h1>Pokémon Tracker</h1>
+            <div class="search-container">
+                <input id="searchInput" type="text" placeholder="Scroll to Pokémon..." class="search-input" aria-label="Scroll to Pokémon by name or number" />
+            </div>
+            <div class="filter-container">
+                <span class="filter-label">Show only:</span>
+                <button id="filterGrey" class="filter-button" aria-label="Filter by Grey state"></button>
+                <button id="filterYellow" class="filter-button" aria-label="Filter by Yellow state"></button>
+                <button id="filterBlue" class="filter-button" aria-label="Filter by Blue state"></button>
+                <button id="filterRed" class="filter-button" aria-label="Filter by Red state"></button>
+            </div>
+            <div id="tabs" class="tab-container">
+                <button id="tabShiny" class="tab-button" onclick="switchTab('shiny')" aria-label="View Shiny Pokémon">Shiny</button>
+                <button id="tabXXL" class="tab-button" onclick="switchTab('xxl')" aria-label="View XXL Pokémon">XXL</button>
+                <button id="tabXXS" class="tab-button" onclick="switchTab('xxs')" aria-label="View XXS Pokémon">XXS</button>
+                <button id="tabHundo" class="tab-button" onclick="switchTab('hundo')" aria-label="View Hundo Pokémon">Hundo</button>
+            </div>
+            <div id="generation-tabs">
+                <button class="gen-button" onclick="scrollToGeneration('1')" aria-label="Scroll to Generation I">I</button>
+                <button class="gen-button" onclick="scrollToGeneration('2')" aria-label="Scroll to Generation II">II</button>
+                <button class="gen-button" onclick="scrollToGeneration('3')" aria-label="Scroll to Generation III">III</button>
+                <button class="gen-button" onclick="scrollToGeneration('4')" aria-label="Scroll to Generation IV">IV</button>
+                <button class="gen-button" onclick="scrollToGeneration('5')" aria-label="Scroll to Generation V">V</button>
+                <button class="gen-button" onclick="scrollToGeneration('6')" aria-label="Scroll to Generation VI">VI</button>
+                <button class="gen-button" onclick="scrollToGeneration('7')" aria-label="Scroll to Generation VII">VII</button>
+                <button class="gen-button" onclick="scrollToGeneration('8')" aria-label="Scroll to Generation VIII">VIII</button>
+                <button class="gen-button" onclick="scrollToGeneration('9')" aria-label="Scroll to Generation IX">IX</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
         <div id="loading">Loading Pokémon data...</div>
         <div id="content"></div>
-        <div id="debug"></div>
+        <div id="debug" class="debug"></div>
         <div id="toast" class="toast">URL copied to clipboard</div>
-        <div id="draggableBar">
-            <span class="grip">☰</span>
-            <button id="saveButton">Save</button>
-            <button id="topButton">Top</button>
-            <button id="clearButton">Clear</button>
-            <span class="filter-label">Show only:</span>
-            <button id="filterGrey" class="filter-button" title="Filter Grey"></button>
-            <button id="filterYellow" class="filter-button" title="Filter Yellow"></button>
-            <button id="filterBlue" class="filter-button" title="Filter Blue"></button>
-            <button id="filterRed" class="filter-button" title="Filter Red"></button>
-        </div>
     </div>
+    <footer>
+        <div class="footer-text">
+            Pokémon data is copyrighted by The Pokémon Company.<br />
+            This dataset is a fan page for non-commercial use only.<br />
+            Data sourced from user-provided files and Pokémon GO event information.
+        </div>
+    </footer>
+    <br><br><br>
     <script src="script.js"></script>
 </body>
 </html>
