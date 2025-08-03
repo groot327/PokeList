@@ -4,7 +4,6 @@ let currentGeneration = localStorage.getItem('currentGeneration') || null;
 let currentFilter = null;
 const cellStates = {};
 let isProcessingTap = false;
-let sortedEntriesCache = {};
 
 let cellsForScreen = 5;
 let myScreenWidth = window.screen.width;
@@ -21,31 +20,16 @@ function loadCellStates() {
         Object.assign(cellStates, JSON.parse(savedStates));
     }
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('states')) {
-        try {
-            Object.assign(cellStates, JSON.parse(atob(urlParams.get('states'))));
-        } catch (e) {
-            console.error('Error parsing URL states:', e);
-            document.getElementById('debug').innerHTML = `Error parsing URL states: ${e.message}`;
-            document.getElementById('debug').style.display = 'block';
+    urlParams.forEach((value, key) => {
+        if (['grey', 'yellow', 'blue', 'red'].includes(value)) {
+            cellStates[key] = value;
         }
-    }
+    });
     saveCellStates();
 }
 
 function saveCellStates() {
     localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
-}
-
-function cacheSortedEntries() {
-    Object.keys(pokemonData).forEach(fileNumber => {
-        sortedEntriesCache[fileNumber] = {};
-        ['shiny', 'xxl', 'xxs', 'hundo'].forEach(tab => {
-            const data = pokemonData[fileNumber][tab] || [];
-            sortedEntriesCache[fileNumber][tab] = (tab === 'shiny' ? Object.keys(data) : data)
-                .sort((a, b) => parseInt(a.split('-')[0], 10) - parseInt(b.split('-')[0], 10));
-        });
-    });
 }
 
 fetch('pokemon.json')
@@ -61,15 +45,11 @@ fetch('pokemon.json')
         if (!data || Object.keys(data).length === 0) {
             throw new Error('Pokémon data is empty or invalid');
         }
-        currentGeneration = currentGeneration || Object.keys(pokemonData)[0] || '1';
-        localStorage.setItem('currentGeneration', currentGeneration);
-        cacheSortedEntries();
+        console.log('Pokémon data loaded:', data);
         loadCellStates();
         initTabs();
         initFilterButtons();
         initMenu();
-        initSearch();
-        renderTabContent(currentTab);
         document.getElementById('loading').style.display = 'none';
     })
     .catch(error => {
@@ -87,43 +67,20 @@ function initTabs() {
         document.getElementById('debug').style.display = 'block';
         return;
     }
-    const tabMap = {
-        'shiny': 'tabShiny',
-        'xxl': 'tabXXL',
-        'xxs': 'tabXXS',
-        'hundo': 'tabHundo'
-    };
-    Object.entries(tabMap).forEach(([tab, buttonId]) => {
-        const button = document.getElementById(buttonId);
-        if (button) {
-            button.classList.toggle('active', tab === currentTab);
-        } else {
-            console.warn(`Tab button #${buttonId} not found`);
-            document.getElementById('debug').innerHTML = `Warning: Tab button #${buttonId} not found`;
-            document.getElementById('debug').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('debug').style.display = 'none';
-            }, 3000);
-        }
-    });
+    switchTab(currentTab);
     updateGenerationButtons();
-    renderTabContent(currentTab);
 }
 
 function initFilterButtons() {
     const filters = ['grey', 'yellow', 'blue', 'red'];
     filters.forEach(color => {
         const button = document.getElementById(`filter${color.charAt(0).toUpperCase() + color.slice(1)}`);
-        if (button) {
-            button.addEventListener('click', () => toggleFilter(color));
-        } else {
-            console.warn(`Filter button #filter${color.charAt(0).toUpperCase() + color.slice(1)} not found`);
-            document.getElementById('debug').innerHTML = `Warning: Filter button #filter${color.charAt(0).toUpperCase() + color.slice(1)} not found`;
-            document.getElementById('debug').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('debug').style.display = 'none';
-            }, 3000);
-        }
+        button.addEventListener('click', () => toggleFilter(color));
+        const menuButton = document.getElementById(`menuFilter${color.charAt(0).toUpperCase() + color.slice(1)}`);
+        menuButton.addEventListener('click', () => {
+            toggleFilter(color);
+            document.getElementById('side-menu').classList.remove('active');
+        });
     });
 }
 
@@ -131,121 +88,45 @@ function initMenu() {
     const hamburger = document.getElementById('hamburger');
     const sideMenu = document.getElementById('side-menu');
     const closeMenu = document.getElementById('closeMenu');
-    if (!hamburger || !sideMenu || !closeMenu) {
-        console.error('Menu elements missing');
-        document.getElementById('debug').innerHTML = 'Error: Menu elements (hamburger, side-menu, or closeMenu) missing';
-        document.getElementById('debug').style.display = 'block';
-        return;
-    }
+
     sideMenu.classList.remove('active');
-    hamburger.style.visibility = 'visible';
+    hamburger.style.visibility = 'visible'; // Ensure hamburger is visible on load
+
     hamburger.addEventListener('click', () => {
         sideMenu.classList.add('active');
-        hamburger.style.visibility = 'hidden';
+        hamburger.style.visibility = 'hidden'; // Hide hamburger when menu opens
     });
+
     closeMenu.addEventListener('click', () => {
         sideMenu.classList.remove('active');
-        hamburger.style.visibility = 'visible';
+        hamburger.style.visibility = 'visible'; // Show hamburger when menu closes
     });
-    const saveButton = document.getElementById('menuSaveButton');
-    const clearButton = document.getElementById('menuClearButton');
-    const exportButton = document.getElementById('menuExportButton');
-    const importButton = document.getElementById('menuImportButton');
-    if (!saveButton || !clearButton || !exportButton || !importButton) {
-        console.error('Side menu buttons missing');
-        document.getElementById('debug').innerHTML = 'Error: Side menu buttons missing';
-        document.getElementById('debug').style.display = 'block';
-        return;
-    }
-    saveButton.addEventListener('click', () => {
+
+    document.getElementById('menuSaveButton').addEventListener('click', () => {
         const params = new URLSearchParams();
-        params.set('states', btoa(JSON.stringify(cellStates)));
-        const url = `${window.location.origin}${window.location.pathname}?${params}`;
-        navigator.clipboard.writeText(url).then(() => showToast());
+        Object.keys(cellStates).forEach(key => {
+            if (cellStates[key] !== 'grey') {
+                params.set(key, cellStates[key]);
+            }
+        });
+        const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+        navigator.clipboard.writeText(url).then(() => {
+            showToast();
+        });
         sideMenu.classList.remove('active');
-        hamburger.style.visibility = 'visible';
+        hamburger.style.visibility = 'visible'; // Show hamburger after save
     });
-    clearButton.addEventListener('click', () => {
+
+    document.getElementById('menuTopButton').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        sideMenu.classList.remove('active');
+        hamburger.style.visibility = 'visible'; // Show hamburger after scroll
+    });
+
+    document.getElementById('menuClearButton').addEventListener('click', () => {
         clearAllStates();
         sideMenu.classList.remove('active');
-        hamburger.style.visibility = 'visible';
-    });
-    exportButton.addEventListener('click', () => {
-        const blob = new Blob([JSON.stringify(cellStates)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'pokemon-states.json';
-        a.click();
-        URL.revokeObjectURL(url);
-        sideMenu.classList.remove('active');
-        hamburger.style.visibility = 'visible';
-    });
-    importButton.addEventListener('click', () => {
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = '.json';
-        input.onchange = e => {
-            const file = e.target.files[0];
-            const reader = new FileReader();
-            reader.onload = event => {
-                try {
-                    Object.assign(cellStates, JSON.parse(event.target.result));
-                    saveCellStates();
-                    renderTabContent(currentTab);
-                } catch (e) {
-                    console.error('Error importing states:', e);
-                    document.getElementById('debug').innerHTML = `Error importing states: ${e.message}`;
-                    document.getElementById('debug').style.display = 'block';
-                }
-                sideMenu.classList.remove('active');
-                hamburger.style.visibility = 'visible';
-            };
-            reader.readAsText(file);
-        };
-        input.click();
-    });
-}
-
-function initSearch() {
-    const searchInput = document.getElementById('searchInput');
-    if (!searchInput) {
-        console.error('Search input not found');
-        document.getElementById('debug').innerHTML = 'Error: Search input not found';
-        document.getElementById('debug').style.display = 'block';
-        return;
-    }
-    searchInput.addEventListener('input', e => {
-        const query = e.target.value.toLowerCase().trim();
-        if (!query) return;
-        let found = false;
-        Object.keys(pokemonData).some(fileNumber => {
-            const tabs = Object.keys(pokemonData[fileNumber]).filter(key => key !== 'generation-name');
-            return tabs.some(tab => {
-                const entries = sortedEntriesCache[fileNumber][tab] || [];
-                return entries.some(key => {
-                    const [number, name] = key.split('-');
-                    if (name.toLowerCase().includes(query) || number.includes(query)) {
-                        const cell = document.querySelector(`td[data-key="${key}"][data-tab="${tab}"]`);
-                        if (cell) {
-                            const headerHeight = document.querySelector('.header').offsetHeight || 120;
-                            const cellTop = cell.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-                            window.scrollTo({ top: cellTop, behavior: 'smooth' });
-                            found = true;
-                            return true;
-                        }
-                    }
-                    return false;
-                });
-            });
-        });
-        if (!found) {
-            document.getElementById('debug').innerHTML = `No Pokémon found matching "${query}"`;
-            document.getElementById('debug').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('debug').style.display = 'none';
-            }, 3000);
-        }
+        hamburger.style.visibility = 'visible'; // Show hamburger after clear
     });
 }
 
@@ -256,10 +137,8 @@ function clearAllStates() {
     currentFilter = null;
     const filters = ['grey', 'yellow', 'blue', 'red'];
     filters.forEach(c => {
-        const button = document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`);
-        if (button) {
-            button.classList.remove('active');
-        }
+        document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`).classList.remove('active');
+        document.getElementById(`menuFilter${c.charAt(0).toUpperCase() + c.slice(1)}`).classList.remove('active');
     });
     saveCellStates();
     renderTabContent(currentTab);
@@ -270,18 +149,16 @@ function toggleFilter(color) {
     if (currentFilter === color) {
         currentFilter = null;
         filters.forEach(c => {
-            const btn = document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`);
-            if (btn) {
-                btn.classList.remove('active');
-            }
+            document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`).classList.remove('active');
+            document.getElementById(`menuFilter${c.charAt(0).toUpperCase() + c.slice(1)}`).classList.remove('active');
         });
     } else {
         currentFilter = color;
         filters.forEach(c => {
             const btn = document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`);
-            if (btn) {
-                btn.classList.toggle('active', c === color);
-            }
+            const menuBtn = document.getElementById(`menuFilter${c.charAt(0).toUpperCase() + c.slice(1)}`);
+            btn.classList.toggle('active', c === color);
+            menuBtn.classList.toggle('active', c === color);
         });
     }
     renderTabContent(currentTab);
@@ -290,16 +167,11 @@ function toggleFilter(color) {
 function switchTab(tab) {
     currentTab = tab;
     localStorage.setItem('currentTab', tab);
-    const tabMap = {
-        'shiny': 'tabShiny',
-        'xxl': 'tabXXL',
-        'xxs': 'tabXXS',
-        'hundo': 'tabHundo'
-    };
-    Object.entries(tabMap).forEach(([t, buttonId]) => {
-        const button = document.getElementById(buttonId);
-        if (button) {
-            button.classList.toggle('active', t === tab);
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(btn => {
+        btn.classList.remove('active', 'hundo-active');
+        if (btn.getAttribute('onclick') === `switchTab('${tab}')`) {
+            btn.classList.add(tab === 'hundo' ? 'hundo-active' : 'active');
         }
     });
     renderTabContent(tab);
@@ -310,10 +182,10 @@ function scrollToGeneration(genNumber) {
     localStorage.setItem('currentGeneration', genNumber);
     const section = document.querySelector(`.tab-content h2[data-gen="${genNumber}"]`);
     if (section) {
-        const headerHeight = document.querySelector('.header').offsetHeight || 120;
-        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+        const headerHeight = document.querySelector('.header').offsetHeight || 180;
+        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({
-            top: sectionTop,
+            top: sectionTop - headerHeight - 10,
             behavior: 'smooth'
         });
         updateGenerationButtons();
@@ -323,118 +195,125 @@ function scrollToGeneration(genNumber) {
 function updateGenerationButtons() {
     const buttons = document.querySelectorAll('.gen-button');
     buttons.forEach(btn => {
-        const gen = btn.textContent.replace('Gen ', '');
-        btn.classList.toggle('active', gen === currentGeneration);
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick') === `scrollToGeneration('${currentGeneration}')`) {
+            btn.classList.add('active');
+        }
     });
 }
 
-function generateCellContent(key, tab) {
-    const [number, name, variant] = key.split('-');
-    const baseImageUrl = "https://groot327.github.io/PokeList/PokeImgs";
-    let imageSrc, displayForm;
-    if (tab === 'shiny') {
-        const [form, imageUrl] = pokemonData[currentGeneration][tab][key] || ['normal', ''];
-        imageSrc = imageUrl || `${baseImageUrl}/pm${Number(number)}.s.icon.png`;
-        displayForm = form === 'normal' ? '' : form;
-    } else {
-        imageSrc = `${baseImageUrl}/pm${Number(number)}.icon.png`;
-        displayForm = variant ? variant.toUpperCase() : '';
-    }
-    return `
-        <div><strong>#${number.padStart(3, '0')}</strong></div>
-        <div><img src="${imageSrc}" alt="${name} ${displayForm}" loading="lazy"></div>
-        <div style="display: block;">${name}</div>
-        <div style="display: block;">${displayForm}</div>
-    `;
-}
-
 function renderTabContent(tab) {
-    if (!pokemonData || !pokemonData[currentGeneration]) {
-        console.error('Invalid pokemonData or currentGeneration');
-        document.getElementById('content').innerHTML = '<p>Invalid Pokémon data or generation.</p>';
-        document.getElementById('debug').innerHTML = `Error: Invalid pokemonData or currentGeneration ${currentGeneration}`;
-        document.getElementById('debug').style.display = 'block';
-        return;
-    }
     const content = document.getElementById('content');
-    const existingSections = Array.from(content.querySelectorAll('.tab-content'));
-    const fragment = document.createDocumentFragment();
+    content.innerHTML = '';
+    
     const sortedKeys = Object.keys(pokemonData).sort((a, b) => Number(a) - Number(b));
-
+    console.log('Rendering tab:', tab, 'Available generations:', sortedKeys); // Debug: Log available generations
+    
     sortedKeys.forEach(fileNumber => {
         const generation = pokemonData[fileNumber];
         const generationName = generation['generation-name'] || `Generation ${fileNumber}`;
         const data = generation[tab] || [];
-        let section = existingSections.find(s => s.querySelector(`h2[data-gen="${fileNumber}"]`));
-        if (!section) {
-            section = document.createElement('div');
-            section.className = 'tab-content';
-            section.innerHTML = `<h2 data-gen="${fileNumber}">Gen ${fileNumber} - ${generationName} - ${tab.toUpperCase()}${currentFilter ? ` (${currentFilter.toUpperCase()} Filter)` : ''}</h2>`;
-        } else {
-            section.querySelector('h2').textContent = `Gen ${fileNumber} - ${generationName} - ${tab.toUpperCase()}${currentFilter ? ` (${currentFilter.toUpperCase()} Filter)` : ''}`;
-        }
-
-        if (!data || (tab === 'shiny' && Object.keys(data).length === 0) || (tab !== 'shiny' && data.length === 0)) {
-            section.innerHTML = `<h2 data-gen="${fileNumber}">Gen ${fileNumber} - ${generationName} - ${tab.toUpperCase()}</h2><p>No ${tab.toUpperCase()} data available.</p>`;
-            fragment.appendChild(section);
+        
+        console.log(`Generation ${fileNumber} (${generationName}):`, { tab, data }); // Debug: Log data for each generation
+        
+        const section = document.createElement('div');
+        section.className = 'tab-content';
+        section.innerHTML = `<h2 data-gen="${fileNumber}">Gen ${fileNumber} - ${generationName} - ${tab.toUpperCase()}${currentFilter ? ` (${currentFilter.toUpperCase()} Filter)` : ''}</h2>`;
+        
+        // Check if data is empty or invalid
+        if (!data || (tab === 'shiny' && Object.keys(data).length === 0) || (tab !== 'shiny' && Array.isArray(data) && data.length === 0)) {
+            section.innerHTML += `<p>No ${tab.toUpperCase()} data available for Gen ${fileNumber}.</p>`;
+            content.appendChild(section);
             return;
         }
 
-        let table = section.querySelector('table');
-        if (!table) {
-            table = document.createElement('table');
-            section.appendChild(table);
+        const table = document.createElement('table');
+        let row;
+        let cellCount = 0;
+        
+        let entries = [];
+        if (tab === 'shiny') {
+            entries = Object.keys(data).sort((a, b) => {
+                const numA = parseInt(a.split('-')[0], 10);
+                const numB = parseInt(b.split('-')[0], 10);
+                return numA - numB;
+            });
         } else {
-            table.innerHTML = '';
+            if (!Array.isArray(data)) {
+                console.warn(`Data for tab "${tab}" in generation ${generationName} is not an array.`);
+                section.innerHTML += `<p>Error: Invalid data format for ${tab.toUpperCase()} in Gen ${fileNumber}.</p>`;
+                content.appendChild(section);
+                return;
+            }
+            entries = data.sort((a, b) => {
+                const numA = parseInt(a.split('-')[0], 10);
+                const numB = parseInt(b.split('-')[0], 10);
+                return numA - numB;
+            });
         }
 
-        let row, cellCount = 0;
-        let entries = sortedEntriesCache[fileNumber][tab] || [];
         entries.forEach((key, index) => {
             const state = cellStates[key] || 'grey';
-            if (currentFilter && state !== currentFilter) return;
-            if (cellCount % cellsForScreen === 0) row = table.insertRow();
-            const existingCell = document.querySelector(`td[data-key="${key}"][data-tab="${tab}"]`);
-            let cell;
-            if (existingCell && existingCell.dataset.tab === tab) {
-                cell = existingCell;
-                cell.innerHTML = generateCellContent(key, tab);
-                cell.className = state;
-            } else {
-                cell = row.insertCell();
-                cell.dataset.key = key;
-                cell.dataset.tab = tab;
-                cell.innerHTML = generateCellContent(key, tab);
-                cell.className = state;
-                cell.setAttribute('role', 'button');
-                cell.setAttribute('aria-label', `Toggle state for ${key.split('-')[1]} ${tab === 'shiny' ? (pokemonData[fileNumber][tab][key]?.[0] || '') : key.split('-')[2] || ''}`);
-                cell.tabIndex = 0;
-                cell.onclick = () => {
-                    if (isProcessingTap) return;
-                    isProcessingTap = true;
-                    handleCellClick(key, cell);
-                    setTimeout(() => { isProcessingTap = false; }, 100);
-                };
-                cell.onkeydown = e => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleCellClick(key, cell);
-                    }
-                };
+            if (currentFilter && state !== currentFilter) {
+                return;
             }
+
+            if (cellCount % cellsForScreen === 0) {
+                row = table.insertRow();
+            }
+
+            let number, name, variant, form, imageUrl, displayNumber, displayVariant, imageSrc, displayForm;
+            let baseImageUrl = "https://groot327.github.io/PokeList/PokeImgs";
+            if (tab === 'shiny') {
+                [number, name, variant] = key.split('-');
+                [form, imageUrl] = data[key] || ['normal', ''];
+                displayNumber = number.padStart(3, '0');
+                imageSrc = imageUrl || `${baseImageUrl}/pm${Number(displayNumber)}.s.icon.png`;
+                displayForm = form === 'normal' ? '' : form;
+            } else {
+                [number, name, variant] = key.split('-');
+                displayNumber = number.padStart(3, '0');
+                displayVariant = variant ? variant.toUpperCase() : '';
+                imageSrc = imageUrl || `${baseImageUrl}/pm${Number(displayNumber)}.icon.png`;
+                displayForm = displayVariant;
+            }
+
+            const cell = row.insertCell();
+            cell.innerHTML = `
+                <div><strong>#${displayNumber}</strong></div>
+                <div><img src="${imageSrc}" alt="${name} ${displayForm}"></div>
+                <div style="display: block;">${name}</div>
+                <div style="display: block;">${displayForm}</div>
+            `;
+            cell.dataset.key = key;
+            cell.dataset.tab = tab;
+            cellStates[key] = cellStates[key] || 'grey';
+            updateCellColor(cell, cellStates[key]);
+            
+            cell.addEventListener('click', (e) => {
+                if (isProcessingTap) return;
+                isProcessingTap = true;
+                handleCellClick(key, cell);
+                setTimeout(() => { isProcessingTap = false; }, 100);
+            });
+            
             cellCount++;
         });
-
+        
         if (table.rows.length > 0) {
             section.appendChild(table);
+            content.appendChild(section);
         } else {
-            section.innerHTML = `<h2 data-gen="${fileNumber}">Gen ${fileNumber} - ${generationName} - ${tab.toUpperCase()}</h2><p>No ${tab.toUpperCase()} Pokémon available${currentFilter ? ` with ${currentFilter} filter` : ''}.</p>`;
+            section.innerHTML += `<p>No ${tab.toUpperCase()} Pokémon available for Gen ${fileNumber}${currentFilter ? ` with ${currentFilter} filter` : ''}.</p>`;
+            content.appendChild(section);
         }
-        fragment.appendChild(section);
     });
-
-    content.innerHTML = '';
-    content.appendChild(fragment);
+    
+    updateGenerationButtons();
+    
+    if (currentGeneration) {
+        setTimeout(() => scrollToGeneration(currentGeneration), 0);
+    }
 }
 
 function updateCellColor(cell, state) {
@@ -445,12 +324,6 @@ function updateCellColor(cell, state) {
 }
 
 function handleCellClick(key, cell) {
-    if (!cell) {
-        console.error('Cell is null in handleCellClick');
-        document.getElementById('debug').innerHTML = 'Error: Cell is null in handleCellClick';
-        document.getElementById('debug').style.display = 'block';
-        return;
-    }
     const currentState = cellStates[key] || 'grey';
     let nextState;
     if (currentState === 'grey') nextState = 'yellow';
@@ -458,21 +331,67 @@ function handleCellClick(key, cell) {
     else if (currentState === 'blue') nextState = 'red';
     else nextState = 'grey';
     cellStates[key] = nextState;
-    cell.className = nextState;
     updateCellColor(cell, nextState);
     saveCellStates();
+    renderTabContent(currentTab);
 }
+
+document.getElementById('saveButton').addEventListener('click', () => {
+    const params = new URLSearchParams();
+    Object.keys(cellStates).forEach(key => {
+        if (cellStates[key] !== 'grey') {
+            params.set(key, cellStates[key]);
+        }
+    });
+    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    navigator.clipboard.writeText(url).then(() => {
+        showToast();
+    });
+});
 
 function showToast() {
     const toast = document.getElementById('toast');
-    if (!toast) {
-        console.error('Toast element not found');
-        document.getElementById('debug').innerHTML = 'Error: Toast element not found';
-        document.getElementById('debug').style.display = 'block';
-        return;
-    }
     toast.classList.add('show');
     setTimeout(() => {
         toast.classList.remove('show');
     }, 3000);
+}
+
+document.getElementById('topButton').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+const draggableBar = document.getElementById('draggableBar');
+let isDragging = false;
+let currentX;
+let initialX;
+let xOffset = 0;
+
+draggableBar.addEventListener('mousedown', startDragging);
+draggableBar.addEventListener('touchstart', startDragging);
+document.addEventListener('mousemove', drag);
+document.addEventListener('touchmove', drag);
+document.addEventListener('mouseup', stopDragging);
+document.addEventListener('touchend', stopDragging);
+
+function startDragging(e) {
+    if (e.target.id === 'saveButton' || e.target.id === 'topButton' || e.target.classList.contains('grip') || e.target.classList.contains('filter-button')) return;
+    initialX = e.type === 'touchstart' ? e.touches[0].clientX - xOffset : e.clientX - xOffset;
+    isDragging = true;
+}
+
+function drag(e) {
+    if (isDragging) {
+        e.preventDefault();
+        currentX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+        xOffset = currentX - initialX;
+        const barWidth = draggableBar.offsetWidth;
+        const maxX = window.innerWidth - barWidth - 10;
+        xOffset = Math.max(10, Math.min(xOffset, maxX));
+        draggableBar.style.left = xOffset + 'px';
+    }
+}
+
+function stopDragging() {
+    isDragging = false;
 }

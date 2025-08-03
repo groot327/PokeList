@@ -248,6 +248,10 @@ td div {
     pointer-events: none;
 }
 
+td div {
+    overflow-wrap: break-word; /* Ensure text wrapping for name and form */
+}
+
 td img {
     max-width: 50px;
     height: auto;
@@ -291,14 +295,14 @@ footer {
 .side-menu {
     position: fixed;
     top: 0;
-    left: -167px; /* Matches new width */
-    width: 167px; /* Reduced to ~2/3 of 250px */
+    left: -167px;
+    width: 167px;
     height: 100%;
     background-color: #f0f0f0;
     box-shadow: 2px 0 5px rgba(0,0,0,0.2);
     z-index: 1050;
     padding: 20px;
-    transition: left 0.3s ease-in-out; /* Smooth slide animation */
+    transition: left 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -370,7 +374,7 @@ footer {
 
 #content {
     min-height: 100px;
-    margin-top: 2px; /* Added 2px buffer below header */
+    margin-top: 2px;
 }
 
 .debug {
