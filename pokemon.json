@@ -3174,39 +3174,39 @@
                 "https://groot327.github.io/PokeList/PokeImgs/pm326.s.icon.png"
             ],
             "327-Spinda-00": [
-                "Spinda 1",
+                "# 1",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f00.s.icon.png"
             ],
             "327-Spinda-01": [
-                "Spinda 2",
+                "# 2",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f01.s.icon.png"
             ],
             "327-Spinda-02": [
-                "Spinda 3",
+                "# 3",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f02.s.icon.png"
             ],
             "327-Spinda-03": [
-                "Spinda 4",
+                "# 4",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f03.s.icon.png"
             ],
             "327-Spinda-04": [
-                "Spinda 5",
+                "# 5",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f04.s.icon.png"
             ],
             "327-Spinda-05": [
-                "Spinda 6",
+                "# 6",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f05.s.icon.png"
             ],
             "327-Spinda-06": [
-                "Spinda 7",
+                "# 7",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f06.s.icon.png"
             ],
             "327-Spinda-07": [
-                "Spinda 8",
+                "# 8",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f07.s.icon.png"
             ],
             "327-Spinda-08": [
-                "Spinda 9 Hearts",
+                "# 9 Hearts",
                 "https://groot327.github.io/PokeList/PokeImgs/pm327.f08.s.icon.png"
             ],
             "328-Trapinch-f640a881c15b274bf36e02bc698e4fc8": [
@@ -3305,21 +3305,17 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm350.s.icon.png"
             ],
-            "351-Castform Normal-a17346b0175ed67965fbc9ea17eb1597": [
+            "351-Castform-3e29d6b7816af4f1cc2e345199e42997": [
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm351.s.icon.png"
             ],
-            "351-Castform Sun-197e60f6c5332619d9a1261492de286d": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm351.s.icon.png"
+            "351-Castform-e7c934f1902fc92338eb1a447047add2": [
+                "Sun",
+                "https://groot327.github.io/PokeList/PokeImgs/pm351.fSUNNY.s.icon.png"
             ],
-            "351-Castformi Rain-3ed8b1cdb334510b59b01b9c15b499b7": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm351.s.icon.png"
-            ],
-            "351-Castform Snow-9f1c9507df25e610914632fe400ebcc9": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm351.s.icon.png"
+            "351-Castform-f0cc72608beeb7c6103f36b573c6ce00": [
+                "Snow",
+                "https://groot327.github.io/PokeList/PokeImgs/pm351.fSNOWY.s.icon.png"
             ],
             "352-Kecleon-da110a73b218a9935fbcbab3895fa1b6": [
                 "normal",
@@ -3578,10 +3574,7 @@
             "348-Armaldo-xxl",
             "349-Feebas-xxl",
             "350-Milotic-xxl",
-            "351-Castform Normal-xxl",
-            "351-Castform Sun-xxl",
-            "351-Castformi Rain-xxl",
-            "351-Castform Snow-xxl",
+            "351-Castform-xxl",
             "352-Kecleon-xxl",
             "353-Shuppet-xxl",
             "354-Banette-xxl",
@@ -3718,10 +3711,7 @@
             "348-Armaldo-xxs",
             "349-Feebas-xxs",
             "350-Milotic-xxs",
-            "351-Castform Normal-xxs",
-            "351-Castform Sun-xxs",
-            "351-Castformi Rain-xxs",
-            "351-Castform Snow-xxs",
+            "351-Castform-xxs",
             "352-Kecleon-xxs",
             "353-Shuppet-xxs",
             "354-Banette-xxs",
@@ -3858,10 +3848,7 @@
             "348-Armaldo-hundo",
             "349-Feebas-hundo",
             "350-Milotic-hundo",
-            "351-Castform Normal-hundo",
-            "351-Castform Sun-hundo",
-            "351-Castformi Rain-hundo",
-            "351-Castform Snow-hundo",
+            "351-Castform-hundo",
             "352-Kecleon-hundo",
             "353-Shuppet-hundo",
             "354-Banette-hundo",
@@ -4085,10 +4072,6 @@
             "420-Cherubi-2e092128a5ed578cf70650070e2ed5d1": [
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm420.s.icon.png"
-            ],
-            "421-Cherrim-efda67f3bd9b677c61bab6ffeeaeabd4": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm421.s.icon.png"
             ],
             "421-Cherrim-b7a59e27d8d8720e81170cb3ed02a408": [
                 "Purple Overcast",
@@ -5065,25 +5048,13 @@
                 "Galarian",
                 "https://groot327.github.io/PokeList/PokeImgs/pm554.fGALARIAN.s.icon.png"
             ],
-            "555-Darmanitan-a8645908cf060144a5334a33837ddbf0": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm555.s.icon.png"
-            ],
             "555-Darmanitan-502a305c856882b7a13092a2fa013972": [
                 "Standard",
                 "https://groot327.github.io/PokeList/PokeImgs/pm555.fSTANDARD.s.icon.png"
             ],
-            "555-Darmanitan-7034f5b3c68cfd28c49146c2d716e137": [
-                "Zen",
-                "https://groot327.github.io/PokeList/PokeImgs/pm555.fZEN.s.icon.png"
-            ],
             "555-Darmanitan-5bcd3b823a4a81c68bd44e6fe85db238": [
                 "Galarian Standard",
                 "https://groot327.github.io/PokeList/PokeImgs/pm555.fGALARIAN_STANDARD.s.icon.png"
-            ],
-            "555-Darmanitan-ba53b0cf859f643b4f71bff1caef20f0": [
-                "Galarian Zen",
-                "https://groot327.github.io/PokeList/PokeImgs/pm555.fGALARIAN_ZEN.s.icon.png"
             ],
             "556-Maractus-a2ae07868670aa1d397aa8b21299124c": [
                 "normal",
@@ -5213,10 +5184,6 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm584.s.icon.png"
             ],
-            "585-Deerling-4654c70daeac74a67cd2466f37884913": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm585.s.icon.png"
-            ],
             "585-Deerling-1d536530ad051764266bf28b59373883": [
                 "Spring",
                 "https://groot327.github.io/PokeList/PokeImgs/pm585.fSPRING.s.icon.png"
@@ -5232,10 +5199,6 @@
             "585-Deerling-8f3a08b4ebb7dc9ac713c0315b69fbb2": [
                 "Winter",
                 "https://groot327.github.io/PokeList/PokeImgs/pm585.fWINTER.s.icon.png"
-            ],
-            "586-Sawsbuck-ffd3f8cf78eaf70bc424eccfcda01fc2": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm586.s.icon.png"
             ],
             "586-Sawsbuck-7fe748e3b1e1e1804cad4a73ee9bc860": [
                 "Spring",
@@ -5517,10 +5480,6 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm646.s.icon.png"
             ],
-            "647-Keldeo-f251eba8b1683ca95ffee393f5f3d12e": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm647.s.icon.png"
-            ],
             "647-Keldeo-01be97a2b36be44d199d73ede5fd9471": [
                 "Ordinary",
                 "https://groot327.github.io/PokeList/PokeImgs/pm647.fORDINARY.s.icon.png"
@@ -5529,10 +5488,6 @@
                 "Resolute",
                 "https://groot327.github.io/PokeList/PokeImgs/pm647.fRESOLUTE.s.icon.png"
             ],
-            "648-Meloetta-cf83a90aeaafebe6bd69ad9bfe9a3c23": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm648.s.icon.png"
-            ],
             "648-Meloetta-c2e0ff7bc205a7540743b93dc7706a2b": [
                 "Aria",
                 "https://groot327.github.io/PokeList/PokeImgs/pm648.fARIA.s.icon.png"
@@ -5540,10 +5495,6 @@
             "648-Meloetta-f553a7b1e77909c5958b8c288ec41720": [
                 "Pirouette",
                 "https://groot327.github.io/PokeList/PokeImgs/pm648.fPIROUETTE.s.icon.png"
-            ],
-            "649-Genesect-0373ddc8142fb4942e4a7b3bc7bd7f7d": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm649.s.icon.png"
             ],
             "649-Genesect-8b3cd321c7aa10ed4a02badf5cfdb92d": [
                 "Normal",
@@ -6048,22 +5999,6 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm650.s.icon.png"
             ],
-            "651-Quilladin-dd3213a250be90f755d8177f4f92ef78": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm651.s.icon.png"
-            ],
-            "652-Chesnaught-c4a36d03fa8a3a375648838761d54137": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm652.s.icon.png"
-            ],
-            "653-Fennekin-b2a2163413316c3b876a49e1bbb4ad58": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm653.s.icon.png"
-            ],
-            "654-Braixen-0fb511e24f952369be5efd906418ecf5": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm654.s.icon.png"
-            ],
             "655-Delphox-ec03e1c6009e25fc59e9174009d2bb5c": [
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm655.s.icon.png"
@@ -6216,10 +6151,6 @@
                 "Female",
                 "https://groot327.github.io/PokeList/PokeImgs/pm668.fFEMALE.s.icon.png"
             ],
-            "669-Flabébé-0e28bd2bd9d32223a2177745e05f0a1a": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm669.s.icon.png"
-            ],
             "669-Flabébé-0d690e851e4ed95068e17c76a84c9f52": [
                 "Yellow",
                 "https://groot327.github.io/PokeList/PokeImgs/pm669.fYELLOW.s.icon.png"
@@ -6236,25 +6167,45 @@
                 "White",
                 "https://groot327.github.io/PokeList/PokeImgs/pm669.fWHITE.s.icon.png"
             ],
-            "671-Florges Red-da3aa45d844fcb97ad6c09799934a608": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm671.s.icon.png"
+            "670-Floette-4dc02910c4ab9022a477fa6fe10d77ec": [
+                "Red",
+                "https://groot327.github.io/PokeList/PokeImgs/pm670.fRED.s.icon.png"
             ],
-            "671-Florges Yellow-90bdef30d9747ab7ba2faa7063becf83": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm671.s.icon.png"
+            "670-Floette-ca2a0987b9942d2c4e482f783ca706be": [
+                "Yellow",
+                "https://groot327.github.io/PokeList/PokeImgs/pm670.fYELLOW.s.icon.png"
             ],
-            "671-Florges Orange-edea171a1d242014d5238e4d696cfe3b": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm671.s.icon.png"
+            "670-Floette-14a9e1528e23c2e7db66db6387f67241": [
+                "Orange",
+                "https://groot327.github.io/PokeList/PokeImgs/pm670.fORANGE.s.icon.png"
             ],
-            "671-Florges Blue-71f59a8de1a4cd9781fbf6a9b8c2acfe": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm671.s.icon.png"
+            "670-Floette-61c523b48c3f748cdc3317e65c1ba739": [
+                "Blue",
+                "https://groot327.github.io/PokeList/PokeImgs/pm670.fBLUE.s.icon.png"
             ],
-            "671-Florges White-7edd094c3a2647c46747db0cb460ec94": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm671.s.icon.png"
+            "670-Floette-a02b83154cc3854169321aa858a61f61": [
+                "White",
+                "https://groot327.github.io/PokeList/PokeImgs/pm670.fWHITE.s.icon.png"
+            ],
+            "671-Florges-45d5ba3f0e61b860256ccbb1b76248d9": [
+                "Red",
+                "https://groot327.github.io/PokeList/PokeImgs/pm671.fRED.s.icon.png"
+            ],
+            "671-Florges-992d6ed8938048f6a2bb24db6e784d2f": [
+                "Yellow",
+                "https://groot327.github.io/PokeList/PokeImgs/pm671.fYELLOW.s.icon.png"
+            ],
+            "671-Florges-c3a49811db01ae995d4714db4f719088": [
+                "Orange",
+                "https://groot327.github.io/PokeList/PokeImgs/pm671.fORANGE.s.icon.png"
+            ],
+            "671-Florges-f3f73fc552ba7a61ce898372d87f240b": [
+                "Blue",
+                "https://groot327.github.io/PokeList/PokeImgs/pm671.fBLUE.s.icon.png"
+            ],
+            "671-Florges-6da6db7f4cddbdf2a6c568b84f0baf74": [
+                "White",
+                "https://groot327.github.io/PokeList/PokeImgs/pm671.fWHITE.s.icon.png"
             ],
             "672-Skiddo-72e66d0868cad5ec05a59d58843123ec": [
                 "normal",
@@ -6271,10 +6222,6 @@
             "675-Pangoro-97cad4f146078277bf77ebd845643b89": [
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm675.s.icon.png"
-            ],
-            "676-Furfrou-06ebb25c82d1e3ee568cd388d3f17944": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm676.s.icon.png"
             ],
             "676-Furfrou-49f208acb29070e5e13c9164b1adcb5b": [
                 "Heart Trim",
@@ -6476,38 +6423,6 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm709.s.icon.png"
             ],
-            "710-Pumpkaboo Small Size-674d267519888fe0c491cd12ad86f5ce": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm710.s.icon.png"
-            ],
-            "710-Pumpkaboo Average Size-cdd25a99c6658764af62ac67c2364c7a": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm710.s.icon.png"
-            ],
-            "710-Pumpkaboo Large Size-a8c1522cbf35c0d038c0ebe9b899ecae": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm710.s.icon.png"
-            ],
-            "710-Pumpkaboo Super Size-3dfe94f7a852d446f3348908400775cf": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm710.s.icon.png"
-            ],
-            "711-Gourgeist Small Size-22047c14aeaddb5fdd18e65165490c44": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm711.s.icon.png"
-            ],
-            "711-Gourgeist Average Size-10f7445c36c10b908c5a1ceeb5c4021a": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm711.s.icon.png"
-            ],
-            "711-Gourgeist Large Size-416df0721bc2b8425f3698f63a26fcbc": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm711.s.icon.png"
-            ],
-            "711-Gourgeist Super Size-8202a82cf826fbf7eca364d71fb8f6f7": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm711.s.icon.png"
-            ],
             "712-Bergmite-beb95b5e5fafa84ea9f9dad4bc15288f": [
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm712.s.icon.png"
@@ -6532,10 +6447,6 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm716.s.icon.png"
             ],
-            "716-Xerneas-6e8c56d2de4b8f3e5dc78b2df2d8f94f": [
-                "Neutral",
-                "https://groot327.github.io/PokeList/PokeImgs/pm716.fNEUTRAL.s.icon.png"
-            ],
             "717-Yveltal-865857b3c5e61946996587b581e2c96f": [
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm717.s.icon.png"
@@ -6543,10 +6454,6 @@
         },
         "xxl": [
             "650-Chespin-xxl",
-            "651-Quilladin-xxl",
-            "652-Chesnaught-xxl",
-            "653-Fennekin-xxl",
-            "654-Braixen-xxl",
             "655-Delphox-xxl",
             "656-Froakie-xxl",
             "657-Frogadier-xxl",
@@ -6562,16 +6469,8 @@
             "667-Litleo-xxl",
             "668-Pyroar-xxl",
             "669-Flabébé-xxl",
-            "670-Floette Red-xxl",
-            "670-Floette Yellow-xxl",
-            "670-Floette Orange-xxl",
-            "670-Floette Blue-xxl",
-            "670-Floette White-xxl",
-            "671-Florges Red-xxl",
-            "671-Florges Yellow-xxl",
-            "671-Florges Orange-xxl",
-            "671-Florges Blue-xxl",
-            "671-Florges White-xxl",
+            "670-Floette-xxl",
+            "671-Florges-xxl",
             "672-Skiddo-xxl",
             "673-Gogoat-xxl",
             "674-Pancham-xxl",
@@ -6631,10 +6530,6 @@
         ],
         "xxs": [
             "650-Chespin-xxs",
-            "651-Quilladin-xxs",
-            "652-Chesnaught-xxs",
-            "653-Fennekin-xxs",
-            "654-Braixen-xxs",
             "655-Delphox-xxs",
             "656-Froakie-xxs",
             "657-Frogadier-xxs",
@@ -6650,16 +6545,8 @@
             "667-Litleo-xxs",
             "668-Pyroar-xxs",
             "669-Flabébé-xxs",
-            "670-Floette Red-xxs",
-            "670-Floette Yellow-xxs",
-            "670-Floette Orange-xxs",
-            "670-Floette Blue-xxs",
-            "670-Floette White-xxs",
-            "671-Florges Red-xxs",
-            "671-Florges Yellow-xxs",
-            "671-Florges Orange-xxs",
-            "671-Florges Blue-xxs",
-            "671-Florges White-xxs",
+            "670-Floette-xxs",
+            "671-Florges-xxs",
             "672-Skiddo-xxs",
             "673-Gogoat-xxs",
             "674-Pancham-xxs",
@@ -6719,10 +6606,6 @@
         ],
         "hundo": [
             "650-Chespin-hundo",
-            "651-Quilladin-hundo",
-            "652-Chesnaught-hundo",
-            "653-Fennekin-hundo",
-            "654-Braixen-hundo",
             "655-Delphox-hundo",
             "656-Froakie-hundo",
             "657-Frogadier-hundo",
@@ -6738,16 +6621,8 @@
             "667-Litleo-hundo",
             "668-Pyroar-hundo",
             "669-Flabébé-hundo",
-            "670-Floette Red-hundo",
-            "670-Floette Yellow-hundo",
-            "670-Floette Orange-hundo",
-            "670-Floette Blue-hundo",
-            "670-Floette White-hundo",
-            "671-Florges Red-hundo",
-            "671-Florges Yellow-hundo",
-            "671-Florges Orange-hundo",
-            "671-Florges Blue-hundo",
-            "671-Florges White-hundo",
+            "670-Floette-hundo",
+            "671-Florges-hundo",
             "672-Skiddo-hundo",
             "673-Gogoat-hundo",
             "674-Pancham-hundo",
@@ -6901,21 +6776,21 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm740.s.icon.png"
             ],
-            "741-Oricorio Baile Style-2af5195b1f94f3d2a5d3962a331fbdd2": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm741.s.icon.png"
+            "741-Oricorio-4ab7e33b2a6b22d138a57458ed411bee": [
+                "Baile Style",
+                "https://groot327.github.io/PokeList/PokeImgs/pm741.fBAILE.s.icon.png"
             ],
-            "741-Oricorio Pom-Pom Style-6f0fdb610773320494375624e0cae0a3": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm741.s.icon.png"
+            "741-Oricorio-cb86abe4f77999b4d73efb10d43a7c4c": [
+                "Pom Style",
+                "https://groot327.github.io/PokeList/PokeImgs/pm741.fPOMPOM.s.icon.png"
             ],
-            "741-Oricorio Pa'u Style-8fbd81c67c518010da1d4f9cb8618c12": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm741.s.icon.png"
+            "741-Oricorio-14a7845d416f710ba5d8a65b514fed60": [
+                "Pa'u Style",
+                "https://groot327.github.io/PokeList/PokeImgs/pm741.fPAU.s.icon.png"
             ],
-            "741-Oricorio Sensu Style-94637b8426b8d7cb958372cd78b75b79": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm741.s.icon.png"
+            "741-Oricorio-1e207d7986e0a3365ec788b88cdaf928": [
+                "Sensu Style",
+                "https://groot327.github.io/PokeList/PokeImgs/pm741.fSENSU.s.icon.png"
             ],
             "742-Cutiefly-28e48284e4c9c030c72e19b1053d9052": [
                 "normal",
@@ -6933,17 +6808,17 @@
                 "Dusk",
                 "https://groot327.github.io/PokeList/PokeImgs/pm744.fDUSK.s.icon.png"
             ],
-            "745-Lycanroc Midday Form-3b42e9048330eb079336b2c16900f5c9": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm745.s.icon.png"
+            "745-Lycanroc-61118aa97bb3afe55f334e160fba0ae3": [
+                "Midday",
+                "https://groot327.github.io/PokeList/PokeImgs/pm745.fMIDDAY.s.icon.png"
             ],
-            "745-Lycanroc Midnight Form-f8ae8cca6b3e5cc82354e059f6c8e774": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm745.s.icon.png"
+            "745-Lycanroc-c7d5eb6321cab817bdedaeefc51dea88": [
+                "Midnight",
+                "https://groot327.github.io/PokeList/PokeImgs/pm745.fMIDNIGHT.s.icon.png"
             ],
-            "745-Lycanroc Dusk Form-ecc58dbb0000437644577582240a01c7": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm745.s.icon.png"
+            "745-Lycanroc-4fdeed7f1247d5fd69c84cc5ae044810": [
+                "Dusk",
+                "https://groot327.github.io/PokeList/PokeImgs/pm745.fDUSK.s.icon.png"
             ],
             "747-Mareanie-7bd319762453e63c8a0e3e6177068018": [
                 "normal",
@@ -7162,16 +7037,11 @@
             "738-Vikavolt-xxl",
             "739-Crabrawler-xxl",
             "740-Crabominable-xxl",
-            "741-Oricorio Baile Style-xxl",
-            "741-Oricorio Pom-Pom Style-xxl",
-            "741-Oricorio Pa'u Style-xxl",
-            "741-Oricorio Sensu Style-xxl",
+            "741-Oricorio-xxl",
             "742-Cutiefly-xxl",
             "743-Ribombee-xxl",
             "744-Rockruff-xxl",
-            "745-Lycanroc Midday Form-xxl",
-            "745-Lycanroc Midnight Form-xxl",
-            "745-Lycanroc Dusk Form-xxl",
+            "745-Lycanroc-xxl",
             "747-Mareanie-xxl",
             "748-Toxapex-xxl",
             "749-Mudbray-xxl",
@@ -7249,16 +7119,11 @@
             "738-Vikavolt-xxs",
             "739-Crabrawler-xxs",
             "740-Crabominable-xxs",
-            "741-Oricorio Baile Style-xxs",
-            "741-Oricorio Pom-Pom Style-xxs",
-            "741-Oricorio Pa'u Style-xxs",
-            "741-Oricorio Sensu Style-xxs",
+            "741-Oricorio-xxs",
             "742-Cutiefly-xxs",
             "743-Ribombee-xxs",
             "744-Rockruff-xxs",
-            "745-Lycanroc Midday Form-xxs",
-            "745-Lycanroc Midnight Form-xxs",
-            "745-Lycanroc Dusk Form-xxs",
+            "745-Lycanroc-xxs",
             "747-Mareanie-xxs",
             "748-Toxapex-xxs",
             "749-Mudbray-xxs",
@@ -7336,16 +7201,11 @@
             "738-Vikavolt-hundo",
             "739-Crabrawler-hundo",
             "740-Crabominable-hundo",
-            "741-Oricorio Baile Style-hundo",
-            "741-Oricorio Pom-Pom Style-hundo",
-            "741-Oricorio Pa'u Style-hundo",
-            "741-Oricorio Sensu Style-hundo",
+            "741-Oricorio-hundo",
             "742-Cutiefly-hundo",
             "743-Ribombee-hundo",
             "744-Rockruff-hundo",
-            "745-Lycanroc Midday Form-hundo",
-            "745-Lycanroc Midnight Form-hundo",
-            "745-Lycanroc Dusk Form-hundo",
+            "745-Lycanroc-hundo",
             "747-Mareanie-hundo",
             "748-Toxapex-hundo",
             "749-Mudbray-hundo",
@@ -7483,13 +7343,13 @@
                 "normal",
                 "https://groot327.github.io/PokeList/PokeImgs/pm848.s.icon.png"
             ],
-            "849-Toxtricity Low Key Form-ae0a9db7ce16159b57ca75c4ab7b72f3": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm849.s.icon.png"
+            "849-Toxtricity-3e43e13c59b7f4ec04248598d6181631": [
+                "Low Key Form",
+                "https://groot327.github.io/PokeList/PokeImgs/POKE_QUESTION.icon.png"
             ],
-            "849-Toxtricity Amped Form-fd56eb031154afe4022ec300e19367f1": [
-                "normal",
-                "https://groot327.github.io/PokeList/PokeImgs/pm849.s.icon.png"
+            "849-Toxtricity-89359dcfe18ddfefcd2152b8b9ffe8e8": [
+                "Amped Form",
+                "https://groot327.github.io/PokeList/PokeImgs/POKE_QUESTION.icon.png"
             ],
             "862-Obstagoon-596b62ef2c859cba7088337be9da3747": [
                 "normal",
@@ -7587,8 +7447,7 @@
             "841-Flapple-xxl",
             "842-Appletun-xxl",
             "848-Toxel-xxl",
-            "849-Toxtricity Low Key Form-xxl",
-            "849-Toxtricity Amped Form-xxl",
+            "849-Toxtricity-xxl",
             "850-Sizzlipede-xxl",
             "851-Centiskorch-xxl",
             "854-Sinistea-xxl",
@@ -7649,8 +7508,7 @@
             "841-Flapple-xxs",
             "842-Appletun-xxs",
             "848-Toxel-xxs",
-            "849-Toxtricity Low Key Form-xxs",
-            "849-Toxtricity Amped Form-xxs",
+            "849-Toxtricity-xxs",
             "850-Sizzlipede-xxs",
             "851-Centiskorch-xxs",
             "854-Sinistea-xxs",
@@ -7711,8 +7569,7 @@
             "841-Flapple-hundo",
             "842-Appletun-hundo",
             "848-Toxel-hundo",
-            "849-Toxtricity Low Key Form-hundo",
-            "849-Toxtricity Amped Form-hundo",
+            "849-Toxtricity-hundo",
             "850-Sizzlipede-hundo",
             "851-Centiskorch-hundo",
             "854-Sinistea-hundo",
