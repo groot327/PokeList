@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Comment out the following no-cache headers before deployment for better performance -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Pokémon Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,21 +15,22 @@
             <button id="menuClearButton" class="menu-button" aria-label="Clear all Pokémon states">Clear</button>
             <button id="menuExportButton" class="menu-button" aria-label="Export Pokémon states">Export</button>
             <button id="menuImportButton" class="menu-button" aria-label="Import Pokémon states">Import</button>
+            <input type="file" id="importFile" accept=".json" style="display: none;" aria-label="Import Pokémon states file">
         </div>
         <div class="container">
             <h1>Pokémon Tracker</h1>
             <div class="search-container">
-                <input id="searchInput" type="text" placeholder="Scroll to Pokémon..." class="search-input" aria-label="Scroll to Pokémon by name or number" />
+                <input id="searchInput" type="text" placeholder="Search Pokémon or Form..." class="search-input" aria-label="Search Pokémon by name, number, or form" />
             </div>
             <div class="filter-container">
                 <span class="filter-label">Show only:</span>
-                <button id="filterGrey" class="filter-button" aria-label="Filter by Grey state"></button>
-                <button id="filterYellow" class="filter-button" aria-label="Filter by Yellow state"></button>
-                <button id="filterBlue" class="filter-button" aria-label="Filter by Blue state"></button>
-                <button id="filterRed" class="filter-button" aria-label="Filter by Red state"></button>
+                <button id="filterGrey" class="filter-button" aria-label="Filter by uncaught Pokémon"></button>
+                <button id="filterYellow" class="filter-button" aria-label="Filter by caught Pokémon"></button>
+                <button id="filterBlue" class="filter-button" aria-label="Filter by traded Pokémon"></button>
+                <button id="filterRed" class="filter-button" aria-label="Filter by perfect Pokémon"></button>
             </div>
             <div id="tabs" class="tab-container">
-                <button id="tabShiny" class="tab-button" onclick="switchTab('shiny')" aria-label="View Shiny Pokémon">Shiny</button>
+                <button id="tabShiny" class="tab-button active" onclick="switchTab('shiny')" aria-label="View Shiny Pokémon">Shiny</button>
                 <button id="tabXXL" class="tab-button" onclick="switchTab('xxl')" aria-label="View XXL Pokémon">XXL</button>
                 <button id="tabXXS" class="tab-button" onclick="switchTab('xxs')" aria-label="View XXS Pokémon">XXS</button>
                 <button id="tabHundo" class="tab-button" onclick="switchTab('hundo')" aria-label="View Hundo Pokémon">Hundo</button>
@@ -51,12 +48,12 @@
             </div>
         </div>
     </header>
-    <div class="container">
+    <main class="container">
         <div id="loading">Loading Pokémon data...</div>
         <div id="content"></div>
         <div id="debug" class="debug"></div>
-        <div id="toast" class="toast">URL copied to clipboard</div>
-    </div>
+        <div id="toast" class="toast">Action completed</div>
+    </main>
     <footer>
         <div class="footer-text">
             Pokémon data is copyrighted by The Pokémon Company.<br />
@@ -64,7 +61,6 @@
             Data sourced from user-provided files and Pokémon GO event information.
         </div>
     </footer>
-    <br><br><br>
     <script src="script.js"></script>
 </body>
 </html>
