@@ -378,12 +378,40 @@ footer {
     background-color: #ffeeaa;
 }
 
-#menuExportButton, #menuImportButton {
+#menuExportButton, #menuImportButton, #menuShareButton {
     background-color: #d0d0d0;
 }
 
-#menuExportButton:hover, #menuImportButton:hover {
+#menuExportButton:hover, #menuImportButton:hover, #menuShareButton:hover {
     background-color: #c0c0c0;
+}
+
+#filterPrompt button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+#filterPrompt button:hover {
+    background-color: #ddd;
+}
+#promptGrey {
+    background-color: #d3d3d3;
+}
+#promptYellow {
+    background-color: #ffff99;
+}
+#promptBlue {
+    background-color: #99ccff;
+}
+#promptRed {
+    background-color: #ff9999;
+}
+#promptCancel {
+    background-color: #ccc;
 }
 
 #loading {

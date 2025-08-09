@@ -13,10 +13,21 @@
         <div id="side-menu" class="side-menu">
             <button id="closeMenu" class="close-menu" aria-label="Close side menu">✖</button>
             <button id="menuSaveButton" class="menu-button" aria-label="Save Pokémon states">Save</button>
+            <button id="menuShareButton" class="menu-button" aria-label="Share Pokémon states">Share</button>
             <button id="menuClearButton" class="menu-button" aria-label="Clear all Pokémon states">Clear</button>
             <button id="menuExportButton" class="menu-button" aria-label="Export Pokémon states">Export</button>
             <button id="menuImportButton" class="menu-button" aria-label="Import Pokémon states">Import</button>
             <input type="file" id="importFile" accept=".json" style="display: none;" aria-label="Import Pokémon states file">
+        </div>
+        <div id="filterPrompt" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+            <div style="background: white; padding: 20px; margin: 20% auto; width: 80%; max-width: 300px; text-align: center; border-radius: 5px;">
+                <p>Please select a color filter to share:</p>
+                <button id="promptGrey">Grey</button>
+                <button id="promptYellow">Yellow</button>
+                <button id="promptBlue">Blue</button>
+                <button id="promptRed">Red</button>
+                <button id="promptCancel">Cancel</button>
+            </div>
         </div>
         <div class="container">
             <h1>Pokémon Tracker</h1>

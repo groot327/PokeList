@@ -114,6 +114,7 @@ function initMenu() {
     const hamburger = document.getElementById('hamburger');
     const sideMenu = document.getElementById('side-menu');
     const closeMenu = document.getElementById('closeMenu');
+    const filterPrompt = document.getElementById('filterPrompt');
 
     sideMenu.classList.remove('active');
     hamburger.style.visibility = 'visible';
@@ -178,6 +179,56 @@ function initMenu() {
         sideMenu.classList.remove('active');
         hamburger.style.visibility = 'visible';
     });
+
+    document.getElementById('menuShareButton').addEventListener('click', () => {
+        if (!currentFilter) {
+            // Show filter prompt if no filter is selected
+            filterPrompt.style.display = 'block';
+            sideMenu.classList.remove('active');
+            hamburger.style.visibility = 'visible';
+        } else {
+            generateShareUrl(currentFilter);
+        }
+    });
+
+    // Filter prompt handlers
+    ['Grey', 'Yellow', 'Blue', 'Red'].forEach(color => {
+        document.getElementById(`prompt${color}`).addEventListener('click', () => {
+            filterPrompt.style.display = 'none';
+            generateShareUrl(color.toLowerCase());
+        });
+    });
+    document.getElementById('promptCancel').addEventListener('click', () => {
+        filterPrompt.style.display = 'none';
+        sideMenu.classList.remove('active');
+        hamburger.style.visibility = 'visible';
+    });
+
+    function generateShareUrl(filter) {
+        const shareData = {
+            tab: currentTab,
+            filter: filter,
+            states: {}
+        };
+        Object.keys(cellStates).forEach(key => {
+            if (cellStates[key] !== 'grey') {
+                shareData.states[key] = cellStates[key];
+            }
+        });
+        const encodedData = btoa(JSON.stringify(shareData));
+        const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+        const url = `${window.location.origin}${basePath}display.html?data=${encodeURIComponent(encodedData)}`;
+        if (url.length > 2000) {
+            showDebug('Warning: Share URL may be too long. Use Export instead.');
+        }
+        navigator.clipboard.writeText(url).then(() => {
+            showToast('Share URL copied to clipboard');
+        }).catch(() => {
+            showDebug('Failed to copy Share URL to clipboard');
+        });
+        sideMenu.classList.remove('active');
+        hamburger.style.visibility = 'visible';
+    }
 
     document.getElementById('importFile').addEventListener('change', (event) => {
         const file = event.target.files[0];
