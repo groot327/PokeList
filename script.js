@@ -182,7 +182,6 @@ function initMenu() {
 
     document.getElementById('menuShareButton').addEventListener('click', () => {
         if (!currentFilter) {
-            // Show filter prompt if no filter is selected
             filterPrompt.style.display = 'block';
             sideMenu.classList.remove('active');
             hamburger.style.visibility = 'visible';
@@ -191,7 +190,6 @@ function initMenu() {
         }
     });
 
-    // Filter prompt handlers
     ['Grey', 'Yellow', 'Blue', 'Red'].forEach(color => {
         document.getElementById(`prompt${color}`).addEventListener('click', () => {
             filterPrompt.style.display = 'none';
@@ -204,30 +202,57 @@ function initMenu() {
         hamburger.style.visibility = 'visible';
     });
 
+    // Initialize Firebase
+    let db;
+    if (typeof firebase !== 'undefined') {
+        try {
+            const firebaseConfig = {
+                apiKey: "AIzaSyBBnkPe5qKDHWrPtgCBcAl4teU9W1h1qW0",
+                authDomain: "g-url-shortener-64c6e.firebaseapp.com",
+                projectId: "g-url-shortener-64c6e",
+                storageBucket: "g-url-shortener-64c6e.firebasestorage.app",
+                messagingSenderId: "786040303042",
+                appId: "1:786040303042:web:d5cd682d1ef4c2ba56ba5b",
+                measurementId: "G-DJYYW10D48"
+            };
+            firebase.initializeApp(firebaseConfig);
+            db = firebase.firestore();
+            console.log('Firebase Firestore initialized');
+        } catch (error) {
+            console.error('Firebase initialization failed:', error);
+            db = null;
+        }
+    } else {
+        console.warn('Firebase SDK not loaded');
+    }
+
     function generateShareUrl(filter) {
-        const shareData = {
-            tab: currentTab,
-            filter: filter,
-            states: {}
-        };
+        const shareData = { tab: currentTab, filter: filter, states: {} };
         Object.keys(cellStates).forEach(key => {
-            if (cellStates[key] !== 'grey') {
-                shareData.states[key] = cellStates[key];
-            }
+            if (cellStates[key] !== 'grey') shareData.states[key] = cellStates[key];
         });
         const encodedData = btoa(JSON.stringify(shareData));
         const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-        const url = `${window.location.origin}${basePath}display.html?data=${encodeURIComponent(encodedData)}`;
-        if (url.length > 2000) {
-            showDebug('Warning: Share URL may be too long. Use Export instead.');
+        const longUrl = `${window.location.origin}${basePath}display.html?data=${encodeURIComponent(encodedData)}`;
+        console.log('Generated long URL:', longUrl);
+        if (longUrl.length > 2000) showDebug('Warning: Share URL may be too long. Use Export instead.');
+
+        try {
+            const shortUrl = shortenUrl(longUrl, db);
+            console.log('Shortened URL:', shortUrl);
+            navigator.clipboard.writeText(shortUrl).then(() => {
+                showToast('Share URL copied to clipboard');
+            }).catch(() => {
+                showDebug('Failed to copy short URL to clipboard');
+            });
+        } catch (error) {
+            console.error('Shortening error:', error);
+            showDebug('Failed to shorten URL: ' + error.message);
+            showToast('URL shortening failed. Please try again later.');
+        } finally {
+            sideMenu.classList.remove('active');
+            hamburger.style.visibility = 'visible';
         }
-        navigator.clipboard.writeText(url).then(() => {
-            showToast('Share URL copied to clipboard');
-        }).catch(() => {
-            showDebug('Failed to copy Share URL to clipboard');
-        });
-        sideMenu.classList.remove('active');
-        hamburger.style.visibility = 'visible';
     }
 
     document.getElementById('importFile').addEventListener('change', (event) => {
@@ -255,6 +280,9 @@ function initMenu() {
         }
     });
 }
+
+// Include shortener.js
+document.write('<script src="shortener.js"></script>');
 
 function clearAllStates() {
     Object.keys(cellStates).forEach(key => {
