@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Tracker</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
@@ -43,8 +43,8 @@
             </div>
             <div id="tabs" class="tab-container">
                 <button id="tabShiny" class="tab-button active" onclick="switchTab('shiny')" aria-label="View Shiny Pokémon">Shiny</button>
-                <button id="tabXXL" class="tab-button" onclick="switchTab('xxl')" aria-label="View XXL Pokémon">XXL</button>
-                <button id="tabXXS" class="tab-button" onclick="switchTab('xxs')" aria-label="View XXS Pokémon">XXS</button>
+                <button id="tabXxl" class="tab-button" onclick="switchTab('xxl')" aria-label="View XXL Pokémon">XXL</button>
+                <button id="tabXxs" class="tab-button" onclick="switchTab('xxs')" aria-label="View XXS Pokémon">XXS</button>
                 <button id="tabHundo" class="tab-button" onclick="switchTab('hundo')" aria-label="View Hundo Pokémon">Hundo</button>
             </div>
             <div id="generation-tabs">
@@ -73,6 +73,41 @@
             Data sourced from user-provided files and Pokémon GO event information.
         </div>
     </footer>
-    <script src="script.js"></script>
+    <!-- Load Firebase Modular SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
+        import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBBnkPe5qKDHWrPtgCBcAl4teU9W1h1qW0",
+            authDomain: "g-url-shortener-64c6e.firebaseapp.com",
+            projectId: "g-url-shortener-64c6e",
+            storageBucket: "g-url-shortener-64c6e.firebasestorage.app",
+            messagingSenderId: "786040303042",
+            appId: "1:786040303042:web:d5cd682d1ef4c2ba56ba5b",
+            measurementId: "G-DJYYW10D48"
+        };
+
+        try {
+            const app = initializeApp(firebaseConfig);
+            window.db = getFirestore(app);
+            window.auth = getAuth(app);
+            signInAnonymously(window.auth)
+                .then(() => {
+                    console.log('Signed in anonymously');
+                })
+                .catch(error => {
+                    console.error('Anonymous sign-in failed:', error);
+                    document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
+                    document.getElementById('debug').innerHTML = `<!-- Anonymous sign-in failed: ${error.message} -->`;
+                });
+        } catch (error) {
+            console.error('Firebase initialization failed:', error);
+            document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
+            document.getElementById('debug').innerHTML = `<!-- Firebase initialization failed: ${error.message} -->`;
+        }
+    </script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

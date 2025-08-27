@@ -1,10 +1,13 @@
+import { signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
+import { doc, setDoc } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+
+let authInitialized = false;
 let pokemonData = null;
 let currentTab = localStorage.getItem('currentTab') || 'shiny';
 let currentFilter = null;
 const cellStates = {};
 let isProcessingTap = false;
 
-// NO_NORMAL_SHINY with leading zeros to match JSON id
 const NO_NORMAL_SHINY = new Set([
     "201", "421", "422", "423", "479", "492", "555", "585", "586", "647",
     "648", "649", "669", "670", "671", "676", "710", "711", "741", "745",
@@ -21,6 +24,21 @@ if (myScreenWidth < 601) {
 }
 document.documentElement.style.setProperty('--cells-for-screen', cellsForScreen);
 
+function showDebug(message) {
+    console.error('DEBUG:', message); // Log to console for developers
+    const debug = document.getElementById('debug');
+    debug.innerHTML = `<!-- ${message} -->`; // Hide in HTML comment
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.innerHTML = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
+
 function loadCellStates() {
     try {
         const savedStates = localStorage.getItem('pokemonCellStates');
@@ -36,7 +54,7 @@ function loadCellStates() {
         saveCellStates();
     } catch (error) {
         console.error('Error loading cell states:', error);
-        showDebug('Error loading saved states. Using default states.');
+        showDebug('Error loading saved states: ' + error.message);
     }
 }
 
@@ -45,29 +63,11 @@ function saveCellStates() {
         localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
     } catch (error) {
         console.error('Error saving cell states:', error);
-        showDebug('Error saving states to localStorage. Storage may be full.');
+        showDebug('Error saving states to localStorage: ' + error.message);
     }
 }
 
-function showDebug(message) {
-    const debug = document.getElementById('debug');
-    debug.innerHTML = message;
-    debug.style.display = 'block';
-    setTimeout(() => {
-        debug.style.display = 'none';
-    }, 5000); // Hide after 5 seconds
-}
-
-function showToast(message) {
-    const toast = document.getElementById('toast');
-    toast.innerHTML = message;
-    toast.classList.add('show');
-    setTimeout(() => {
-        toast.classList.remove('show');
-    }, 3000);
-}
-
-fetch('pokemon.json') // Update to your actual JSON file name
+fetch('pokemon.json')
     .then(response => {
         document.getElementById('loading').style.display = 'block';
         if (!response.ok) {
@@ -88,14 +88,14 @@ fetch('pokemon.json') // Update to your actual JSON file name
     })
     .catch(error => {
         console.error('Error loading Pokémon data:', error);
-        document.getElementById('content').innerHTML = '<p>Failed to load Pokémon data. Please check the JSON file or network connection.</p>';
-        showDebug(`Error: ${error.message}`);
+        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
+        showDebug('Error loading Pokémon data: ' + error.message);
         document.getElementById('loading').style.display = 'none';
     });
 
 function initTabs() {
     if (!pokemonData) {
-        document.getElementById('content').innerHTML = '<p>No Pokémon data available.</p>';
+        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
         showDebug('No Pokémon data available');
         return;
     }
@@ -136,14 +136,11 @@ function initMenu() {
                 params.set(key, cellStates[key]);
             }
         });
-        if (params.toString().length > 2000) {
-            showDebug('Warning: URL may be too long for some browsers. Consider exporting instead.');
-        }
         const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
         navigator.clipboard.writeText(url).then(() => {
             showToast('URL copied to clipboard');
-        }).catch(() => {
-            showDebug('Failed to copy URL to clipboard');
+        }).catch(error => {
+            showDebug('Failed to copy URL to clipboard: ' + error.message);
         });
         sideMenu.classList.remove('active');
         hamburger.style.visibility = 'visible';
@@ -168,7 +165,7 @@ function initMenu() {
             showToast('States exported successfully');
         } catch (error) {
             console.error('Error exporting states:', error);
-            showDebug('Failed to export states');
+            showDebug('Failed to export states: ' + error.message);
         }
         sideMenu.classList.remove('active');
         hamburger.style.visibility = 'visible';
@@ -186,14 +183,14 @@ function initMenu() {
             sideMenu.classList.remove('active');
             hamburger.style.visibility = 'visible';
         } else {
-            generateShareUrl(currentFilter);
+            initializeFirebaseForShare(currentFilter);
         }
     });
 
     ['Grey', 'Yellow', 'Blue', 'Red'].forEach(color => {
         document.getElementById(`prompt${color}`).addEventListener('click', () => {
             filterPrompt.style.display = 'none';
-            generateShareUrl(color.toLowerCase());
+            initializeFirebaseForShare(color.toLowerCase());
         });
     });
     document.getElementById('promptCancel').addEventListener('click', () => {
@@ -202,28 +199,31 @@ function initMenu() {
         hamburger.style.visibility = 'visible';
     });
 
-    // Initialize Firebase
-    let db;
-    if (typeof firebase !== 'undefined') {
-        try {
-            const firebaseConfig = {
-                apiKey: "AIzaSyBBnkPe5qKDHWrPtgCBcAl4teU9W1h1qW0",
-                authDomain: "g-url-shortener-64c6e.firebaseapp.com",
-                projectId: "g-url-shortener-64c6e",
-                storageBucket: "g-url-shortener-64c6e.firebasestorage.app",
-                messagingSenderId: "786040303042",
-                appId: "1:786040303042:web:d5cd682d1ef4c2ba56ba5b",
-                measurementId: "G-DJYYW10D48"
-            };
-            firebase.initializeApp(firebaseConfig);
-            db = firebase.firestore();
-            console.log('Firebase Firestore initialized');
-        } catch (error) {
-            console.error('Firebase initialization failed:', error);
-            db = null;
+    function initializeFirebaseForShare(filter) {
+        if (!window.db || !window.auth) {
+            showDebug('Firebase not initialized');
+            fallbackToLongUrl(filter);
+            return;
         }
-    } else {
-        console.warn('Firebase SDK not loaded');
+        attemptAuth(filter);
+    }
+
+    function attemptAuth(filter) {
+        if (authInitialized) {
+            generateShareUrl(filter);
+            return;
+        }
+        signInAnonymously(window.auth)
+            .then((userCredential) => {
+                authInitialized = true;
+                showDebug('Firebase authenticated anonymously with UID: ' + userCredential.user.uid);
+                generateShareUrl(filter);
+            })
+            .catch(error => {
+                authInitialized = false;
+                showDebug('Firebase authentication failed: ' + error.message);
+                fallbackToLongUrl(filter);
+            });
     }
 
     function generateShareUrl(filter) {
@@ -233,26 +233,43 @@ function initMenu() {
         });
         const encodedData = btoa(JSON.stringify(shareData));
         const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-        const longUrl = `${window.location.origin}${basePath}display.html?data=${encodeURIComponent(encodedData)}`;
-        console.log('Generated long URL:', longUrl);
-        if (longUrl.length > 2000) showDebug('Warning: Share URL may be too long. Use Export instead.');
+        const longUrl = `${window.location.origin}${basePath}display/?data=${encodeURIComponent(encodedData)}`;
+        showDebug('Generated long URL: ' + longUrl);
 
-        try {
-            const shortUrl = shortenUrl(longUrl, db);
-            console.log('Shortened URL:', shortUrl);
-            navigator.clipboard.writeText(shortUrl).then(() => {
+        (async () => {
+            try {
+                const shortUrl = await shortenUrl(longUrl, window.db);
+                await navigator.clipboard.writeText(shortUrl);
                 showToast('Share URL copied to clipboard');
-            }).catch(() => {
-                showDebug('Failed to copy short URL to clipboard');
-            });
-        } catch (error) {
-            console.error('Shortening error:', error);
-            showDebug('Failed to shorten URL: ' + error.message);
-            showToast('URL shortening failed. Please try again later.');
-        } finally {
-            sideMenu.classList.remove('active');
-            hamburger.style.visibility = 'visible';
-        }
+            } catch (error) {
+                showDebug('Shortening error: ' + error.message);
+                await navigator.clipboard.writeText(longUrl).catch(error => {
+                    showDebug('Failed to copy fallback URL to clipboard: ' + error.message);
+                });
+                showToast('URL shortening failed. Long URL copied instead.');
+            } finally {
+                sideMenu.classList.remove('active');
+                hamburger.style.visibility = 'visible';
+            }
+        })();
+    }
+
+    function fallbackToLongUrl(filter) {
+        const shareData = { tab: currentTab, filter: filter, states: {} };
+        Object.keys(cellStates).forEach(key => {
+            if (cellStates[key] !== 'grey') shareData.states[key] = cellStates[key];
+        });
+        const encodedData = btoa(JSON.stringify(shareData));
+        const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+        const longUrl = `${window.location.origin}${basePath}display/?data=${encodeURIComponent(encodedData)}`;
+        showDebug('Falling back to long URL: ' + longUrl);
+        navigator.clipboard.writeText(longUrl).then(() => {
+            showToast('Share failed, long URL copied to clipboard');
+        }).catch(error => {
+            showDebug('Failed to copy fallback URL to clipboard: ' + error.message);
+        });
+        sideMenu.classList.remove('active');
+        hamburger.style.visibility = 'visible';
     }
 
     document.getElementById('importFile').addEventListener('change', (event) => {
@@ -271,8 +288,7 @@ function initMenu() {
                     renderTabContent(currentTab);
                     showToast('States imported successfully');
                 } catch (error) {
-                    console.error('Error importing states:', error);
-                    showDebug('Failed to import states: Invalid file format');
+                    showDebug('Failed to import states: ' + error.message);
                 }
             };
             reader.readAsText(file);
@@ -281,8 +297,54 @@ function initMenu() {
     });
 }
 
-// Include shortener.js
-document.write('<script src="shortener.js"></script>');
+async function shortenUrl(longUrl, db) {
+    showDebug('Starting shortenUrl with longUrl: ' + longUrl);
+    if (!validateUrl(longUrl)) throw new Error('Invalid URL');
+    const newShortCode = generateShortCode();
+    const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'display';
+    const shortUrl = `${window.location.origin}${basePath}?${newShortCode}`;
+    try {
+        if (db && authInitialized) {
+            showDebug('Attempting Firestore save for code: ' + newShortCode);
+            await setDoc(doc(db, 'urls', newShortCode), {
+                longUrl: longUrl,
+                createdAt: new Date().toISOString()
+            });
+            showDebug('Firestore save successful for code: ' + newShortCode);
+            return shortUrl;
+        } else {
+            showDebug('Firestore not available or not authenticated');
+            return longUrl;
+        }
+    } catch (error) {
+        showDebug('Firestore save failed: ' + error.message);
+        throw error;
+    }
+}
+
+function generateShortCode() {
+    const code = Math.random().toString(36).substring(2, 8);
+    showDebug('Generated short code: ' + code);
+    return code;
+}
+
+function validateUrl(url) {
+    try {
+        if (!url || typeof url !== 'string') {
+            showDebug('Validation failed: URL is not a string or is null');
+            return false;
+        }
+        const maxLength = 10000;
+        if (url.length > maxLength) {
+            showDebug('Validation failed: URL exceeds ' + maxLength + ' characters');
+            return false;
+        }
+        return true;
+    } catch (error) {
+        showDebug('Validation error: ' + error.message);
+        return false;
+    }
+}
 
 function clearAllStates() {
     Object.keys(cellStates).forEach(key => {
@@ -328,6 +390,18 @@ function switchTab(tab) {
     renderTabContent(tab);
 }
 
+function applyFilter(filter) {
+    const cells = document.getElementsByClassName('grid-cell');
+    for (let cell of cells) {
+        const cellId = cell.id;
+        if (filter) {
+            cell.style.display = cellStates[cellId] === filter ? 'block' : 'none';
+        } else {
+            cell.style.display = 'block';
+        }
+    }
+}
+
 function scrollToGeneration(genNumber) {
     const section = document.querySelector(`.tab-content h2[data-gen="${genNumber}"]`);
     if (section) {
@@ -353,12 +427,11 @@ function renderTabContent(tab) {
     content.innerHTML = '';
 
     if (!pokemonData || !pokemonData.pokemon) {
-        content.innerHTML = '<p>No Pokémon data available.</p>';
+        content.innerHTML = '<p>Something went wrong. Please try again later.</p>';
         showDebug('No Pokémon data available');
         return;
     }
 
-    // Group Pokémon by generation_number
     const generations = {};
     pokemonData.pokemon.forEach(pokemon => {
         const gen = pokemon.generation_number;
@@ -368,7 +441,6 @@ function renderTabContent(tab) {
         generations[gen].push(pokemon);
     });
 
-    // Sort generations numerically
     const sortedGenKeys = Object.keys(generations).sort((a, b) => Number(a) - Number(b));
 
     sortedGenKeys.forEach(genNumber => {
@@ -383,20 +455,16 @@ function renderTabContent(tab) {
         let cellCount = 0;
 
         pokemons.forEach(pokemon => {
-            // For Shiny tab, show all forms; for XXS/XXL/Hundo, show only base form
             const formsToRender = tab === 'shiny' ? pokemon.forms : pokemon.forms.filter(f => f.form === pokemon.base_form);
 
             formsToRender.forEach(form => {
-                // Skip base form in shiny tab for NO_NORMAL_SHINY Pokémon
                 if (tab === 'shiny' && NO_NORMAL_SHINY.has(pokemon.id) && form.form === pokemon.base_form) {
                     return;
                 }
-                // Skip forms that don't apply to xxs/xxl/hundo tabs
-                if (tab !== 'shiny' && !form[tab]) {
+                if (tab !== 'shiny' && !form[tab] && form.form !== pokemon.base_form) {
                     return;
                 }
 
-                // Use tab-specific key: shiny-<form.key> for shiny, <tab>-<id> for xxs/xxl/hundo
                 const key = tab === 'shiny' ? `shiny-${form.key}` : `${tab}-${pokemon.id}`;
                 const state = cellStates[key] || 'grey';
                 if (currentFilter && state !== currentFilter) {
@@ -410,7 +478,7 @@ function renderTabContent(tab) {
                 const displayNumber = pokemon.id;
                 const displayName = pokemon.name;
                 const displayForm = form.form === pokemon.base_form ? '' : form.form;
-                const imageSrc = tab === 'shiny' && form.shiny ? form.shiny.image : form.normal.image;
+                const imageSrc = tab === 'shiny' && form.shiny?.image ? form.shiny.image : form.normal.image;
 
                 const cell = row.insertCell();
                 cell.innerHTML = `
@@ -444,7 +512,6 @@ function renderTabContent(tab) {
         }
     });
 
-    // Add search functionality
     const searchInput = document.getElementById('searchInput');
     searchInput.removeEventListener('input', searchInput._inputHandler);
     searchInput._inputHandler = () => {
@@ -502,3 +569,24 @@ function handleCellClick(key, cell) {
     saveCellStates();
     window.scrollTo({ top: scrollY, behavior: 'instant' });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        showDebug('DOM fully loaded');
+        ['shiny', 'xxs', 'xxl', 'hundo'].forEach(tab => {
+            const tabElement = document.getElementById(`tab${tab.charAt(0).toUpperCase() + tab.slice(1)}`);
+            if (tabElement) {
+                tabElement.addEventListener('click', () => {
+                    switchTab(tab);
+                    showDebug(`Tab clicked: ${tab}`);
+                });
+            } else {
+                showDebug(`Tab element tab${tab.charAt(0).toUpperCase() + tab.slice(1)} not found`);
+            }
+        });
+        switchTab('shiny');
+    } catch (error) {
+        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
+        showDebug('Initialization error: ' + error.message);
+    }
+});

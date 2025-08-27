@@ -189,6 +189,13 @@ h1 {
 .tab-content h2 {
     color: #333;
     margin: 2px 0 20px;
+    text-align: center;
+}
+
+#form-filter {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 
 table {
@@ -426,6 +433,13 @@ footer {
     min-height: 100px;
     margin-top: 2px;
 }
+#content .othercontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 500px;
+}
 
 .debug {
     display: block;
@@ -437,6 +451,7 @@ footer {
     margin: 20px 0;
     font-size: 14px;
     display: none;
+    z-index: 1004;
 }
 
 #toast {
@@ -458,6 +473,11 @@ footer {
 
 #toast.show {
     opacity: 1;
+}
+
+.center {
+	display: block;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
