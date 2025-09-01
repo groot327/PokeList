@@ -253,7 +253,7 @@ function initMenu() {
         const encodedData = btoa(JSON.stringify(shareData));
         const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
         const longUrl = `${window.location.origin}${basePath}display/?data=${encodeURIComponent(encodedData)}`;
-        showDebug('Generated long URL: ' + longUrl);
+        alert('Generated long URL: ' + longUrl);
 
         (async () => {
             try {
@@ -263,7 +263,7 @@ function initMenu() {
             } catch (error) {
                 showDebug('Shortening error: ' + error.message);
                 await navigator.clipboard.writeText(longUrl).catch(error => {
-                    showDebug('Failed to copy fallback URL to clipboard: ' + error.message);
+                    alert('Failed to copy fallback URL to clipboard: ' + error.message);
                 });
                 showToast('URL shortening failed. Long URL copied instead.');
             } finally {
@@ -317,26 +317,26 @@ function initMenu() {
 }
 
 async function shortenUrl(longUrl, db) {
-    showDebug('Starting shortenUrl with longUrl: ' + longUrl);
+    alert('Starting shortenUrl with longUrl: ' + longUrl);
     if (!validateUrl(longUrl)) throw new Error('Invalid URL');
     const newShortCode = generateShortCode();
     const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'display';
     const shortUrl = `${window.location.origin}${basePath}?${newShortCode}`;
     try {
         if (db && authInitialized) {
-            showDebug('Attempting Firestore save for code: ' + newShortCode);
+            alert('Attempting Firestore save for code: ' + newShortCode);
             await setDoc(doc(db, 'urls', newShortCode), {
                 longUrl: longUrl,
                 createdAt: new Date().toISOString()
             });
-            showDebug('Firestore save successful for code: ' + newShortCode);
+            alert('Firestore save successful for code: ' + newShortCode);
             return shortUrl;
         } else {
-            showDebug('Firestore not available or not authenticated');
+            alert('Firestore not available or not authenticated');
             return longUrl;
         }
     } catch (error) {
-        showDebug('Firestore save failed: ' + error.message);
+        alert('Firestore save failed: ' + error.message);
         throw error;
     }
 }

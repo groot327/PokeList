@@ -6705,11 +6705,21 @@
       "name": "Unown",
       "generation": "Johto",
       "generation_number": "2",
-      "base_form": "Unown A",
+      "base_form": "normal",
       "xxs": true,
       "xxl": true,
       "hundo": true,
       "forms": [
+        {
+          "form": "normal",
+          "key": "e1812694-8d01-51ea-be17-80dec2f13821",
+          "normal": {
+            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0201.icon.png"
+          },
+          "shiny": {
+            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0201.s.icon.png"
+          }
+        },
         {
           "form": "Unown A",
           "key": "6524bc60-d2bb-59e9-a844-c0f0fb482532",
