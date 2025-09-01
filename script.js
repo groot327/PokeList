@@ -19,9 +19,9 @@ if (myScreenWidth < 601) {
 document.documentElement.style.setProperty('--cells-for-screen', cellsForScreen);
 
 function showDebug(message) {
-    console.error('DEBUG:', message); // Log to console for developers
+    console.error('DEBUG:', message);
     const debug = document.getElementById('debug');
-    debug.innerHTML = `<!-- ${message} -->`; // Hide in HTML comment
+    debug.innerHTML = `<!-- ${message} -->`;
 }
 
 function showToast(message) {
@@ -78,6 +78,7 @@ fetch('pokemon.json')
         initTabs();
         initFilterButtons();
         initMenu();
+        initGenerationTabs(); // Add this line
         document.getElementById('loading').style.display = 'none';
     })
     .catch(error => {
@@ -86,6 +87,30 @@ fetch('pokemon.json')
         showDebug('Error loading Pokémon data: ' + error.message);
         document.getElementById('loading').style.display = 'none';
     });
+
+function initGenerationTabs() {
+    const buttons = document.querySelectorAll('.gen-button');
+    buttons.forEach(btn => {
+        // Extract generation number from onclick attribute or text content
+        let genNumber = btn.getAttribute('onclick')?.match(/scrollToGeneration\('(\d+)'\)/)?.[1];
+        if (!genNumber) {
+            // Fallback: infer from button text (I, II, III, etc.)
+            const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+            const index = romanNumerals.indexOf(btn.textContent.trim());
+            genNumber = index >= 0 ? String(index + 1) : null;
+        }
+        if (genNumber) {
+            // Remove existing onclick to prevent duplicates
+            btn.removeAttribute('onclick');
+            btn.addEventListener('click', () => {
+                scrollToGeneration(genNumber);
+                showDebug(`Generation tab clicked: ${genNumber}`);
+            });
+        } else {
+            showDebug(`No valid generation number found for button: ${btn.textContent}`);
+        }
+    });
+}
 
 function initTabs() {
     if (!pokemonData) {
@@ -382,6 +407,7 @@ function switchTab(tab) {
         }
     });
     renderTabContent(tab);
+    window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function applyFilter(filter) {
@@ -397,23 +423,31 @@ function applyFilter(filter) {
 }
 
 function scrollToGeneration(genNumber) {
-    const section = document.querySelector(`.tab-content h2[data-gen="${genNumber}"]`);
-    if (section) {
-        const headerHeight = document.querySelector('.header').offsetHeight || 130;
-        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-            top: sectionTop - headerHeight - 10,
-            behavior: 'smooth'
-        });
-        const buttons = document.querySelectorAll('.gen-button');
-        buttons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('onclick') === `scrollToGeneration('${genNumber}')`) {
-                btn.classList.add('active');
-                setTimeout(() => btn.classList.remove('active'), 1000);
-            }
-        });
-    }
+    setTimeout(() => {
+        const section = document.querySelector(`.tab-content h2[data-gen="${genNumber}"]`);
+        if (section) {
+            const header = document.querySelector('.header');
+            const headerHeight = header ? header.offsetHeight : 130;
+            const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: sectionTop - headerHeight - 10,
+                behavior: 'smooth'
+            });
+            const buttons = document.querySelectorAll('.gen-button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                // Check button text (I, II, III, etc.) to match genNumber
+                const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+                const index = Number(genNumber) - 1;
+                if (btn.textContent.trim() === romanNumerals[index]) {
+                    btn.classList.add('active');
+                    setTimeout(() => btn.classList.remove('active'), 1000);
+                }
+            });
+        } else {
+            showDebug(`Section for gen ${genNumber} not found`);
+        }
+    }, 100);
 }
 
 function renderTabContent(tab) {
@@ -449,32 +483,28 @@ function renderTabContent(tab) {
         let cellCount = 0;
 
         pokemons.forEach(pokemon => {
-            // For shiny tab, include all forms with a valid shiny image; for other tabs, use base form only
             let formsToRender = tab === 'shiny'
                 ? pokemon.forms.filter(f => f.shiny && f.shiny.image && f.form)
                 : pokemon.forms.filter(f => f.form === pokemon.base_form);
 
-            // Custom sorting for shiny tab: A-Z, then ?, then !
             if (tab === 'shiny' && pokemon.id === '201') {
                 formsToRender = formsToRender.sort((a, b) => {
                     const getFormOrder = (form) => {
                         const suffix = form.form.replace('Unown ', '').toUpperCase();
-                        if (/^[A-Z]$/.test(suffix)) return suffix.charCodeAt(0); // A-Z: 65-90
-                        if (suffix === '?') return 91; // ? after Z
-                        if (suffix === '!') return 92; // ! after ?
-                        return 999; // Fallback for unexpected forms
+                        if (/^[A-Z]$/.test(suffix)) return suffix.charCodeAt(0);
+                        if (suffix === '?') return 91;
+                        if (suffix === '!') return 92;
+                        return 999;
                     };
                     return getFormOrder(a) - getFormOrder(b);
                 });
             }
 
             formsToRender.forEach(form => {
-                // For non-shiny tabs, skip forms without the specified attribute (unless base form)
-                if (tab !== 'shiny' && !form[tab] && form.form !== pokemon.base_form) {
+                if (tab !== 'shiny' && !pokemon[tab]) {
                     return;
                 }
 
-                // Debug: Log each form being rendered
                 showDebug(`Rendering form for #${pokemon.id}: ${form.form} with shiny image ${form.shiny?.image || 'none'}`);
 
                 const key = tab === 'shiny' ? `shiny-${form.key}` : `${tab}-${pokemon.id}`;
@@ -489,15 +519,17 @@ function renderTabContent(tab) {
 
                 const displayNumber = pokemon.id;
                 const displayName = pokemon.name;
-                // Display form name if base_form is not 'normal' or for non-base forms
-                const displayForm = (form.form === pokemon.base_form && pokemon.base_form === 'normal') ? '' : form.form;
-                // Use shiny image for shiny tab; otherwise, use normal image
+                let displayForm = '';
+                if (tab === 'shiny') {
+                    displayForm = (form.form === pokemon.base_form && pokemon.base_form === 'normal') ? '' : form.form;
+                }
+
                 const imageSrc = tab === 'shiny' ? form.shiny.image : form.normal.image;
 
                 const cell = row.insertCell();
                 cell.innerHTML = `
                     <div class="pokemon-number"><strong>#${displayNumber}</strong></div>
-                    <div><img src="${imageSrc}" alt="${displayName}${displayForm ? ' ' + displayForm : ''}" loading="lazy" onerror="this.classList.add('error');"></div>
+                    <div><img class="pokemon-image" src="${imageSrc}" alt="${displayName}${displayForm ? ' ' + displayForm : ''}" loading="lazy" onerror="this.classList.add('error');"></div>
                     <div class="pokemon-name">${displayName}</div>
                     <div class="pokemon-form">${displayForm || ''}</div>
                 `;
@@ -598,6 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 showDebug(`Tab element tab${tab.charAt(0).toUpperCase() + tab.slice(1)} not found`);
             }
         });
+        initGenerationTabs(); // Add this line
         switchTab('shiny');
     } catch (error) {
         document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
