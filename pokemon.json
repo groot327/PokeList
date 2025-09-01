@@ -9957,34 +9957,24 @@
       "name": "Spinda",
       "generation": "Hoenn",
       "generation_number": "3",
-      "base_form": "#9",
+      "base_form": "09",
       "forms": [
         {
-          "form": "#9",
-          "key": "2a676401-28a6-50ba-95f0-e4b0f11fb46b",
+          "form": "09",
+          "key": "9caec874-ff06-5648-b25d-af74ff9486bc",
           "normal": {
-            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f#9.icon.png"
+            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f09.icon.png"
           },
           "xxs": true,
           "xxl": true,
           "hundo": true,
           "shiny": {
-            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f#9.s.icon.png"
+            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f09.s.icon.png"
           }
         },
         {
-          "form": "# 1",
-          "key": "317a825c-b4df-5c24-9b41-d36c0a2583cc",
-          "normal": {
-            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f00.icon.png"
-          },
-          "shiny": {
-            "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f00.s.icon.png"
-          }
-        },
-        {
-          "form": "# 2",
-          "key": "6621a828-12b1-5c8c-a1e7-4494f981b521",
+          "form": "01",
+          "key": "c05e9a7f-12c4-5f2a-84b5-f18ce430b9b8",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f01.icon.png"
           },
@@ -9993,8 +9983,8 @@
           }
         },
         {
-          "form": "# 3",
-          "key": "9c00e322-1b6e-574d-9a97-4c19220eb498",
+          "form": "02",
+          "key": "d2716571-731f-536f-8bf8-fa88903d0d97",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f02.icon.png"
           },
@@ -10003,8 +9993,8 @@
           }
         },
         {
-          "form": "# 4",
-          "key": "7f11ea8e-c768-531c-9a9c-0888887874c6",
+          "form": "03",
+          "key": "95570c8c-7e59-5db6-9dfd-80bc62850339",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f03.icon.png"
           },
@@ -10013,8 +10003,8 @@
           }
         },
         {
-          "form": "# 5",
-          "key": "1d9e6320-7be2-5e70-9dd8-459cdf37d529",
+          "form": "04",
+          "key": "2553e749-9468-5fc1-b828-53f42bb63c08",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f04.icon.png"
           },
@@ -10023,8 +10013,8 @@
           }
         },
         {
-          "form": "# 6",
-          "key": "fbef9efb-2eac-5ab3-b23b-012f2308462f",
+          "form": "05",
+          "key": "8a26dcd9-c804-50ed-ae30-f21d4eedacdb",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f05.icon.png"
           },
@@ -10033,8 +10023,8 @@
           }
         },
         {
-          "form": "# 7",
-          "key": "ff793e9c-543d-5b92-861a-94cb1ccd5b31",
+          "form": "06",
+          "key": "1bf5368b-ac50-5bb2-8cb1-38c0995a10fd",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f06.icon.png"
           },
@@ -10043,8 +10033,8 @@
           }
         },
         {
-          "form": "# 8",
-          "key": "47555572-0293-550a-9fd7-d1ddfd7c2210",
+          "form": "07",
+          "key": "450ed638-533b-5513-ab4d-e435a41f4eec",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f07.icon.png"
           },
@@ -10053,8 +10043,8 @@
           }
         },
         {
-          "form": "# 9",
-          "key": "14e23077-8620-5b1e-96b9-07703ea6d748",
+          "form": "08",
+          "key": "9a9d0b2e-20c7-5163-917b-f5dab02a5473",
           "normal": {
             "image": "https://groot327.github.io/PokeList/PokeImgs/pm0327.f08.icon.png"
           },
