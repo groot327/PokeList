@@ -98,15 +98,15 @@
             window.auth = getAuth(app);
             signInAnonymously(window.auth)
                 .then(() => {
-                    alert('Signed in anonymously');
+                    showDebug('Signed in anonymously');
                 })
                 .catch(error => {
-                    alert('Anonymous sign-in failed:', error);
+                    showDebug('Anonymous sign-in failed:', error);
                     document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
                     document.getElementById('debug').innerHTML = `<!-- Anonymous sign-in failed: ${error.message} -->`;
                 });
         } catch (error) {
-            alert('Firebase initialization failed:', error);
+            showDebug('Firebase initialization failed:', error);
             document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
             document.getElementById('debug').innerHTML = `<!-- Firebase initialization failed: ${error.message} -->`;
         }
