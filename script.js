@@ -8,12 +8,6 @@ let currentFilter = null;
 const cellStates = {};
 let isProcessingTap = false;
 
-const NO_NORMAL_SHINY = new Set([
-    "201", "421", "422", "423", "479", "492", "555", "585", "586", "647",
-    "648", "649", "669", "670", "671", "676", "710", "711", "741", "745",
-    "849", "877", "892", "905", "925", "978"
-]);
-
 // Responsive cell count
 let cellsForScreen = 5;
 let myScreenWidth = window.screen.width;
@@ -455,15 +449,33 @@ function renderTabContent(tab) {
         let cellCount = 0;
 
         pokemons.forEach(pokemon => {
-            const formsToRender = tab === 'shiny' ? pokemon.forms : pokemon.forms.filter(f => f.form === pokemon.base_form);
+            // For shiny tab, include all forms with a valid shiny image; for other tabs, use base form only
+            let formsToRender = tab === 'shiny'
+                ? pokemon.forms.filter(f => f.shiny && f.shiny.image && f.form)
+                : pokemon.forms.filter(f => f.form === pokemon.base_form);
+
+            // Custom sorting for shiny tab: A-Z, then ?, then !
+            if (tab === 'shiny' && pokemon.id === '201') {
+                formsToRender = formsToRender.sort((a, b) => {
+                    const getFormOrder = (form) => {
+                        const suffix = form.form.replace('Unown ', '').toUpperCase();
+                        if (/^[A-Z]$/.test(suffix)) return suffix.charCodeAt(0); // A-Z: 65-90
+                        if (suffix === '?') return 91; // ? after Z
+                        if (suffix === '!') return 92; // ! after ?
+                        return 999; // Fallback for unexpected forms
+                    };
+                    return getFormOrder(a) - getFormOrder(b);
+                });
+            }
 
             formsToRender.forEach(form => {
-                if (tab === 'shiny' && NO_NORMAL_SHINY.has(pokemon.id) && form.form === pokemon.base_form) {
-                    return;
-                }
+                // For non-shiny tabs, skip forms without the specified attribute (unless base form)
                 if (tab !== 'shiny' && !form[tab] && form.form !== pokemon.base_form) {
                     return;
                 }
+
+                // Debug: Log each form being rendered
+                showDebug(`Rendering form for #${pokemon.id}: ${form.form} with shiny image ${form.shiny?.image || 'none'}`);
 
                 const key = tab === 'shiny' ? `shiny-${form.key}` : `${tab}-${pokemon.id}`;
                 const state = cellStates[key] || 'grey';
@@ -477,15 +489,17 @@ function renderTabContent(tab) {
 
                 const displayNumber = pokemon.id;
                 const displayName = pokemon.name;
-                const displayForm = form.form === pokemon.base_form ? '' : form.form;
-                const imageSrc = tab === 'shiny' && form.shiny?.image ? form.shiny.image : form.normal.image;
+                // Display form name if base_form is not 'normal' or for non-base forms
+                const displayForm = (form.form === pokemon.base_form && pokemon.base_form === 'normal') ? '' : form.form;
+                // Use shiny image for shiny tab; otherwise, use normal image
+                const imageSrc = tab === 'shiny' ? form.shiny.image : form.normal.image;
 
                 const cell = row.insertCell();
                 cell.innerHTML = `
                     <div class="pokemon-number"><strong>#${displayNumber}</strong></div>
-                    <div><img src="${imageSrc}" alt="${displayName} ${displayForm || form.form}" onerror="this.classList.add('error');"></div>
+                    <div><img src="${imageSrc}" alt="${displayName}${displayForm ? ' ' + displayForm : ''}" loading="lazy" onerror="this.classList.add('error');"></div>
                     <div class="pokemon-name">${displayName}</div>
-                    <div class="pokemon-form">${displayForm}</div>
+                    <div class="pokemon-form">${displayForm || ''}</div>
                 `;
                 cell.dataset.key = key;
                 cell.dataset.tab = tab;
