@@ -6,6 +6,7 @@
     <title>Pokémon Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -61,12 +62,12 @@
                 <button class="gen-button" onclick="scrollToGeneration('8')" aria-label="Scroll to Generation VIII">VIII</button>
                 <button class="gen-button" onclick="scrollToGeneration('9')" aria-label="Scroll to Generation IX">IX</button>
             </div>
+            <div id="debug" class="debug"></div>
         </div>
     </header>
     <main class="container">
         <div id="loading">Loading Pokémon data...</div>
         <div id="content"></div>
-        <div id="debug" class="debug"></div>
         <div id="toast" class="toast">Action completed</div>
     </main>
     <footer>
@@ -77,6 +78,7 @@
         </div>
     </footer>
     <!-- Load Firebase Modular SDK -->
+
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
         import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
@@ -102,15 +104,16 @@
                 })
                 .catch(error => {
                     showDebug('Anonymous sign-in failed:', error);
-                    document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
-                    document.getElementById('debug').innerHTML = `<!-- Anonymous sign-in failed: ${error.message} -->`;
+                    document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later. (anon)</p>';
+                    document.getElementById('debug').innerHTML = `Anonymous sign-in failed: ${error.message}`;
                 });
         } catch (error) {
             showDebug('Firebase initialization failed:', error);
-            document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
-            document.getElementById('debug').innerHTML = `<!-- Firebase initialization failed: ${error.message} -->`;
+            document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later. (catch)</p>';
+            document.getElementById('debug').innerHTML = `Firebase initialization failed: ${error.message}`;
         }
     </script>
+
     <script type="module" src="script.js"></script>
 </body>
 </html>

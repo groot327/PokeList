@@ -181,17 +181,6 @@ h1 {
     opacity: 0.9;
 }
 
-.tab-content {
-    margin-bottom: 20px;
-    display: block;
-}
-
-.tab-content h2 {
-    color: #333;
-    margin: 2px 0 20px;
-    text-align: center;
-}
-
 #form-filter {
 	text-align: center;
 	font-weight: bold;
@@ -442,7 +431,7 @@ footer {
     margin-top: 2px;
 }
 #content .othercontent {
-    display: flex;
+    display: display;
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px auto;
@@ -458,7 +447,7 @@ footer {
     text-align: center;
     margin: 20px 0;
     font-size: 14px;
-    display: none;
+    display: block;
     z-index: 1004;
 }
 

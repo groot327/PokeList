@@ -190,7 +190,7 @@ function displayPokemon(data) {
                 const cell = row.insertCell();
                 cell.innerHTML = `
                     <div class="pokemon-number"><strong>#${displayNumber}</strong></div>
-                    <div><img src="${imageSrc}" alt="${displayName} ${displayForm || form.form}" onerror="this.classList.add('error');"></div>
+                    <div><img class="pokemon-image" src="${imageSrc}" alt="${displayName} ${displayForm || form.form}" onerror="this.classList.add('error');"></div>
                     <div class="pokemon-name">${displayName}</div>
                     <div class="pokemon-form">${displayForm}</div>
                 `;

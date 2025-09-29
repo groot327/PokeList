@@ -19,9 +19,9 @@ if (myScreenWidth < 601) {
 document.documentElement.style.setProperty('--cells-for-screen', cellsForScreen);
 
 function showDebug(message) {
-    console.error('DEBUG:', message);
     const debug = document.getElementById('debug');
-    debug.innerHTML += `\n<!-- ${message} -->`;
+    debug.innerHTML = `${message}`;
+    setTimeout(() => {}, 5000);
 }
 
 function showToast(message) {
@@ -47,8 +47,8 @@ function loadCellStates() {
         });
         saveCellStates();
     } catch (error) {
-        console.error('Error loading cell states:', error);
         showDebug('Error loading saved states: ' + error.message);
+        setTimeout(() => {}, 5000);
     }
 }
 
@@ -56,8 +56,8 @@ function saveCellStates() {
     try {
         localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
     } catch (error) {
-        console.error('Error saving cell states:', error);
         showDebug('Error saving states to localStorage: ' + error.message);
+        setTimeout(() => {}, 5000);
     }
 }
 
@@ -78,29 +78,26 @@ fetch('pokemon.json')
         initTabs();
         initFilterButtons();
         initMenu();
-        initGenerationTabs(); // Add this line
+        initGenerationTabs();
         document.getElementById('loading').style.display = 'none';
     })
     .catch(error => {
-        console.error('Error loading Pokémon data:', error);
-        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
+        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later. (load)</p>';
         showDebug('Error loading Pokémon data: ' + error.message);
+        setTimeout(() => {}, 5000);
         document.getElementById('loading').style.display = 'none';
     });
 
 function initGenerationTabs() {
     const buttons = document.querySelectorAll('.gen-button');
     buttons.forEach(btn => {
-        // Extract generation number from onclick attribute or text content
         let genNumber = btn.getAttribute('onclick')?.match(/scrollToGeneration\('(\d+)'\)/)?.[1];
         if (!genNumber) {
-            // Fallback: infer from button text (I, II, III, etc.)
             const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
             const index = romanNumerals.indexOf(btn.textContent.trim());
             genNumber = index >= 0 ? String(index + 1) : null;
         }
         if (genNumber) {
-            // Remove existing onclick to prevent duplicates
             btn.removeAttribute('onclick');
             btn.addEventListener('click', () => {
                 scrollToGeneration(genNumber);
@@ -114,7 +111,7 @@ function initGenerationTabs() {
 
 function initTabs() {
     if (!pokemonData) {
-        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
+        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later. (initt)</p>';
         showDebug('No Pokémon data available');
         return;
     }
@@ -248,13 +245,25 @@ function initMenu() {
     function generateShareUrl(filter) {
         const shareData = { tab: currentTab, filter: filter, states: {} };
         Object.keys(cellStates).forEach(key => {
-            if (cellStates[key] !== 'grey') shareData.states[key] = cellStates[key];
+            if (cellStates[key] === filter) {
+                shareData.states[key] = cellStates[key];
+            }
         });
-        const encodedData = btoa(JSON.stringify(shareData));
+        let encodedData = btoa(JSON.stringify(shareData));
+        if (typeof LZString !== 'undefined') {
+            const compressed = LZString.compressToBase64(JSON.stringify(shareData));
+            encodedData = compressed;
+        }
         const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
         const longUrl = `${window.location.origin}${basePath}display/?data=${encodeURIComponent(encodedData)}`;
-        // alert('Generated long URL: ' + longUrl);
-
+        showDebug('Generated long URL: ' + longUrl);
+        setTimeout(() => {}, 5000);
+        navigator.clipboard.writeText(longUrl).then(() => {
+            showToast('Long URL copied (use for sharing if short fails)');
+        }).catch(error => {
+            showDebug('Clipboard copy failed: ' + error.message);
+            setTimeout(() => {}, 5000);
+        });
         (async () => {
             try {
                 const shortUrl = await shortenUrl(longUrl, window.db);
@@ -262,8 +271,10 @@ function initMenu() {
                 showToast('Share URL copied to clipboard');
             } catch (error) {
                 showDebug('Shortening error: ' + error.message);
+                setTimeout(() => {}, 5000);
                 await navigator.clipboard.writeText(longUrl).catch(error => {
-                    // alert('Failed to copy fallback URL to clipboard: ' + error.message);
+                    showDebug('Clipboard copy failed: ' + error.message);
+                    setTimeout(() => {}, 5000);
                 });
                 showToast('URL shortening failed. Long URL copied instead.');
             } finally {
@@ -276,16 +287,24 @@ function initMenu() {
     function fallbackToLongUrl(filter) {
         const shareData = { tab: currentTab, filter: filter, states: {} };
         Object.keys(cellStates).forEach(key => {
-            if (cellStates[key] !== 'grey') shareData.states[key] = cellStates[key];
+            if (cellStates[key] === filter) {
+                shareData.states[key] = cellStates[key];
+            }
         });
-        const encodedData = btoa(JSON.stringify(shareData));
+        let encodedData = btoa(JSON.stringify(shareData));
+        if (typeof LZString !== 'undefined') {
+            const compressed = LZString.compressToBase64(JSON.stringify(shareData));
+            encodedData = compressed;
+        }
         const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
         const longUrl = `${window.location.origin}${basePath}display/?data=${encodeURIComponent(encodedData)}`;
         showDebug('Falling back to long URL: ' + longUrl);
+        setTimeout(() => {}, 5000);
         navigator.clipboard.writeText(longUrl).then(() => {
             showToast('Share failed, long URL copied to clipboard');
         }).catch(error => {
             showDebug('Failed to copy fallback URL to clipboard: ' + error.message);
+            setTimeout(() => {}, 5000);
         });
         sideMenu.classList.remove('active');
         hamburger.style.visibility = 'visible';
@@ -308,6 +327,7 @@ function initMenu() {
                     showToast('States imported successfully');
                 } catch (error) {
                     showDebug('Failed to import states: ' + error.message);
+                    setTimeout(() => {}, 5000);
                 }
             };
             reader.readAsText(file);
@@ -317,26 +337,30 @@ function initMenu() {
 }
 
 async function shortenUrl(longUrl, db) {
-    // alert('Starting shortenUrl with longUrl: ' + longUrl);
     if (!validateUrl(longUrl)) throw new Error('Invalid URL');
     const newShortCode = generateShortCode();
     const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'display';
     const shortUrl = `${window.location.origin}${basePath}?${newShortCode}`;
     try {
         if (db && authInitialized) {
-            // alert('Attempting Firestore save for code: ' + newShortCode);
+            showDebug('Attempting Firestore save for code: ' + newShortCode);
+            setTimeout(() => {}, 5000)
+            showDebug(`longUrl length: ${longUrl.length}`);
+            setTimeout(() => {}, 5000)
+            showDebug(`Document size: ${JSON.stringify({ longUrl, createdAt: new Date().toISOString() }).length}`);
+            setTimeout(() => {}, 5000)
             await setDoc(doc(db, 'urls', newShortCode), {
                 longUrl: longUrl,
                 createdAt: new Date().toISOString()
             });
-            // alert('Firestore save successful for code: ' + newShortCode);
             return shortUrl;
         } else {
-            // alert('Firestore not available or not authenticated');
+            showDebug('Firestore not available or not authenticated');
             return longUrl;
         }
     } catch (error) {
-        // alert('Firestore save failed: ' + error.message);
+        showDebug('Firestore save failed: ' + error.message);
+        setTimeout(() => {}, 5000);
         throw error;
     }
 }
@@ -344,23 +368,23 @@ async function shortenUrl(longUrl, db) {
 function generateShortCode() {
     const code = Math.random().toString(36).substring(2, 8);
     showDebug('Generated short code: ' + code);
+    setTimeout(() => {}, 5000);
     return code;
 }
 
 function validateUrl(url) {
     try {
-        if (!url || typeof url !== 'string') {
-            showDebug('Validation failed: URL is not a string or is null');
-            return false;
-        }
-        const maxLength = 10000;
+        if (!url || typeof url !== 'string') return false;
+        const maxLength = 30000;
         if (url.length > maxLength) {
             showDebug('Validation failed: URL exceeds ' + maxLength + ' characters');
+            setTimeout(() => {}, 5000):
             return false;
         }
         return true;
     } catch (error) {
         showDebug('Validation error: ' + error.message);
+        setTimeout(() => {}, 5000):
         return false;
     }
 }
@@ -379,21 +403,21 @@ function clearAllStates() {
 }
 
 function toggleFilter(color) {
+    const filters = ['grey', 'yellow', 'blue', 'red'];
     if (currentFilter === color) {
         currentFilter = null;
-        const filters = ['grey', 'yellow', 'blue', 'red'];
         filters.forEach(c => {
             document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`).classList.remove('active');
         });
     } else {
         currentFilter = color;
-        const filters = ['grey', 'yellow', 'blue', 'red'];
         filters.forEach(c => {
             const btn = document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`);
             btn.classList.toggle('active', c === color);
         });
     }
-    renderTabContent(currentTab);
+    applyFilter(currentFilter);
+    // renderTabContent(currentTab);
 }
 
 function switchTab(tab) {
@@ -407,47 +431,38 @@ function switchTab(tab) {
         }
     });
     renderTabContent(tab);
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    // window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function applyFilter(filter) {
-    const cells = document.getElementsByClassName('grid-cell');
-    for (let cell of cells) {
-        const cellId = cell.id;
-        if (filter) {
-            cell.style.display = cellStates[cellId] === filter ? 'block' : 'none';
-        } else {
-            cell.style.display = 'block';
-        }
-    }
+    const cells = document.querySelectorAll('.pokemon-cell');
+    cells.forEach(cell => {
+        const state = cellStates[cell.dataset.key] || 'grey';
+        cell.style.display = filter ? (state === filter ? 'table-cell' : 'none') : 'table-cell';
+    });
 }
 
 function scrollToGeneration(genNumber) {
-    setTimeout(() => {
-        const section = document.querySelector(`.tab-content h2[data-gen="${genNumber}"]`);
-        if (section) {
-            const header = document.querySelector('.header');
-            const headerHeight = header ? header.offsetHeight : 130;
-            const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({
-                top: sectionTop - headerHeight - 10,
-                behavior: 'smooth'
-            });
-            const buttons = document.querySelectorAll('.gen-button');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-                // Check button text (I, II, III, etc.) to match genNumber
-                const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
-                const index = Number(genNumber) - 1;
-                if (btn.textContent.trim() === romanNumerals[index]) {
-                    btn.classList.add('active');
-                    setTimeout(() => btn.classList.remove('active'), 1000);
-                }
-            });
-        } else {
-            showDebug(`Section for gen ${genNumber} not found`);
-        }
-    }, 100);
+    const section = document.querySelector(`.tab-content h2[data-gen="${genNumber}"]`);
+    if (section) {
+        const headerHeigh5 = document.querySelector('.header').offsetHeight : 130;
+        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: sectionTop - headerHeight - 10,
+            behavior: 'smooth'
+        });
+        const buttons = document.querySelectorAll('.gen-button');
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('onclick') === `scrollToGeneration('${genNumber}')`) {
+                btn.classList.add('active');
+                setTimeout(() => btn.classList.remove('active'), 1000);
+            }
+        });
+    } else {
+        showDebug(`Section for gen ${genNumber} not found`);
+        setTimeout(() => {}, 1000);
+    }
 }
 
 function renderTabContent(tab) {
@@ -455,8 +470,9 @@ function renderTabContent(tab) {
     content.innerHTML = '';
 
     if (!pokemonData || !pokemonData.pokemon) {
-        content.innerHTML = '<p>Something went wrong. Please try again later.</p>';
+        content.innerHTML = '<p>Something went wrong. Please try again later. (rentab)</p>';
         showDebug('No Pokémon data available');
+        setTimeout(() => {}, 5000);
         return;
     }
 
@@ -478,7 +494,9 @@ function renderTabContent(tab) {
         section.className = 'tab-content';
         section.innerHTML = `<h2 data-gen="${genNumber}">Gen ${genNumber} - ${generationName} - ${tab.toUpperCase()}${currentFilter ? ` (${currentFilter.toUpperCase()} Filter)` : ''}</h2>`;
 
+        const fragment = document.createDocumentFragment();
         const table = document.createElement('table');
+        fragment.appendChild(table);
         let row;
         let cellCount = 0;
 
@@ -513,6 +531,10 @@ function renderTabContent(tab) {
                     return;
                 }
 
+                // Debug: Log each form being rendered
+                showDebug(`Rendering form for #${pokemon.id}: ${form.form} with shiny image ${form.shiny?.image || 'none'}`);
+                setTimeout(() => {}, 1000);
+
                 if (cellCount % cellsForScreen === 0) {
                     row = table.insertRow();
                 }
@@ -527,6 +549,7 @@ function renderTabContent(tab) {
                 const imageSrc = tab === 'shiny' ? form.shiny.image : form.normal.image;
 
                 const cell = row.insertCell();
+                cell.className = 'pokemon-cell';
                 cell.innerHTML = `
                     <div class="pokemon-number"><strong>#${displayNumber}</strong></div>
                     <div><img class="pokemon-image" src="${imageSrc}" alt="${displayName}${displayForm ? ' ' + displayForm : ''}" loading="lazy" onerror="this.classList.add('error');"></div>
@@ -550,7 +573,7 @@ function renderTabContent(tab) {
         });
 
         if (table.rows.length > 0) {
-            section.appendChild(table);
+            section.appendChild(fragment);
             content.appendChild(section);
         } else {
             section.innerHTML += `<p>No ${tab.toUpperCase()} Pokémon available for Gen ${genNumber}${currentFilter ? ` with ${currentFilter} filter` : ''}.</p>`;
@@ -592,6 +615,7 @@ function renderTabContent(tab) {
         }
     };
     searchInput.addEventListener('input', searchInput._inputHandler);
+    applyFilter(currentFilter);
 }
 
 function updateCellColor(cell, state) {
@@ -625,15 +649,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 tabElement.addEventListener('click', () => {
                     switchTab(tab);
                     showDebug(`Tab clicked: ${tab}`);
+                    setTimeout(() => {}, 5000);
                 });
             } else {
                 showDebug(`Tab element tab${tab.charAt(0).toUpperCase() + tab.slice(1)} not found`);
+                setTimeout(() => {}, 5000);
             }
         });
-        initGenerationTabs(); // Add this line
+        initGenerationTabs();
         switchTab('shiny');
     } catch (error) {
-        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
+        document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later. (domcatch)</p>';
         showDebug('Initialization error: ' + error.message);
+        setTimeout(() => {}, 5000);
     }
 });
