@@ -2,21 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    padding-top: 130px;
-}
-
-.container {
-    max-width: 100%;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-h1 {
-    color: #333;
-    font-size: 24px;
-    margin: 8px 0;
+    padding-top: 155px;
 }
 
 .header {
@@ -26,313 +12,78 @@ h1 {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 8px 0;
+    padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     box-sizing: border-box;
+    height: 145px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
 }
 
 .search-container {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    justify-content: flex-end;
+    top: 5px;
+    right: 15px;
 }
 
 .search-input {
-    padding: 6px;
+    padding: 5px;
     font-size: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 150px;
-    max-width: 100%;
+    width: 140px;
 }
 
 .filter-container {
     position: absolute;
-    top: 40px;
-    right: 8px;
+    top: 38px;
+    right: 15px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
 }
 
-.filter-label {
-    font-size: 12px;
-    color: #333;
-    margin-right: 6px;
-    user-select: none;
-}
+.filter-label { font-size: 11px; color: #333; }
 
 .filter-button {
     width: 18px;
     height: 18px;
-    border-radius: 4px;
+    border: 2px solid;
+    border-radius: 3px;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-#filterGrey {
-    border: 2px solid #999999;
     background-color: transparent;
 }
 
-#filterGrey.active {
-    background-color: #999999;
-}
+#filterGrey { border-color: #999; }
+#filterYellow { border-color: #ffaa1d; }
+#filterBlue { border-color: #0066cc; }
+#filterRed { border-color: #cc3333; }
 
-#filterYellow {
-    border: 2px solid #ffaa1d;
-    background-color: transparent;
-}
-
-#filterYellow.active {
-    background-color: #ffaa1d;
-}
-
-#filterBlue {
-    border: 2px solid #0066cc;
-    background-color: transparent;
-}
-
-#filterBlue.active {
-    background-color: #0066cc;
-}
-
-#filterRed {
-    border: 2px solid #cc3333;
-    background-color: transparent;
-}
-
-#filterRed.active {
-    background-color: #cc3333;
-}
-
-.filter-button:hover {
-    opacity: 0.8;
-}
-
-.filter-button:active {
-    opacity: 0.6;
-}
-
-.tab-container {
-    margin: 8px 0;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.tab-button {
-    padding: 6px 12px;
-    margin: 0 3px;
-    border: 2px solid #214D1F;
-    background-color: #214D1F;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
-    line-height: normal;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
-}
-
-.tab-button.active {
-    background-color: white;
-    color: #214D1F;
-    border: 2px solid #214D1F;
-}
-
-.tab-button:hover:not(:disabled) {
-    opacity: 0.9;
-}
-
-#generation-tabs {
-    margin: 8px 0;
-    display: flex;
-    justify-content: center;
-    gap: 3px;
-}
-
-.gen-button {
-    padding: 6px 12px;
-    margin: 0 3px;
-    border: none;
-    background-color: #214D1F;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
-    line-height: normal;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
-}
-
-.gen-button.active {
-    background-color: white;
-    color: #214D1F;
-    border: none;
-}
-
-.gen-button:hover:not(:disabled) {
-    opacity: 0.9;
-}
-
-#form-filter {
-	text-align: center;
-	font-weight: bold;
-	font-size: 1.5em;
-}
-
-table {
-    width: 100%;
-    max-width: 100%;
-    border-collapse: separate;
-    border-spacing: 2px;
-    margin: 0 auto;
-    table-layout: auto;
-    box-sizing: border-box;
-}
-
-td {
-    border: 1px solid #cccccc;
-    padding: 6px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    box-sizing: border-box;
-    width: calc(100% / var(--cells-for-screen));
-    min-width: 60px;
-    font-size: 12px;
-    vertical-align: top;
-    line-height: 1.2;
-    touch-action: manipulation;
-    -webkit-user-select: none;
-    user-select: none;
-    position: relative;
-}
-
-td:hover {
-    background-color: #f0f0f0;
-}
-
-td.yellow {
-    border-color: #ffaa1d;
-    border-width: 2px;
-    background-color: #ffffcc;
-}
-
-td.blue {
-    border-color: #0066cc;
-    border-width: 2px;
-    background-color: #e6e6ff;
-}
-
-td.red {
-    border-color: #cc3333;
-    border-width: 2px;
-    background-color: #ffe6e6;
-}
-
-td img,
-td div {
-    pointer-events: none;
-}
-
-td div {
-    overflow-wrap: break-word;
-    max-width: 100%;
-}
-
-td img {
-    /* max-width: 50px; */
-    height: auto;
-    display: block;
-    margin: 0 auto 4px;
-}
-
-.pokemon-image {
-    max-width: 50px;
-    max-height: 50px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-
-td img.error {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin: 0 auto 4px;
-}
-
-.pokemon-number, .pokemon-name, .pokemon-form {
-    font-size: 12px;
-    margin-bottom: 4px;
-    line-height: 1.2;
-    overflow-wrap: break-word;
-}
-
-@media (max-width: 600px) {
-    .pokemon-number, .pokemon-name, .pokemon-form {
-        font-size: 10px;
-        margin-bottom: 3px;
-    }
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 11px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    border: 1px solid black;
-    margin-top: 20px;
-}
-
-.footer-text {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.hamburger {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    z-index: 1100;
-}
+#filterGrey.active { background-color: #999; }
+#filterYellow.active { background-color: #ffaa1d; }
+#filterBlue.active { background-color: #0066cc; }
+#filterRed.active { background-color: #cc3333; }
 
 .side-menu {
     position: fixed;
     top: 0;
-    left: -167px;
-    width: 167px;
+    left: -300px;
+    width: 200px;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #eeeeee;
     box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    z-index: 1050;
+    z-index: 1500;
     padding: 20px;
     transition: left 0.3s ease-in-out;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    visibility: hidden;
+    text-align: left;
 }
 
 .side-menu.active {
@@ -340,225 +91,113 @@ footer {
     visibility: visible;
 }
 
-.side-menu.active ~ .hamburger {
-    visibility: hidden;
+.side-menu-header {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0 8px 0;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
 }
 
-.close-menu {
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    align-self: flex-end;
-}
+.side-menu-header:first-of-type { border-top: none; margin-top: 0; }
 
 .menu-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    color: #333;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-#menuSaveButton {
-    background-color: #4CAF50;
-    color: white;
-}
-
-#menuSaveButton:hover {
-    background-color: #45a049;
-}
-
-#menuClearButton {
-    background-color: #ffaa1d;
-    border: 1px solid #ffaa1d;
-    color: #333;
-}
-
-#menuClearButton:hover {
-    background-color: #ffeeaa;
-}
-
-#menuExportButton, #menuImportButton, #menuShareButton {
     background-color: #d0d0d0;
-}
-
-#menuExportButton:hover, #menuImportButton:hover, #menuShareButton:hover {
-    background-color: #c0c0c0;
-}
-
-#filterPrompt button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-}
-#filterPrompt button:hover {
-    background-color: #ddd;
-}
-#promptGrey {
-    background-color: #d3d3d3;
-}
-#promptYellow {
-    background-color: #ffff99;
-}
-#promptBlue {
-    background-color: #99ccff;
-}
-#promptRed {
-    background-color: #ff9999;
-}
-#promptCancel {
-    background-color: #ccc;
-}
-
-#loading {
-    text-align: center;
-    font-size: 16px;
     color: #333;
-    margin-top: 20px;
-    display: none;
-}
-
-#content {
-    min-height: 100px;
-    margin-top: 2px;
-}
-#content .othercontent {
-    display: display;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px auto;
-    max-width: 500px;
-}
-
-.debug {
-    display: block;
-    color: red;
-    background: #ffe6e6;
-    padding: 10px;
-    border-radius: 4px;
+    font-weight: bold;
     text-align: center;
-    margin: 20px 0;
-    font-size: 14px;
-    display: block;
-    z-index: 1004;
 }
 
-#toast {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #4CAF50;
+#menuSaveButton { background-color: #5cb85c; color: white; }
+#menuClearButton { background-color: #f0ad4e; color: white; }
+
+.close-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.hamburger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+table { width: 100%; border-spacing: 2px; table-layout: fixed; }
+
+td {
+    border: 1px solid #cccccc;
+    padding: 6px;
+    text-align: center;
+    background: white;
+    vertical-align: top;
+    width: calc(100% / var(--cells-for-screen));
+}
+
+.pokemon-number { font-size: 10px; color: #666; margin-bottom: 2px; }
+.pokemon-name { font-size: 12px; font-weight: bold; margin: 4px 0; color: #000; }
+.pokemon-form { font-size: 10px; color: #555; font-style: italic; margin-top: 2px; }
+
+.pokemon-image {
+    max-width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+td.yellow { border: 2px solid #ffaa1d; background-color: #ffffcc; }
+td.blue { border: 2px solid #0066cc; background-color: #e6e6ff; }
+td.red { border: 2px solid #cc3333; background-color: #ffe6e6; }
+
+.tab-button, .gen-button {
+    padding: 6px 10px;
+    font-size: 12px;
+    background: #214D1F;
     color: white;
-    padding: 12px 24px;
+    border: none;
     border-radius: 4px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 1000;
-    min-width: 200px;
-    text-align: center;
-    font-size: 16px;
+    cursor: pointer;
 }
 
-#toast.show {
-    opacity: 1;
+.tab-button.active { background: white; color: #214D1F; border: 1px solid #214D1F; }
+
+.tab-container, #generation-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
 }
 
-.center {
-	display: block;
-    text-align: center;
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 30px;
+    display: none;
+    z-index: 2000;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
-.side-menu-header {
-	border-top: 1px solid black;
-	padding-top: 10px;
-}
-
-@media (max-width: 600px) {
-    :root {
-        --cells-for-screen: 3;
-    }
-    body {
-        padding-top: 120px;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    .search-container {
-        top: 6px;
-        right: 6px;
-    }
-    .search-input {
-        width: 120px;
-        font-size: 10px;
-    }
-    .filter-container {
-        top: 36px;
-        right: 6px;
-        gap: 5px;
-    }
-    .filter-label {
-        font-size: 10px;
-        margin-right: 4px;
-    }
-    .filter-button {
-        width: 16px;
-        height: 16px;
-    }
-    .tab-button {
-        padding: 5px 10px;
-        font-size: 11px;
-        margin: 0 2px;
-        border: 2px solid #214D1F;
-    }
-    .gen-button {
-        padding: 5px 10px;
-        font-size: 11px;
-        margin: 0 2px;
-        border: none;
-    }
-    table {
-        border-spacing: 2px;
-        margin-top: 8px;
-    }
-    td {
-        width: calc(100% / var(--cells-for-screen));
-        min-width: 50px;
-        font-size: 10px;
-        padding: 5px;
-    }
-    td img {
-        max-width: 40px;
-        height: auto;
-        max-height: 50px;
-        margin-bottom: 4px;
-    }
-    .hamburger {
-        font-size: 18px;
-        top: 6px;
-        left: 6px;
-    }
-    #toast {
-        min-width: 180px;
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-    footer {
-        font-size: 10px;
-        padding: 15px;
-    }
-}
-
-@media (min-width: 1025px) {
-    :root {
-        --cells-for-screen: 7;
-    }
-}
+.toast.show { display: block; }

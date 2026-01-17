@@ -4,7 +4,8 @@
 
 The idea for this page is the result of a conversation with a Pokémon Ambassador in 2025.
 
-The idea is to allow the user to keep track the Shiny, XXL, XXS, and 100% IV (Hundo) Pokémon they have collected in the Pokémon GO game.
+The idea is to allow the user to keep track the Shiny, XXL, XXS, and 100% IV (Hundo) Pokémon 
+they have collected in the Pokémon GO game.
 
 ## The details
 
