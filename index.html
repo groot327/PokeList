@@ -3,25 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon Tracker - Display Only</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+    <title>Pokémon Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
 </head>
 <body>
-    <header id="header" class="header">
+    <header class="header">
+        <button id="hamburger" class="hamburger" aria-label="Open side menu">☰</button>
+        
+        <div id="side-menu" class="side-menu">
+            <button id="closeMenu" class="close-menu" aria-label="Close side menu">✖</button>
+            <span class="side-menu-header">Share with others</span>
+            <button id="menuShareButton" class="menu-button">Share</button>
+            
+            <span class="side-menu-header">Local Actions</span>
+            <button id="menuSaveButton" class="menu-button">Save</button>
+            <button id="menuClearButton" class="menu-button">Clear</button>
+            <button id="menuExportButton" class="menu-button">Export</button>
+            <button id="menuImportButton" class="menu-button">Import</button>
+            <input type="file" id="importFile" accept=".json" style="display: none;">
+        </div>
+
         <div class="container">
-            <h1>Pokémon Tracker - Display Only</h1>
-            <div id="form-filter"></div>
+            <h1>Pokémon Tracker</h1>
+            
+            <div class="search-container">
+                <input id="searchInput" type="text" placeholder="Search Pokémon..." class="search-input" />
+            </div>
+            <div class="filter-container">
+                <span class="filter-label">Show only:</span>
+                <button id="filterGrey" class="filter-button" title="Uncaught"></button>
+                <button id="filterYellow" class="filter-button" title="Caught"></button>
+                <button id="filterBlue" class="filter-button" title="Traded"></button>
+                <button id="filterRed" class="filter-button" title="Hundo"></button>
+            </div>
+
+            <div id="tabs" class="tab-container">
+                <button id="tabShiny" class="tab-button">Shiny</button>
+                <button id="tabXxl" class="tab-button">XXL</button>
+                <button id="tabXxs" class="tab-button">XXS</button>
+                <button id="tabHundo" class="tab-button">Hundo</button>
+            </div>
+            <div id="generation-tabs">
+                <button class="gen-button">I</button>
+                <button class="gen-button">II</button>
+                <button class="gen-button">III</button>
+                <button class="gen-button">IV</button>
+                <button class="gen-button">V</button>
+                <button class="gen-button">VI</button>
+                <button class="gen-button">VII</button>
+                <button class="gen-button">VIII</button>
+                <button class="gen-button">IX</button>
+            </div>
         </div>
     </header>
-    <div id="loading">Loading...</div>
-    <div id="content"></div>
-    <div id="debug" class="debug"></div>
+
+    <main class="container">
+        <div id="loading">Loading Pokémon data...</div>
+        <div id="content"></div>
+        <div id="toast" class="toast">Action completed</div>
+    </main>
+
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <h3 style="margin-top:0; font-size: 16px;">Share which collection?</h3>
+            <div class="share-options">
+                <button class="share-opt" data-color="grey" title="Grey"></button>
+                <button class="share-opt" data-color="yellow" title="Yellow"></button>
+                <button class="share-opt" data-color="blue" title="Blue"></button>
+                <button class="share-opt" data-color="red" title="Red"></button>
+            </div>
+            <button id="closeModal" class="menu-button" style="margin-top: 25px; background: #666; color: white;">Cancel</button>
+        </div>
+    </div>
 
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
-        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
+        import { getFirestore, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 
         const firebaseConfig = {
             apiKey: "AIzaSyBBnkPe5qKDHWrPtgCBcAl4teU9W1h1qW0",
@@ -29,20 +89,14 @@
             projectId: "g-url-shortener-64c6e",
             storageBucket: "g-url-shortener-64c6e.firebasestorage.app",
             messagingSenderId: "786040303042",
-            appId: "1:786040303042:web:d5cd682d1ef4c2ba56ba5b",
-            measurementId: "G-DJYYW10D48"
+            appId: "1:786040303042:web:d5cd682d1ef4c2ba56ba5b"
         };
-
-        try {
-            const app = initializeApp(firebaseConfig);
-            window.db = getFirestore(app);
-            console.log('Firebase initialized successfully');
-        } catch (error) {
-            console.error('Firebase initialization failed:', error);
-            document.getElementById('debug').innerHTML = ``;
-        }
+        const app = initializeApp(firebaseConfig);
+        window.db = getFirestore(app);
+        window.auth = getAuth(app);
+        window.fs = { doc, setDoc, getDoc };
     </script>
-    <script type="module" src="display.js"></script>
+    <script type="module" src="script.js"></script>
     <footer>
         <div class="footer-text">
             Pokémon data is copyrighted by The Pokémon Company.<br />
