@@ -6,6 +6,7 @@
     <title>Pokémon Tracker - Display Only</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
 </head>
 <body>
     <header id="header" class="header">
@@ -38,8 +39,7 @@
             console.log('Firebase initialized successfully');
         } catch (error) {
             console.error('Firebase initialization failed:', error);
-            document.getElementById('content').innerHTML = '<p>Something went wrong. Please try again later.</p>';
-            document.getElementById('debug').innerHTML = `<!-- Firebase initialization failed: ${error.message} -->`;
+            document.getElementById('debug').innerHTML = ``;
         }
     </script>
     <script type="module" src="display.js"></script>
