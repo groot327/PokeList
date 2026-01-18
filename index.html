@@ -65,6 +65,19 @@
         <div id="toast" class="toast">Action completed</div>
     </main>
 
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <h3 style="margin-top:0; font-size: 16px;">Share which collection?</h3>
+            <div class="share-options">
+                <button class="share-opt" data-color="grey" title="Grey"></button>
+                <button class="share-opt" data-color="yellow" title="Yellow"></button>
+                <button class="share-opt" data-color="blue" title="Blue"></button>
+                <button class="share-opt" data-color="red" title="Red"></button>
+            </div>
+            <button id="closeModal" class="menu-button" style="margin-top: 25px; background: #666; color: white;">Cancel</button>
+        </div>
+    </div>
+
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
         import { getAuth } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
@@ -84,5 +97,12 @@
         window.fs = { doc, setDoc, getDoc };
     </script>
     <script type="module" src="script.js"></script>
+    <footer>
+        <div class="footer-text">
+            Pokémon data is copyrighted by The Pokémon Company.<br />
+            This dataset is a fan page for non-commercial use only.<br />
+            Data sourced from user-provided files and Pokémon GO event information.
+        </div>
+    </footer>
 </body>
 </html>

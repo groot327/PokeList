@@ -47,6 +47,7 @@ function initApp() {
     initFilters();
     initGenTabs();
     initSearch();
+    initModal();
     switchTab(currentTab);
 }
 
@@ -64,10 +65,7 @@ function initMenu() {
     };
 
     document.getElementById('menuClearButton').onclick = () => {
-        if(confirm("This will erase all marked Pokémon. Continue?")) { 
-            localStorage.removeItem('pokemonCellStates'); 
-            location.reload(); 
-        }
+        if(confirm("Erase all data?")) { localStorage.removeItem('pokemonCellStates'); location.reload(); }
     };
 
     document.getElementById('menuExportButton').onclick = () => {
@@ -83,7 +81,7 @@ function initMenu() {
 
     document.getElementById('menuImportButton').onclick = () => importFile.click();
     
-    // NUCLEAR IMPORT - Matches the toast logic that worked for Share
+    // NUCLEAR IMPORT
     importFile.onchange = (e) => {
         const file = e.target.files[0];
         if (!file) return;
@@ -95,39 +93,72 @@ function initMenu() {
                     cellStates = imported;
                     localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
                     renderTabContent();
-                    showToast("Import successful!"); // This should show up now
+                    showToast("Import successful!");
                 }
-            } catch (err) {
-                // No alert here, just fail silently or log to console
-                console.error("Import failed", err);
-            }
+            } catch (err) { console.error(err); }
             importFile.value = ""; 
         };
         reader.readAsText(file);
     };
 
-    // SHARE BUTTON LOGIC
-    document.getElementById('menuShareButton').onclick = async () => {
-        if (!window.fs) return alert("System still loading, try again in a second.");
-        showToast("Generating link...");
-        try {
-            const dataStr = JSON.stringify(cellStates);
-            const compressed = LZString.compressToEncodedURIComponent(dataStr);
-            const shareId = Math.random().toString(36).substring(2, 10);
-            
-            await window.fs.setDoc(window.fs.doc(window.db, "shares", shareId), {
-                data: compressed,
-                timestamp: Date.now()
-            });
-
-            const shareUrl = `${window.location.origin}${window.location.pathname}?s=${shareId}`;
-            await navigator.clipboard.writeText(shareUrl);
-            showToast("Share link copied to clipboard!");
-        } catch (e) {
-            console.error(e);
-            showToast("Error generating link.");
-        }
+    // Open Modal from Share button
+    document.getElementById('menuShareButton').onclick = () => {
+        document.getElementById('shareModal').style.display = "block";
+        menu.classList.remove('active');
+        ham.style.visibility = 'visible';
     };
+}
+
+function initModal() {
+    const modal = document.getElementById('shareModal');
+    document.getElementById('closeModal').onclick = () => modal.style.display = "none";
+    
+    // Outside click close
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+
+    document.querySelectorAll('.share-opt').forEach(btn => {
+        btn.onclick = async () => {
+            const selectedColor = btn.getAttribute('data-color');
+            modal.style.display = "none";
+            
+            if (!window.fs) return alert("System still loading...");
+            showToast(`Generating ${selectedColor} link...`);
+
+            try {
+                // FILTER DATA: Only share the chosen color
+                const filtered = {};
+                for (const [k, v] of Object.entries(cellStates)) {
+                    if (v === selectedColor) filtered[k] = v;
+                }
+
+                const dataStr = JSON.stringify(filtered);
+                const compressed = LZString.compressToEncodedURIComponent(dataStr);
+                const shareId = Math.random().toString(36).substring(2, 10);
+                
+                //await window.fs.setDoc(window.fs.doc(window.db, "shares", shareId), {
+                //    data: compressed,
+                //    timestamp: Date.now(),
+                //    color: selectedColor
+                //});
+                await window.fs.setDoc(window.fs.doc(window.db, "shares", shareId), {
+                    longUrl: `/PokeList/display/index.html?data=${compressed}`,
+                    createdAt: new Date().toISOString(),
+                    color: selectedColor
+                });
+
+
+                // Path formatting for /display/ subdirectory
+                const baseUrl = window.location.origin + window.location.pathname.replace('index.html', '');
+                const shareUrl = `${baseUrl}display/index.html?s=${shareId}`;
+                
+                await navigator.clipboard.writeText(shareUrl);
+                showToast(`${selectedColor.toUpperCase()} link copied!`);
+            } catch (e) {
+                console.error(e);
+                showToast("Error generating link.");
+            }
+        };
+    });
 }
 
 function initTabs() {
@@ -189,12 +220,8 @@ function showToast(msg) {
     const t = document.getElementById('toast');
     if(t) {
         t.innerText = msg;
-        t.classList.add('show'); // This adds the class
-        
-        // Remove it after 3 seconds
-        setTimeout(() => { 
-            t.classList.remove('show'); 
-        }, 3000);
+        t.classList.add('show');
+        setTimeout(() => { t.classList.remove('show'); }, 3000);
     }
 }
 
