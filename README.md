@@ -89,6 +89,7 @@ elsewhere.
 
 1. continue to search for missing images
 2. expand this readme with page "help" information in prep for adding it to the page
+3. password protect the tracker page; we don't need millions of people hitting this! 
 
 ## History
 
@@ -96,6 +97,11 @@ elsewhere.
 * 2025-08-07: pushed good latest code to github; some image issues remain.
 * 2025-08-08: code should be pretty solid; updated html with favicon.ico link.
 * 2025-08-26: latest code push includes the share process, finalized.
+* 2026-01-20: multiple updates in this code push:
+  * better display on my tablet and mobile in general,
+  * corrected share function - should work cross-device now,
+  * preparation for legendary-only display in pokemon.json,
+  * other issues addressed              
 
 ## Notice:
 
