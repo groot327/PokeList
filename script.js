@@ -20,7 +20,7 @@ fetch('pokemon.json').then(r => r.json()).then(data => {
 });
 
 async function checkIncomingShare() {
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(awindow.location.search);
     const shareId = urlParams.get('s');
     if (shareId && window.fs) {
         try {
@@ -107,58 +107,69 @@ function initMenu() {
         menu.classList.remove('active');
         ham.style.visibility = 'visible';
     };
+    document.getElementById('menuShareButton').onclick = () => {
+      document.getElementById('shareModal').style.display = "block";
+      const menu = document.getElementById('side-menu');
+      const ham = document.getElementById('hamburger');
+      menu.classList.remove('active');
+      ham.style.visibility = 'visible';
+  };
+
+// Inside your initModal() or where you handle the share buttons:
+
+
 }
 
 function initModal() {
-    const modal = document.getElementById('shareModal');
-    document.getElementById('closeModal').onclick = () => modal.style.display = "none";
+  const modal = document.getElementById('shareModal');
+  document.getElementById('closeModal').onclick = () => modal.style.display = "none";
     
-    // Outside click close
-    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+  // Outside click close
+  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
 
-    document.querySelectorAll('.share-opt').forEach(btn => {
-        btn.onclick = async () => {
-            const selectedColor = btn.getAttribute('data-color');
-            modal.style.display = "none";
+  document.querySelectorAll('.share-opt').forEach(btn => {
+    btn.onclick = async () => {
+      const selectedColor = btn.getAttribute('data-color');
+      document.getElementById('shareModal').style.display = "none";
+        
+      if (!window.fs) return alert("System still loading...");
+      showToast(`Generating ${selectedColor} link...`);
+
+      try {
+        // 1. Filter the data to ONLY include the selected color
+        const filtered = {};
+        for (const [k, v] of Object.entries(cellStates)) {
+          if (v === selectedColor) filtered[k] = v;
+        }
+
+        // 2. Compress the filtered data
+         const dataStr = JSON.stringify(filtered);
+         const compressed = LZString.compressToEncodedURIComponent(dataStr);
             
-            if (!window.fs) return alert("System still loading...");
-            showToast(`Generating ${selectedColor} link...`);
+        // 3. Generate a unique ID
+        const shareId = Math.random().toString(36).substring(2, 10);
+            
+        // 4. Save to Firebase (CLEAN VERSION)
+        // We save 'data' as its own field, and 'longUrl' just for reference
+        const base = window.location.origin + window.location.pathname.replace('index.html', '');
+        const shareUrl = `${base}display/index.html?s=${shareId}`;
 
-            try {
-                // FILTER DATA: Only share the chosen color
-                const filtered = {};
-                for (const [k, v] of Object.entries(cellStates)) {
-                    if (v === selectedColor) filtered[k] = v;
-                }
+        await window.fs.setDoc(window.fs.doc(window.db, "shares", shareId), {
+          data: compressed,      // Raw compressed string for the script to read
+          color: selectedColor,
+          createdAt: new Date().toISOString(),
+          longUrl: shareUrl      // Still saved so you can see it in the dashboard
+        });
 
-                const dataStr = JSON.stringify(filtered);
-                const compressed = LZString.compressToEncodedURIComponent(dataStr);
-                const shareId = Math.random().toString(36).substring(2, 10);
-                
-                //await window.fs.setDoc(window.fs.doc(window.db, "shares", shareId), {
-                //    data: compressed,
-                //    timestamp: Date.now(),
-                //    color: selectedColor
-                //});
-                await window.fs.setDoc(window.fs.doc(window.db, "shares", shareId), {
-                    longUrl: `/PokeList/display/index.html?data=${compressed}`,
-                    createdAt: new Date().toISOString(),
-                    color: selectedColor
-                });
-
-
-                // Path formatting for /display/ subdirectory
-                const baseUrl = window.location.origin + window.location.pathname.replace('index.html', '');
-                const shareUrl = `${baseUrl}display/index.html?s=${shareId}`;
-                
-                await navigator.clipboard.writeText(shareUrl);
-                showToast(`${selectedColor.toUpperCase()} link copied!`);
-            } catch (e) {
-                console.error(e);
-                showToast("Error generating link.");
-            }
-        };
-    });
+        // 5. Copy the URL to clipboard
+        await navigator.clipboard.writeText(shareUrl);
+        showToast(`${selectedColor.toUpperCase()} link copied!`);
+      } catch (e) {
+        console.error("Share failed:", e);
+        showToast("Error generating link.");
+      }
+    };
+  });
 }
 
 function initTabs() {

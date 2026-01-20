@@ -1,10 +1,15 @@
+/* --- GLOBAL STYLES --- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding-top: 155px;
+    /* Default desktop padding to clear the fixed header */
+    padding-top: 155px; 
+    /* Padding at bottom to prevent content being hidden by footer */
+    padding-bottom: 60px;
 }
 
+/* --- HEADER SECTION --- */
 .header {
     background-color: #C8F0C7;
     position: fixed;
@@ -12,10 +17,10 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 5px 0 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     box-sizing: border-box;
-    height: 145px;
+    min-height: 145px;
 }
 
 .container {
@@ -25,6 +30,13 @@ body {
     position: relative;
 }
 
+h1 {
+    margin-top: 5px; /* Moved closer to top border globally */
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* --- DESKTOP POSITIONING (Search & Filters) --- */
 .search-container {
     position: absolute;
     top: 5px;
@@ -69,6 +81,7 @@ body {
 #filterBlue.active { background-color: #0066cc; }
 #filterRed.active { background-color: #cc3333; }
 
+/* --- SIDE MENU (Hamburger Menu) --- */
 .side-menu {
     position: fixed;
     top: 0;
@@ -137,27 +150,7 @@ body {
     z-index: 1100;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 11px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    border: 1px solid black;
-    margin-top: 20px;
-}
-
-.footer-text {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
+/* --- POKEMON GRID STYLES --- */
 table { width: 100%; border-spacing: 2px; table-layout: fixed; }
 
 td {
@@ -181,10 +174,12 @@ td {
     display: block;
 }
 
+/* Color States */
 td.yellow { border: 2px solid #ffaa1d; background-color: #ffffcc; }
 td.blue { border: 2px solid #0066cc; background-color: #e6e6ff; }
 td.red { border: 2px solid #cc3333; background-color: #ffe6e6; }
 
+/* --- TABS & GENERATION BUTTONS --- */
 .tab-button, .gen-button {
     padding: 6px 10px;
     font-size: 12px;
@@ -204,9 +199,10 @@ td.red { border: 2px solid #cc3333; background-color: #ffe6e6; }
     margin-top: 5px;
 }
 
+/* --- TOAST NOTIFICATIONS --- */
 .toast {
     position: fixed;
-    bottom: 20px;
+    bottom: 60px; /* Moved up to stay clear of the footer */
     left: 50%;
     transform: translateX(-50%);
     background: #333;
@@ -220,7 +216,7 @@ td.red { border: 2px solid #cc3333; background-color: #ffe6e6; }
 }
 .toast.show { display: block; }
 
-/* MODAL */
+/* --- SHARE MODAL --- */
 .modal {
     display: none; 
     position: fixed; 
@@ -258,3 +254,72 @@ td.red { border: 2px solid #cc3333; background-color: #ffe6e6; }
 .share-opt[data-color="yellow"] { background-color: #ffaa1d; border-color: #e69500; }
 .share-opt[data-color="blue"] { background-color: #0066cc; border-color: #004d99; }
 .share-opt[data-color="red"] { background-color: #cc3333; border-color: #992626; }
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    // color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 10px;
+    border: 1px solid black;
+    
+    // position: fixed;
+    bottom: 0;
+    // height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    color: #fff;
+}
+
+/* --- 📱 MOBILE SPECIFIC OVERRIDES --- */
+@media (max-width: 600px) {
+    body {
+        padding-top: 195px; 
+    }
+
+    .header {
+        height: auto;
+        min-height: 185px;
+    }
+
+    h1 {
+        font-size: 18px; 
+        margin-top: 2px; 
+        margin-bottom: 8px;
+    }
+
+    .search-container, .filter-container {
+        position: static; 
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    .search-input {
+        width: 80%; 
+        font-size: 14px; 
+    }
+
+    .filter-container {
+        margin-bottom: 12px;
+    }
+
+    .filter-label {
+        font-size: 12px;
+    }
+}
