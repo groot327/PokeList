@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Tracker - Display Only</title>
-    <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Override to shrink the header for the display page */
+        .header {
+            min-height: auto !important;
+            padding: 10px 0 !important;
+        }
+        body {
+            /* Reduced padding since header and search bar are gone */
+            padding-top: 80px !important; 
+        }
+        #status-subtitle {
+            font-size: 14px;
+            color: #444;
+            font-weight: bold;
+            margin-top: 4px;
+            text-transform: capitalize;
+        }
+        /* Target Generation Headers to shrink spacing */
+        #content h2 {
+            margin: 10px 0 5px 0 !important; /* Top 10px, Bottom 5px */
+            font-size: 1.2rem;
+        }
+        @media (max-width: 600px) {
+            body { padding-top: 90px !important; }
+        }
+    </style>
 </head>
 <body>
     <header id="header" class="header">
         <div class="container">
-            <h1>Pokémon Tracker - Display Only</h1>
-            <div id="form-filter"></div>
-        </div>
+            <h1>Pokémon Tracker Display</h1>
+            <div id="status-subtitle">Loading Collection Details...</div>
+            </div>
     </header>
-    <div id="loading">Loading...</div>
-    <div id="content"></div>
-    <div id="debug" class="debug"></div>
+
+    <main class="container">
+        <div id="loading">Loading...</div>
+        <div id="content"></div>
+        <div id="debug" class="debug"></div>
+    </main>
 
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
-        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+        import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 
         const firebaseConfig = {
             apiKey: "AIzaSyBBnkPe5qKDHWrPtgCBcAl4teU9W1h1qW0",
@@ -36,13 +65,15 @@
         try {
             const app = initializeApp(firebaseConfig);
             window.db = getFirestore(app);
+            window.fs = { doc, getDoc };
             console.log('Firebase initialized successfully');
         } catch (error) {
             console.error('Firebase initialization failed:', error);
-            document.getElementById('debug').innerHTML = ``;
+            document.getElementById('debug').innerHTML = `Firebase Init Error: ${error.message}`;
         }
     </script>
     <script type="module" src="display.js"></script>
+
     <footer>
         <div class="footer-text">
             Pokémon data is copyrighted by The Pokémon Company.<br />
