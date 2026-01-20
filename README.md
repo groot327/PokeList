@@ -89,7 +89,7 @@ elsewhere.
 
 1. continue to search for missing images
 2. expand this readme with page "help" information in prep for adding it to the page
-3. password protect the tracker page; we don't need millions of people hitting this! 
+3. legendary-only display for tracker 
 
 ## History
 
@@ -101,7 +101,8 @@ elsewhere.
   * better display on my tablet and mobile in general,
   * corrected share function - should work cross-device now,
   * preparation for legendary-only display in pokemon.json,
-  * other issues addressed              
+  * other issues addressed
+* 2026-01-20: second push with minor adjustment.             
 
 ## Notice:
 
