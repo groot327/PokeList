@@ -6,15 +6,15 @@ function debugLog(msg, isError = false) {
         const span = document.createElement('div');
         span.style.color = isError ? '#ff4444' : '#2ecc71';
         span.style.fontSize = '13px';
-        span.style.marginTop = '5px';
         span.innerText = `> ${msg}`;
         logDiv.appendChild(span);
     }
-    console.log(msg);
 }
 
 let pokemonData = null;
-let cellStates = {}; 
+let sharedKeys = [];
+let activeTab = 'shiny';
+let sharedColor = 'grey';
 
 const updateGrid = () => {
     let cols = window.innerWidth < 601 ? 3 : (window.innerWidth > 1024 ? 7 : 5);
@@ -24,38 +24,22 @@ const updateGrid = () => {
 let cellsForScreen = updateGrid();
 window.addEventListener('resize', () => { cellsForScreen = updateGrid(); });
 
-const fixImagePath = (path) => {
-    if (!path) return '';
-    if (path.startsWith('http')) return path;
-    return window.location.origin + path;
-};
+const fixImagePath = (p) => p && p.startsWith('http') ? p : '../' + p.replace(/^\//, '');
 
-// 1. Fetch the master pokemon list
 fetch('../pokemon.json')
-    .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}: pokemon.json not found`);
-        return r.json();
-    })
+    .then(r => r.json())
     .then(data => {
         pokemonData = data;
         loadSharedData();
     })
-    .catch(err => {
-        debugLog(`CRITICAL ERROR: ${err.message}`, true);
-    });
+    .catch(err => debugLog("Failed to load pokemon.json", true));
 
-// 2. Fetch the specific share record from Firebase
 async function loadSharedData() {
     const urlParams = new URLSearchParams(window.location.search);
     const shareId = urlParams.get('s');
-    
-    if (!shareId) {
-        debugLog("ERROR: No ID found in URL", true);
-        return;
-    }
-
-    if (!window.fs || !window.db) {
-        setTimeout(loadSharedData, 500);
+    if (!shareId || !window.fs) {
+        if (!shareId) debugLog("No Share ID", true);
+        else setTimeout(loadSharedData, 500);
         return;
     }
 
@@ -64,63 +48,32 @@ async function loadSharedData() {
         const docSnap = await window.fs.getDoc(docRef);
         
         if (docSnap.exists()) {
-            const docData = docSnap.data();
-            let compressed = docData.data || "";
-
-            if (!compressed && docData.longUrl) {
-                const urlParts = docData.longUrl.split('data=');
-                if (urlParts.length > 1) {
-                    compressed = urlParts[1];
-                }
-            }
-
-            if (!compressed) throw new Error("No data string found in record.");
-
-            const decompressed = LZString.decompressFromEncodedURIComponent(compressed);
-            if (!decompressed) throw new Error("Decompression failed");
-
-            cellStates = JSON.parse(decompressed);
+            const fb = docSnap.data();
+            const stateObject = JSON.parse(LZString.decompressFromEncodedURIComponent(fb.data));
             
-            const firstKey = Object.keys(cellStates)[0] || "";
-            const category = firstKey.split('-')[0] || "Collection";
-            const colorName = docData.color || "Selected";
+            activeTab = fb.tab;
+            sharedKeys = Object.keys(stateObject);
+            sharedColor = fb.color;
             
-            const subtitle = document.getElementById('status-subtitle');
-            if (subtitle) {
-                subtitle.innerText = `${category.toUpperCase()} - ${colorName.charAt(0).toUpperCase() + colorName.slice(1)} Filter`;
-            }
-
-            setTimeout(() => {
-                document.getElementById('loading').style.display = 'none';
-                renderSharedContent(); // initSearch call removed
-            }, 500);
-            
+            document.getElementById('status-subtitle').innerText = `Type: ${activeTab.toUpperCase()}`;
+            document.getElementById('loading').style.display = 'none';
+            renderSharedContent();
         } else {
-            debugLog("ERROR: Share ID does not exist", true);
-            if(document.getElementById('status-subtitle')) {
-                document.getElementById('status-subtitle').innerText = "Link Expired";
-            }
+            debugLog("Link invalid or expired", true);
         }
-    } catch (e) {
-        debugLog(`CRITICAL ERROR: ${e.message}`, true);
-    }
+    } catch (e) { debugLog("Error loading share", true); }
 }
 
-// 3. Render the UI
 function renderSharedContent() {
     const content = document.getElementById('content');
     if(!content || !pokemonData) return;
-    
     content.innerHTML = '';
+
     const generations = {};
-    
     pokemonData.pokemon.forEach(p => {
         if (!generations[p.generation_number]) generations[p.generation_number] = [];
         generations[p.generation_number].push(p);
     });
-
-    const firstKey = Object.keys(cellStates)[0] || "";
-    const prefix = firstKey.split('-')[0] || 'shiny';
 
     Object.keys(generations).sort((a,b)=>a-b).forEach(num => {
         const pks = generations[num];
@@ -129,25 +82,17 @@ function renderSharedContent() {
         let cellCount = 0;
 
         pks.forEach(p => {
-            p.forms.forEach(f => {
-                let state = null;
-                const isShinyTab = prefix === 'shiny';
-
-                if (cellStates[`${prefix}-${f.key}`]) {
-                    state = cellStates[`${prefix}-${f.key}`];
-                } 
-                else if (f.form === 'normal' && cellStates[`${prefix}-${p.id}`]) {
-                    state = cellStates[`${prefix}-${p.id}`];
-                }
-
-                if (state) {
+            let forms = (activeTab === 'shiny') ? p.forms : p.forms.filter(f => f.form === p.base_form);
+            
+            forms.forEach(f => {
+                const key = `${activeTab}-${f.key}`;
+                
+                if (sharedKeys.includes(key)) {
                     if (cellCount > 0 && cellCount % cellsForScreen === 0) row = table.insertRow();
-                    
                     const cell = row.insertCell();
-                    cell.className = state;
+                    cell.className = sharedColor; 
                     
-                    const img = isShinyTab ? f.shiny.image : f.normal.image;
-                    
+                    const img = (activeTab === 'shiny') ? f.shiny.image : f.normal.image;
                     cell.innerHTML = `
                         <div class="pokemon-number">#${p.id}</div>
                         <img class="pokemon-image" src="${fixImagePath(img)}" loading="lazy">
@@ -158,17 +103,12 @@ function renderSharedContent() {
                 }
             });
         });
-        
+
         if (cellCount > 0) {
             const h2 = document.createElement('h2');
             h2.innerText = `Gen ${num}`;
-            // Margin is now handled by the CSS block in index.html
             content.appendChild(h2);
             content.appendChild(table);
         }
     });
-
-    if (content.innerHTML === '') {
-        content.innerHTML = '<div style="padding:50px;">This shared view is empty or uses an invalid format.</div>';
-    }
 }
