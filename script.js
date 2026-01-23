@@ -1,6 +1,5 @@
 let pokemonData = null;
 let currentTab = localStorage.getItem('currentTab') || 'shiny';
-let currentFilter = null;
 let cellStates = JSON.parse(localStorage.getItem('pokemonCellStates') || '{}');
 
 const updateGrid = () => {
@@ -20,7 +19,7 @@ fetch('pokemon.json').then(r => r.json()).then(data => {
 });
 
 async function checkIncomingShare() {
-    const urlParams = new URLSearchParams(awindow.location.search);
+    const urlParams = new URLSearchParams(window.location.search);
     const shareId = urlParams.get('s');
     if (shareId && window.fs) {
         try {
@@ -30,11 +29,10 @@ async function checkIncomingShare() {
                 const compressed = docSnap.data().data;
                 const decompressed = LZString.decompressFromEncodedURIComponent(compressed);
                 const sharedData = JSON.parse(decompressed);
-                if (confirm("Load shared data? This will overwrite your current progress.")) {
-                    cellStates = sharedData;
+                if (confirm("Load shared data? This will merge with your current progress.")) {
+                    cellStates = { ...cellStates, ...sharedData };
                     localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
                     renderTabContent();
-                    showToast("Shared data loaded!");
                 }
             }
         } catch (e) { console.error("Share error:", e); }
@@ -44,7 +42,6 @@ async function checkIncomingShare() {
 function initApp() {
     initMenu();
     initTabs();
-    initFilters();
     initGenTabs();
     initSearch();
     initModal();
@@ -65,7 +62,11 @@ function initMenu() {
     };
 
     document.getElementById('menuClearButton').onclick = () => {
-        if(confirm("Erase all data?")) { localStorage.removeItem('pokemonCellStates'); location.reload(); }
+        if(confirm("Erase all data?")) { 
+            cellStates = {};
+            localStorage.removeItem('pokemonCellStates'); 
+            location.reload(); 
+        }
     };
 
     document.getElementById('menuExportButton').onclick = () => {
@@ -81,109 +82,76 @@ function initMenu() {
 
     document.getElementById('menuImportButton').onclick = () => importFile.click();
     
-    // NUCLEAR IMPORT
     importFile.onchange = (e) => {
         const file = e.target.files[0];
         if (!file) return;
         const reader = new FileReader();
         reader.onload = (event) => {
             try {
-                const imported = JSON.parse(event.target.result);
-                if (imported) {
-                    cellStates = imported;
-                    localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
-                    renderTabContent();
-                    showToast("Import successful!");
-                }
+                cellStates = JSON.parse(event.target.result);
+                localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
+                renderTabContent();
+                showToast("Import successful!");
             } catch (err) { console.error(err); }
-            importFile.value = ""; 
         };
         reader.readAsText(file);
     };
 
-    // Open Modal from Share button
     document.getElementById('menuShareButton').onclick = () => {
         document.getElementById('shareModal').style.display = "block";
         menu.classList.remove('active');
         ham.style.visibility = 'visible';
     };
-    document.getElementById('menuShareButton').onclick = () => {
-      document.getElementById('shareModal').style.display = "block";
-      const menu = document.getElementById('side-menu');
-      const ham = document.getElementById('hamburger');
-      menu.classList.remove('active');
-      ham.style.visibility = 'visible';
-  };
-
-// Inside your initModal() or where you handle the share buttons:
-
-
 }
 
 function initModal() {
   const modal = document.getElementById('shareModal');
   document.getElementById('closeModal').onclick = () => modal.style.display = "none";
-    
-  // Outside click close
-  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
 
   document.querySelectorAll('.share-opt').forEach(btn => {
     btn.onclick = async () => {
       const selectedColor = btn.getAttribute('data-color');
-      document.getElementById('shareModal').style.display = "none";
-        
-      if (!window.fs) return alert("System still loading...");
-      showToast(`Generating ${selectedColor} link...`);
+      modal.style.display = "none";
+      if (!window.fs) return;
 
       try {
-        // 1. Filter the data to ONLY include the selected color
         const filtered = {};
-        for (const [k, v] of Object.entries(cellStates)) {
-          if (v === selectedColor) filtered[k] = v;
+        const prefix = `${currentTab}-`;
+        
+        for (const [key, value] of Object.entries(cellStates)) {
+          if (key.startsWith(prefix) && value === selectedColor) {
+            filtered[key] = value;
+          }
         }
 
-        // 2. Compress the filtered data
-         const dataStr = JSON.stringify(filtered);
-         const compressed = LZString.compressToEncodedURIComponent(dataStr);
-            
-        // 3. Generate a unique ID
+        if (Object.keys(filtered).length === 0) {
+            showToast("Nothing to share in this category!");
+            return;
+        }
+
+        const compressed = LZString.compressToEncodedURIComponent(JSON.stringify(filtered));
         const shareId = Math.random().toString(36).substring(2, 10);
-            
-        // 4. Save to Firebase (CLEAN VERSION)
-        // We save 'data' as its own field, and 'longUrl' just for reference
         const base = window.location.origin + window.location.pathname.replace('index.html', '');
-        const shareUrl = `${base}display/index.html?s=${shareId}`;
+        const shareUrl = `${base}display/index.html?s=${shareId}&type=${currentTab.toUpperCase()}`;
 
         await window.fs.setDoc(window.fs.doc(window.db, "shares", shareId), {
-          data: compressed,      // Raw compressed string for the script to read
+          data: compressed,
           color: selectedColor,
-          createdAt: new Date().toISOString(),
-          longUrl: shareUrl      // Still saved so you can see it in the dashboard
+          tab: currentTab,
+          createdAt: new Date().toISOString()
         });
 
-        // 5. Copy the URL to clipboard
         await navigator.clipboard.writeText(shareUrl);
-        showToast(`${selectedColor.toUpperCase()} link copied!`);
-      } catch (e) {
-        console.error("Share failed:", e);
-        showToast("Error generating link.");
-      }
+        showToast("Link copied to clipboard!");
+      } catch (e) { console.error(e); }
     };
   });
 }
 
 function initTabs() {
     ['shiny', 'xxl', 'xxs', 'hundo'].forEach(t => {
-        const id = `tab${t.charAt(0).toUpperCase() + t.slice(1)}`;
-        const btn = document.getElementById(id);
+        const btn = document.getElementById(`tab${t.charAt(0).toUpperCase() + t.slice(1)}`);
         if(btn) btn.onclick = () => switchTab(t);
-    });
-}
-
-function initFilters() {
-    ['Grey', 'Yellow', 'Blue', 'Red'].forEach(c => {
-        const btn = document.getElementById(`filter${c}`);
-        if(btn) btn.onclick = () => toggleFilter(c.toLowerCase());
     });
 }
 
@@ -218,15 +186,6 @@ function switchTab(tab) {
     renderTabContent();
 }
 
-function toggleFilter(color) {
-    currentFilter = (currentFilter === color) ? null : color;
-    ['grey', 'yellow', 'blue', 'red'].forEach(c => {
-        const btn = document.getElementById(`filter${c.charAt(0).toUpperCase() + c.slice(1)}`);
-        if(btn) btn.classList.toggle('active', c === currentFilter);
-    });
-    renderTabContent();
-}
-
 function showToast(msg) {
     const t = document.getElementById('toast');
     if(t) {
@@ -239,8 +198,8 @@ function showToast(msg) {
 function renderTabContent() {
     const content = document.getElementById('content');
     if(!content || !pokemonData) return;
-    
     content.innerHTML = '';
+
     const generations = {};
     pokemonData.pokemon.forEach(p => {
         if (!generations[p.generation_number]) generations[p.generation_number] = [];
@@ -258,9 +217,9 @@ function renderTabContent() {
         pks.forEach(p => {
             let forms = (currentTab === 'shiny') ? p.forms : p.forms.filter(f => f.form === p.base_form);
             forms.forEach(f => {
-                const key = (currentTab === 'shiny') ? `shiny-${f.key}` : `${currentTab}-${p.id}`;
+                // Using the key from the JSON file as the unique ID
+                const key = `${currentTab}-${f.key}`;
                 const state = cellStates[key] || 'grey';
-                if (currentFilter && state !== currentFilter) return;
 
                 if (cellCount > 0 && cellCount % cellsForScreen === 0) row = table.insertRow();
                 const cell = row.insertCell();
@@ -276,8 +235,9 @@ function renderTabContent() {
 
                 cell.onclick = () => {
                     const cycle = {'grey':'yellow','yellow':'blue','blue':'red','red':'grey'};
-                    cellStates[key] = cycle[cellStates[key] || 'grey'];
-                    cell.className = cellStates[key];
+                    const newState = cycle[cellStates[key] || 'grey'];
+                    cellStates[key] = newState;
+                    cell.className = newState;
                     localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
                 };
                 cellCount++;
