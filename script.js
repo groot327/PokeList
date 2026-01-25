@@ -215,16 +215,32 @@ function renderTabContent() {
         let cellCount = 0;
 
         pks.forEach(p => {
+            // Determine which forms to iterate over based on the tab
             let forms = (currentTab === 'shiny') ? p.forms : p.forms.filter(f => f.form === p.base_form);
+            
             forms.forEach(f => {
-                // Using the key from the JSON file as the unique ID
+                // Update 1: Check if the required data exists for the current tab.
+                // If looking for shiny, and f.shiny is missing (e.g. Enamorus), skip this form entirely.
+                if (currentTab === 'shiny' && !f.shiny) {
+                    return;
+                }
+
+                // If looking for normal tabs, and f.normal is missing, skip (safety check).
+                if (currentTab !== 'shiny' && !f.normal) {
+                    return;
+                }
+
                 const key = `${currentTab}-${f.key}`;
                 const state = cellStates[key] || 'grey';
 
                 if (cellCount > 0 && cellCount % cellsForScreen === 0) row = table.insertRow();
                 const cell = row.insertCell();
                 cell.className = state;
-                const img = (currentTab === 'shiny') ? f.shiny.image : f.normal.image;
+                
+                // Update 2: Robust image retrieval. 
+                // We know the object (f.shiny or f.normal) exists due to the check above.
+                const imgSource = (currentTab === 'shiny') ? f.shiny.image : f.normal.image;
+                const img = imgSource || 'PokeImgs/POKE_QUESTION.icon.png';
                 
                 cell.innerHTML = `
                     <div class="pokemon-number">#${p.id}</div>
@@ -243,6 +259,12 @@ function renderTabContent() {
                 cellCount++;
             });
         });
-        if (cellCount > 0) { section.appendChild(table); content.appendChild(section); }
+        
+        // Update 3: Only append the section if there are actually cells in it.
+        // This prevents empty Gen headers if a Gen has Pokemon but none match the current filter (e.g. no shinies yet).
+        if (cellCount > 0) { 
+            section.appendChild(table); 
+            content.appendChild(section); 
+        }
     });
 }

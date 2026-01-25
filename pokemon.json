@@ -80,10 +80,10 @@
                     "form": "Party Hat",
                     "key": "WlusPUFk",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0002.cJAN_2020_NOEVOLVE.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0002.cJAN_2020_NOEVOLVE.s.icon.png"
                     }
                 }
             ]
@@ -114,10 +114,10 @@
                     "form": "Party Hat",
                     "key": "oOlTuppH",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0003.cJAN_2020_NOEVOLVE.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0003.cJAN_2020_NOEVOLVE.s.icon.png"
                     }
                 }
             ]
@@ -264,6 +264,16 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0007.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Sunglasses",
+                    "key": "PhcpYkXQ",
+                    "normal": {
+                        "image": "PokeImgs/pm0007.cSUMMER_2018.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0007.cSUMMER_2018.s.icon.png"
                     }
                 },
                 {
@@ -616,7 +626,7 @@
             "id": "0019",
             "name": "Rattata",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -650,7 +660,7 @@
             "id": "0020",
             "name": "Raticate",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -1594,7 +1604,7 @@
             "id": "0026",
             "name": "Raichu",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -1778,7 +1788,7 @@
             "id": "0027",
             "name": "Sandshrew",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -1812,7 +1822,7 @@
             "id": "0028",
             "name": "Sandslash",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2068,7 +2078,7 @@
             "id": "0037",
             "name": "Vulpix",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2112,7 +2122,7 @@
             "id": "0038",
             "name": "Ninetales",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2440,7 +2450,7 @@
             "id": "0050",
             "name": "Diglett",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2484,7 +2494,7 @@
             "id": "0051",
             "name": "Dugtrio",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2528,7 +2538,7 @@
             "id": "0052",
             "name": "Meowth",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2572,7 +2582,7 @@
             "id": "0053",
             "name": "Persian",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2732,7 +2742,7 @@
             "id": "0058",
             "name": "Growlithe",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "hisui",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -2756,7 +2766,7 @@
             "id": "0059",
             "name": "Arcanine",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "hisui",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3136,7 +3146,7 @@
             "id": "0074",
             "name": "Geodude",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3170,7 +3180,7 @@
             "id": "0075",
             "name": "Graveler",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3204,7 +3214,7 @@
             "id": "0076",
             "name": "Golem",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3238,7 +3248,7 @@
             "id": "0077",
             "name": "Ponyta",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3292,7 +3302,7 @@
             "id": "0078",
             "name": "Rapidash",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3336,7 +3346,7 @@
             "id": "0079",
             "name": "Slowpoke",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3390,7 +3400,7 @@
             "id": "0080",
             "name": "Slowbro",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3482,7 +3492,7 @@
             "id": "0083",
             "name": "Farfetch'd",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -3980,7 +3990,7 @@
             "id": "0100",
             "name": "Voltorb",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "hisui",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -4014,7 +4024,7 @@
             "id": "0101",
             "name": "Electrode",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "hisui",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -4072,7 +4082,7 @@
             "id": "0103",
             "name": "Exeggutor",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -4140,7 +4150,7 @@
             "id": "0105",
             "name": "Marowak",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "alola",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -4280,7 +4290,7 @@
             "id": "0110",
             "name": "Weezing",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -4588,7 +4598,7 @@
             "id": "0122",
             "name": "Mr. Mime",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -4752,7 +4762,7 @@
             "id": "0128",
             "name": "Tauros",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "paldea",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -4768,6 +4778,36 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0128.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Combat",
+                    "key": "MuYzjczs",
+                    "normal": {
+                        "image": "PokeImgs/pm0128.fPALDEA_COMBAT.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0128.fPALDEA_COMBAT.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Blaze",
+                    "key": "pMq9EliV",
+                    "normal": {
+                        "image": "PokeImgs/pm0128.fPALDEA_BLAZE.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0128.fPALDEA_BLAZE.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Aqua",
+                    "key": "7oVVoabU",
+                    "normal": {
+                        "image": "PokeImgs/pm0128.fPALDEA_AQUA.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0128.fPALDEA_AQUA.s.icon.png"
                     }
                 }
             ]
@@ -5396,7 +5436,7 @@
             "id": "0144",
             "name": "Articuno",
             "rarity": "legendary",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -5430,7 +5470,7 @@
             "id": "0145",
             "name": "Zapdos",
             "rarity": "legendary",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -5464,7 +5504,7 @@
             "id": "0146",
             "name": "Moltres",
             "rarity": "legendary",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Kanto",
             "generation_number": "1",
             "base_form": "normal",
@@ -5758,7 +5798,7 @@
             "id": "0157",
             "name": "Typhlosion",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "hisui",
             "generation": "Johto",
             "generation_number": "2",
             "base_form": "normal",
@@ -6776,7 +6816,7 @@
             "id": "0194",
             "name": "Wooper",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "paldea",
             "generation": "Johto",
             "generation_number": "2",
             "base_form": "normal",
@@ -7016,7 +7056,7 @@
             "id": "0199",
             "name": "Slowking",
             "rarity": "standard",
-            "regional": "none",
+            "regional": "galar",
             "generation": "Johto",
             "generation_number": "2",
             "base_form": "normal",
@@ -7087,21 +7127,11 @@
             "regional": "none",
             "generation": "Johto",
             "generation_number": "2",
-            "base_form": "normal",
+            "base_form": "Unown A",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "IW5F4EUw",
-                    "normal": {
-                        "image": "PokeImgs/pm0201.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
-                },
                 {
                     "form": "Unown A",
                     "key": "tEoJxsm0",
@@ -10611,21 +10641,11 @@
             "regional": "none",
             "generation": "Hoenn",
             "generation_number": "3",
-            "base_form": "normal",
+            "base_form": "01",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "kUEK7tNH",
-                    "normal": {
-                        "image": "PokeImgs/pm0327.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0327.s.icon.png"
-                    }
-                },
                 {
                     "form": "01",
                     "key": "Y9hfXZu4",
@@ -12901,49 +12921,39 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "Plant",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "JQvxp5Gd",
-                    "normal": {
-                        "image": "PokeImgs/pm0412.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0412.s.icon.png"
-                    }
-                },
-                {
                     "form": "Plant",
                     "key": "Rt1UJLnL",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0412.fBURMY_PLANT.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0412.fPLANT.s.icon.png"
+                        "image": "PokeImgs/pm0412.fBURMY_PLANT.s.icon.png"
                     }
                 },
                 {
                     "form": "Sandy",
                     "key": "DkI6eMpB",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0412.fBURMY_SANDY.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0412.fSANDY.s.icon.png"
+                        "image": "PokeImgs/pm0412.fBURMY_SANDY.s.icon.png"
                     }
                 },
                 {
                     "form": "Trash",
                     "key": "MVcNluZW",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0412.fBURMY_TRASH.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0412.fTRASH.s.icon.png"
+                        "image": "PokeImgs/pm0412.fBURMY_TRASH.s.icon.png"
                     }
                 }
             ]
@@ -12955,49 +12965,39 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "Plant",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "lmxRKNhE",
-                    "normal": {
-                        "image": "PokeImgs/pm0413.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0413.s.icon.png"
-                    }
-                },
-                {
                     "form": "Plant",
                     "key": "TtqeBkNT",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0413.fWORMADAM_PLANT.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0413.fPLANT.s.icon.png"
+                        "image": "PokeImgs/pm0413.fWORMADAM_PLANT.s.icon.png"
                     }
                 },
                 {
                     "form": "Sandy",
                     "key": "9omu3gvY",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0413.fWORMADAM_SANDY.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0413.fSANDY.s.icon.png"
+                        "image": "PokeImgs/pm0413.fWORMADAM_SANDY.s.icon.png"
                     }
                 },
                 {
                     "form": "Trash",
                     "key": "XklYRA2H",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0413.fWORMADAM_TRASH.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0413.fTRASH.s.icon.png"
+                        "image": "PokeImgs/pm0413.fWORMADAM_TRASH.s.icon.png"
                     }
                 }
             ]
@@ -13177,21 +13177,11 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "Sunny",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "js8wA7VU",
-                    "normal": {
-                        "image": "PokeImgs/pm0421.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0421.s.icon.png"
-                    }
-                },
                 {
                     "form": "Overcast",
                     "key": "NuPEJ55q",
@@ -13221,21 +13211,11 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "West Sea",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "5rviacBx",
-                    "normal": {
-                        "image": "PokeImgs/pm0422.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0422.s.icon.png"
-                    }
-                },
                 {
                     "form": "West Sea",
                     "key": "RUz0C1TA",
@@ -13265,21 +13245,11 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "West Sea",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "facPdyo9",
-                    "normal": {
-                        "image": "PokeImgs/pm0423.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0423.s.icon.png"
-                    }
-                },
                 {
                     "form": "West Sea",
                     "key": "sBjdg2F9",
@@ -14829,29 +14799,16 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "Fan",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "xJMrvhpm",
-                    "normal": {
-                        "image": "PokeImgs/pm0479.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0479.s.icon.png"
-                    }
-                },
-                {
                     "form": "Fan",
                     "key": "Ysl9HVCt",
                     "normal": {
                         "image": "PokeImgs/pm0479.fFAN.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0479.fFAN.s.icon.png"
                     }
                 },
                 {
@@ -14859,9 +14816,6 @@
                     "key": "3guV0s44",
                     "normal": {
                         "image": "PokeImgs/pm0479.fFROST.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0479.fFROST.s.icon.png"
                     }
                 },
                 {
@@ -14869,9 +14823,6 @@
                     "key": "4nSI8SNt",
                     "normal": {
                         "image": "PokeImgs/pm0479.fHEAT.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0479.fHEAT.s.icon.png"
                     }
                 },
                 {
@@ -14879,9 +14830,6 @@
                     "key": "u629oem3",
                     "normal": {
                         "image": "PokeImgs/pm0479.fMOW.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0479.fMOW.s.icon.png"
                     }
                 },
                 {
@@ -14889,9 +14837,6 @@
                     "key": "6MyGvi6p",
                     "normal": {
                         "image": "PokeImgs/pm0479.fWASH.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0479.fWASH.s.icon.png"
                     }
                 }
             ]
@@ -15091,21 +15036,11 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "Altered",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "AZugCEbv",
-                    "normal": {
-                        "image": "PokeImgs/pm0487.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0487.s.icon.png"
-                    }
-                },
                 {
                     "form": "Altered",
                     "key": "HuX4490N",
@@ -15183,29 +15118,16 @@
             "regional": "none",
             "generation": "Sinnoh",
             "generation_number": "4",
-            "base_form": "normal",
+            "base_form": "Land",
             "xxs": false,
             "xxl": true,
             "hundo": false,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "g3KMzP4v",
-                    "normal": {
-                        "image": "PokeImgs/pm0492.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0492.s.icon.png"
-                    }
-                },
-                {
                     "form": "Land",
                     "key": "LA9uROgr",
                     "normal": {
                         "image": "PokeImgs/pm0492.fLAND.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0492.fLAND.s.icon.png"
                     }
                 },
                 {
@@ -15213,9 +15135,6 @@
                     "key": "G7lBwHWr",
                     "normal": {
                         "image": "PokeImgs/pm0492.fSKY.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0492.fSKY.s.icon.png"
                     }
                 }
             ]
@@ -15237,9 +15156,6 @@
                     "key": "mNo5MZ6k",
                     "normal": {
                         "image": "PokeImgs/pm0494.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0494.s.icon.png"
                     }
                 }
             ]
@@ -16621,21 +16537,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Blue Striped",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "RH71Pyts",
-                    "normal": {
-                        "image": "PokeImgs/pm0550.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0550.s.icon.png"
-                    }
-                },
                 {
                     "form": "Red Striped",
                     "key": "ZKgNlSoV",
@@ -16781,21 +16687,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Standard",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "LzaUsQ2x",
-                    "normal": {
-                        "image": "PokeImgs/pm0555.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0555.s.icon.png"
-                    }
-                },
                 {
                     "form": "Standard",
                     "key": "F9pztLhu",
@@ -17551,21 +17447,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Spring",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "qVxElI03",
-                    "normal": {
-                        "image": "PokeImgs/pm0585.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0585.s.icon.png"
-                    }
-                },
                 {
                     "form": "Spring",
                     "key": "0UNdJZuq",
@@ -17615,21 +17501,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Spring",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "izZ3KUJ0",
-                    "normal": {
-                        "image": "PokeImgs/pm0586.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0586.s.icon.png"
-                    }
-                },
                 {
                     "form": "Spring",
                     "key": "V7cs4oJm",
@@ -19025,26 +18901,6 @@
                     "shiny": {
                         "image": "PokeImgs/pm0640.s.icon.png"
                     }
-                },
-                {
-                    "form": "Incarnate",
-                    "key": "tGhUs75z",
-                    "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
-                },
-                {
-                    "form": "Therian",
-                    "key": "jsBk9pF5",
-                    "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
                 }
             ]
         },
@@ -19055,21 +18911,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Incarnate",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "s9dFUXEi",
-                    "normal": {
-                        "image": "PokeImgs/pm0641.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0641.s.icon.png"
-                    }
-                },
                 {
                     "form": "Incarnate",
                     "key": "q5r1Y3JN",
@@ -19099,19 +18945,29 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Incarnate",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "pmLggTRY",
+                    "form": "Incarnate",
+                    "key": "62Ip068A",
                     "normal": {
-                        "image": "PokeImgs/pm0642.icon.png"
+                        "image": "PokeImgs/pm0642.fINCARNATE.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0642.s.icon.png"
+                        "image": "PokeImgs/pm0642.fINCARNATE.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Therian",
+                    "key": "HDhgj7Ah",
+                    "normal": {
+                        "image": "PokeImgs/pm0642.fTHERIAN.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0642.fTHERIAN.s.icon.png"
                     }
                 }
             ]
@@ -19171,21 +19027,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Incarnate",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "l8T6ZMZv",
-                    "normal": {
-                        "image": "PokeImgs/pm0645.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0645.s.icon.png"
-                    }
-                },
                 {
                     "form": "Incarnate",
                     "key": "N42leKqZ",
@@ -19215,21 +19061,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Normal",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "NyZ0hq4o",
-                    "normal": {
-                        "image": "PokeImgs/pm0646.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0646.s.icon.png"
-                    }
-                },
                 {
                     "form": "Normal",
                     "key": "T8q6SFEF",
@@ -19269,21 +19105,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Ordinary",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "NFWSXB2r",
-                    "normal": {
-                        "image": "PokeImgs/pm0647.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
-                },
                 {
                     "form": "Ordinary",
                     "key": "lw0COfnr",
@@ -19313,21 +19139,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Aria",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "sgJG3q8d",
-                    "normal": {
-                        "image": "PokeImgs/pm0648.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0648.s.icon.png"
-                    }
-                },
                 {
                     "form": "Aria",
                     "key": "bCbUUu0q",
@@ -19357,21 +19173,11 @@
             "regional": "none",
             "generation": "Unova",
             "generation_number": "5",
-            "base_form": "normal",
+            "base_form": "Normal",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "w0ONcjTc",
-                    "normal": {
-                        "image": "PokeImgs/pm0649.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0649.s.icon.png"
-                    }
-                },
                 {
                     "form": "Normal",
                     "key": "gCIUOxmu",
@@ -19845,21 +19651,11 @@
             "regional": "none",
             "generation": "Kalos",
             "generation_number": "6",
-            "base_form": "normal",
+            "base_form": "Pokeball",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "0m7zAlMF",
-                    "normal": {
-                        "image": "PokeImgs/pm0666.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0666.s.icon.png"
-                    }
-                },
                 {
                     "form": "Icy Snow",
                     "key": "MiinwcsR",
@@ -20201,21 +19997,11 @@
             "regional": "none",
             "generation": "Kalos",
             "generation_number": "6",
-            "base_form": "normal",
+            "base_form": "Yellow",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "Xk3k0ViU",
-                    "normal": {
-                        "image": "PokeImgs/pm0670.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0670.s.icon.png"
-                    }
-                },
                 {
                     "form": "Red",
                     "key": "c8n6a2Kv",
@@ -20275,21 +20061,11 @@
             "regional": "none",
             "generation": "Kalos",
             "generation_number": "6",
-            "base_form": "normal",
+            "base_form": "Yellow",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "Weo6iKYr",
-                    "normal": {
-                        "image": "PokeImgs/pm0671.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0671.s.icon.png"
-                    }
-                },
                 {
                     "form": "Red",
                     "key": "WWoDwoVq",
@@ -20445,21 +20221,11 @@
             "regional": "none",
             "generation": "Kalos",
             "generation_number": "6",
-            "base_form": "normal",
+            "base_form": "Natural",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "BhwoVsBE",
-                    "normal": {
-                        "image": "PokeImgs/pm0676.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0676.s.icon.png"
-                    }
-                },
                 {
                     "form": "Natural",
                     "key": "OTnOVLqr",
@@ -21447,16 +21213,6 @@
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "hRqr5XOl",
-                    "normal": {
-                        "image": "PokeImgs/pm0710.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0710.s.icon.png"
-                    }
-                },
-                {
                     "form": "Small",
                     "key": "AEL1oC0e",
                     "normal": {
@@ -21550,16 +21306,6 @@
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "LJy3wM4a",
-                    "normal": {
-                        "image": "PokeImgs/pm0711.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0711.s.icon.png"
-                    }
-                },
                 {
                     "form": "Small",
                     "key": "nAJKWCAq",
@@ -21769,6 +21515,16 @@
                     "shiny": {
                         "image": "PokeImgs/pm0716.s.icon.png"
                     }
+                },
+                {
+                    "form": "Neutral",
+                    "key": "vCgEu4Fy",
+                    "normal": {
+                        "image": "PokeImgs/pm0716.fNEUTRAL.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0716.fNEUTRAL.s.icon.png"
+                    }
                 }
             ]
         },
@@ -21813,9 +21569,6 @@
                     "key": "q2HMycO0",
                     "normal": {
                         "image": "PokeImgs/pm0718.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -21837,9 +21590,6 @@
                     "key": "Lbt7eavZ",
                     "normal": {
                         "image": "PokeImgs/pm0719.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0719.s.icon.png"
                     }
                 }
             ]
@@ -21861,9 +21611,6 @@
                     "key": "IfD6oWxp",
                     "normal": {
                         "image": "PokeImgs/pm0720.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -21885,9 +21632,6 @@
                     "key": "GIo5gmIS",
                     "normal": {
                         "image": "PokeImgs/pm0721.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -22395,21 +22139,11 @@
             "regional": "none",
             "generation": "Alola",
             "generation_number": "7",
-            "base_form": "normal",
+            "base_form": "PomPom",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "Jbm94l2W",
-                    "normal": {
-                        "image": "PokeImgs/pm0741.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0741.s.icon.png"
-                    }
-                },
                 {
                     "form": "Baile",
                     "key": "hyNitXMS",
@@ -22507,21 +22241,11 @@
             "regional": "none",
             "generation": "Alola",
             "generation_number": "7",
-            "base_form": "normal",
+            "base_form": "Dusk",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "FsJN2Cq5",
-                    "normal": {
-                        "image": "PokeImgs/pm0744.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0744.s.icon.png"
-                    }
-                },
                 {
                     "form": "Dusk",
                     "key": "zthmq37O",
@@ -22541,21 +22265,11 @@
             "regional": "none",
             "generation": "Alola",
             "generation_number": "7",
-            "base_form": "normal",
+            "base_form": "Midday",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "yeKYqeR3",
-                    "normal": {
-                        "image": "PokeImgs/pm0745.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0745.s.icon.png"
-                    }
-                },
                 {
                     "form": "Midday",
                     "key": "JyrUIYMD",
@@ -22845,9 +22559,6 @@
                     "key": "WlK7QoTa",
                     "normal": {
                         "image": "PokeImgs/pm0757.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0757.s.icon.png"
                     }
                 }
             ]
@@ -22869,9 +22580,6 @@
                     "key": "U3WOaC49",
                     "normal": {
                         "image": "PokeImgs/pm0758.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0758.s.icon.png"
                     }
                 }
             ]
@@ -23013,9 +22721,6 @@
                     "key": "tV4050j4",
                     "normal": {
                         "image": "PokeImgs/pm0764.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0764.s.icon.png"
                     }
                 }
             ]
@@ -23301,9 +23006,6 @@
                     "key": "rLKnu1Fu",
                     "normal": {
                         "image": "PokeImgs/pm0781.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0781.s.icon.png"
                     }
                 }
             ]
@@ -23493,9 +23195,6 @@
                     "key": "QvPUHePo",
                     "normal": {
                         "image": "PokeImgs/pm0789.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -23517,9 +23216,6 @@
                     "key": "RWvfNgbW",
                     "normal": {
                         "image": "PokeImgs/pm0790.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0790.s.icon.png"
                     }
                 }
             ]
@@ -23541,9 +23237,6 @@
                     "key": "pWOtjSya",
                     "normal": {
                         "image": "PokeImgs/pm0791.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0791.s.icon.png"
                     }
                 }
             ]
@@ -23565,9 +23258,6 @@
                     "key": "WNHgBasP",
                     "normal": {
                         "image": "PokeImgs/pm0792.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0792.s.icon.png"
                     }
                 }
             ]
@@ -23747,21 +23437,11 @@
             "regional": "none",
             "generation": "Alola",
             "generation_number": "7",
-            "base_form": "normal",
+            "base_form": "Dusk Mane",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "p862wKsv",
-                    "normal": {
-                        "image": "PokeImgs/pm0800.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0800.s.icon.png"
-                    }
-                },
                 {
                     "form": "Dawn Wings",
                     "key": "xfHqAPta",
@@ -23801,9 +23481,6 @@
                     "key": "iHXDM0Tu",
                     "normal": {
                         "image": "PokeImgs/pm0802.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -24305,9 +23982,6 @@
                     "key": "FVmumXVr",
                     "normal": {
                         "image": "PokeImgs/pm0827.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0827.s.icon.png"
                     }
                 }
             ]
@@ -24329,9 +24003,6 @@
                     "key": "KmC1juWI",
                     "normal": {
                         "image": "PokeImgs/pm0828.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0828.s.icon.png"
                     }
                 }
             ]
@@ -24353,9 +24024,6 @@
                     "key": "VS1hgSnY",
                     "normal": {
                         "image": "PokeImgs/pm0829.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0829.s.icon.png"
                     }
                 }
             ]
@@ -24377,9 +24045,6 @@
                     "key": "DkVntvt2",
                     "normal": {
                         "image": "PokeImgs/pm0830.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0830.s.icon.png"
                     }
                 }
             ]
@@ -24469,9 +24134,6 @@
                     "key": "ORGbxxwX",
                     "normal": {
                         "image": "PokeImgs/pm0835.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0835.s.icon.png"
                     }
                 }
             ]
@@ -24493,9 +24155,6 @@
                     "key": "CAbAq7Vd",
                     "normal": {
                         "image": "PokeImgs/pm0836.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0836.s.icon.png"
                     }
                 }
             ]
@@ -24517,9 +24176,6 @@
                     "key": "wvA7rlmb",
                     "normal": {
                         "image": "PokeImgs/pm0840.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0840.s.icon.png"
                     }
                 }
             ]
@@ -24541,9 +24197,6 @@
                     "key": "N43aeWfN",
                     "normal": {
                         "image": "PokeImgs/pm0841.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0841.s.icon.png"
                     }
                 }
             ]
@@ -24565,9 +24218,6 @@
                     "key": "suEmBqB5",
                     "normal": {
                         "image": "PokeImgs/pm0842.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0842.s.icon.png"
                     }
                 }
             ]
@@ -24603,21 +24253,11 @@
             "regional": "none",
             "generation": "Galar",
             "generation_number": "8",
-            "base_form": "normal",
+            "base_form": "Amped",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "3Y7kXVOi",
-                    "normal": {
-                        "image": "PokeImgs/pm0849.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0849.s.icon.png"
-                    }
-                },
                 {
                     "form": "Low Key Form",
                     "key": "YCIx3KFC",
@@ -24657,9 +24297,6 @@
                     "key": "KwaCPndy",
                     "normal": {
                         "image": "PokeImgs/pm0850.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0850.s.icon.png"
                     }
                 }
             ]
@@ -24681,9 +24318,6 @@
                     "key": "ONXVlAHr",
                     "normal": {
                         "image": "PokeImgs/pm0851.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0851.s.icon.png"
                     }
                 }
             ]
@@ -24705,9 +24339,6 @@
                     "key": "qPSDTpiq",
                     "normal": {
                         "image": "PokeImgs/pm0854.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0854.s.icon.png"
                     }
                 }
             ]
@@ -24729,9 +24360,6 @@
                     "key": "XFM3C2rO",
                     "normal": {
                         "image": "PokeImgs/pm0855.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0855.s.icon.png"
                     }
                 }
             ]
@@ -24753,9 +24381,6 @@
                     "key": "FartxR0J",
                     "normal": {
                         "image": "PokeImgs/pm0856.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0856.s.icon.png"
                     }
                 }
             ]
@@ -24777,9 +24402,6 @@
                     "key": "sgDAN0zT",
                     "normal": {
                         "image": "PokeImgs/pm0857.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0857.s.icon.png"
                     }
                 }
             ]
@@ -24801,9 +24423,48 @@
                     "key": "jwHm5sTR",
                     "normal": {
                         "image": "PokeImgs/pm0858.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0858.s.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0859",
+            "name": "Impidimp",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "2fieCS8X",
+                    "normal": {
+                        "image": "PokeImgs/pm0859.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0860",
+            "name": "Morgrem",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "UM8jqpz3",
+                    "normal": {
+                        "image": "PokeImgs/pm0860.icon.png"
                     }
                 }
             ]
@@ -25003,9 +24664,6 @@
                     "key": "QekzLO4f",
                     "normal": {
                         "image": "PokeImgs/pm0874.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0874.s.icon.png"
                     }
                 }
             ]
@@ -25017,29 +24675,16 @@
             "regional": "none",
             "generation": "Galar",
             "generation_number": "8",
-            "base_form": "normal",
+            "base_form": "Full Belly",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "9bP9ya37",
-                    "normal": {
-                        "image": "PokeImgs/pm0877.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
-                },
-                {
                     "form": "Full Belly",
                     "key": "Bszt1Sav",
                     "normal": {
                         "image": "PokeImgs/pm0877.fFULL_BELLY.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0877.fFULL_BELLY.s.icon.png"
                     }
                 },
                 {
@@ -25047,9 +24692,6 @@
                     "key": "OOdsZIfm",
                     "normal": {
                         "image": "PokeImgs/pm0877.fHANGRY.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0877.fHANGRY.s.icon.png"
                     }
                 }
             ]
@@ -25071,9 +24713,6 @@
                     "key": "BYib9K86",
                     "normal": {
                         "image": "PokeImgs/pm0885.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0885.s.icon.png"
                     }
                 }
             ]
@@ -25095,9 +24734,6 @@
                     "key": "5IF3hCKn",
                     "normal": {
                         "image": "PokeImgs/pm0886.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0886.s.icon.png"
                     }
                 }
             ]
@@ -25119,9 +24755,6 @@
                     "key": "CSS8yXDI",
                     "normal": {
                         "image": "PokeImgs/pm0887.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0887.s.icon.png"
                     }
                 }
             ]
@@ -25133,21 +24766,11 @@
             "regional": "none",
             "generation": "Galar",
             "generation_number": "8",
-            "base_form": "normal",
+            "base_form": "Hero",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "38CVE4Hj",
-                    "normal": {
-                        "image": "PokeImgs/pm0888.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0888.s.icon.png"
-                    }
-                },
                 {
                     "form": "Hero",
                     "key": "POCWvuGF",
@@ -25177,21 +24800,11 @@
             "regional": "none",
             "generation": "Galar",
             "generation_number": "8",
-            "base_form": "normal",
+            "base_form": "Hero",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "kKcBhOI4",
-                    "normal": {
-                        "image": "PokeImgs/pm0889.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0889.s.icon.png"
-                    }
-                },
                 {
                     "form": "Hero",
                     "key": "cieSl32V",
@@ -25231,9 +24844,6 @@
                     "key": "C1qo8DDv",
                     "normal": {
                         "image": "PokeImgs/pm0890.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0890.s.icon.png"
                     }
                 }
             ]
@@ -25255,9 +24865,6 @@
                     "key": "xLPJpAzU",
                     "normal": {
                         "image": "PokeImgs/pm0891.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -25269,39 +24876,23 @@
             "regional": "none",
             "generation": "Galar",
             "generation_number": "8",
-            "base_form": "normal",
+            "base_form": "Single Strike Style",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "2z9SxblT",
-                    "normal": {
-                        "image": "PokeImgs/pm0892.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
-                },
-                {
                     "form": "Single Strike Style",
                     "key": "yVHzFl9H",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0892.fSINGLE_STRIKE.icon.png"
                     }
                 },
                 {
                     "form": "Rapid Strike Style",
                     "key": "MrlkwnzH",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0892.fRAPID_STRIKE.icon.png"
                     }
                 }
             ]
@@ -25323,9 +24914,6 @@
                     "key": "IWvrgQoe",
                     "normal": {
                         "image": "PokeImgs/pm0893.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -25505,29 +25093,16 @@
             "regional": "none",
             "generation": "Galar",
             "generation_number": "8",
-            "base_form": "normal",
+            "base_form": "Incarnate",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "ZYsOpfau",
-                    "normal": {
-                        "image": "PokeImgs/pm0905.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
-                },
-                {
                     "form": "Incarnate",
                     "key": "xbPTXHgp",
                     "normal": {
                         "image": "PokeImgs/pm0905.fINCARNATE.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 },
                 {
@@ -25535,9 +25110,6 @@
                     "key": "DQKonsxI",
                     "normal": {
                         "image": "PokeImgs/pm0905.fTHERIAN.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -25851,6 +25423,27 @@
             ]
         },
         {
+            "id": "0920",
+            "name": "Lokix",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "E2sRqhcS",
+                    "normal": {
+                        "image": "PokeImgs/pm0920.icon.png"
+                    }
+                }
+            ]
+        },
+        {
             "id": "0921",
             "name": "Pawmi",
             "rarity": "standard",
@@ -25953,21 +25546,11 @@
             "regional": "none",
             "generation": "Paldea",
             "generation_number": "9",
-            "base_form": "normal",
+            "base_form": "Family of Three",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
-                {
-                    "form": "normal",
-                    "key": "FJk6C4KT",
-                    "normal": {
-                        "image": "PokeImgs/pm0925.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0925.s.icon.png"
-                    }
-                },
                 {
                     "form": "Family of Three",
                     "key": "eNpFlcur",
@@ -26007,9 +25590,6 @@
                     "key": "11cEh2Ih",
                     "normal": {
                         "image": "PokeImgs/pm0926.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0926.s.icon.png"
                     }
                 }
             ]
@@ -26031,9 +25611,6 @@
                     "key": "a2TpsV2f",
                     "normal": {
                         "image": "PokeImgs/pm0927.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0927.s.icon.png"
                     }
                 }
             ]
@@ -26106,6 +25683,90 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0930.s.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0931",
+            "name": "Squawkabilly",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "nvma0c9u",
+                    "normal": {
+                        "image": "PokeImgs/pm0931.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0932",
+            "name": "Nacli",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "0E3fmfyb",
+                    "normal": {
+                        "image": "PokeImgs/pm0932.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0933",
+            "name": "Naclstack",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "YatdfdOy",
+                    "normal": {
+                        "image": "PokeImgs/pm0933.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0934",
+            "name": "Garganacl",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "DgcDELFC",
+                    "normal": {
+                        "image": "PokeImgs/pm0934.icon.png"
                     }
                 }
             ]
@@ -26199,9 +25860,6 @@
                     "key": "bvFbimK6",
                     "normal": {
                         "image": "PokeImgs/pm0938.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0938.s.icon.png"
                     }
                 }
             ]
@@ -26223,9 +25881,6 @@
                     "key": "4hYNME6r",
                     "normal": {
                         "image": "PokeImgs/pm0939.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0939.s.icon.png"
                     }
                 }
             ]
@@ -26247,9 +25902,6 @@
                     "key": "DGs9ekyB",
                     "normal": {
                         "image": "PokeImgs/pm0944.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0944.s.icon.png"
                     }
                 }
             ]
@@ -26271,9 +25923,6 @@
                     "key": "46UbzaxV",
                     "normal": {
                         "image": "PokeImgs/pm0945.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0945.s.icon.png"
                     }
                 }
             ]
@@ -26295,9 +25944,6 @@
                     "key": "8zHtUWJs",
                     "normal": {
                         "image": "PokeImgs/pm0948.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0948.s.icon.png"
                     }
                 }
             ]
@@ -26319,9 +25965,6 @@
                     "key": "jwXOHbLZ",
                     "normal": {
                         "image": "PokeImgs/pm0949.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0949.s.icon.png"
                     }
                 }
             ]
@@ -26343,9 +25986,6 @@
                     "key": "ks5VNdzi",
                     "normal": {
                         "image": "PokeImgs/pm0957.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0957.s.icon.png"
                     }
                 }
             ]
@@ -26367,9 +26007,6 @@
                     "key": "VloahWrA",
                     "normal": {
                         "image": "PokeImgs/pm0958.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0958.s.icon.png"
                     }
                 }
             ]
@@ -26391,9 +26028,6 @@
                     "key": "vX4YjHCT",
                     "normal": {
                         "image": "PokeImgs/pm0959.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0959.s.icon.png"
                     }
                 }
             ]
@@ -26487,9 +26121,6 @@
                     "key": "CMLZiwft",
                     "normal": {
                         "image": "PokeImgs/pm0965.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0965.s.icon.png"
                     }
                 }
             ]
@@ -26511,9 +26142,6 @@
                     "key": "WVpYqTX4",
                     "normal": {
                         "image": "PokeImgs/pm0966.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0966.s.icon.png"
                     }
                 }
             ]
@@ -26535,9 +26163,6 @@
                     "key": "kiSy0CaF",
                     "normal": {
                         "image": "PokeImgs/pm0971.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0971.s.icon.png"
                     }
                 }
             ]
@@ -26559,9 +26184,6 @@
                     "key": "ERZTieQi",
                     "normal": {
                         "image": "PokeImgs/pm0972.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0972.s.icon.png"
                     }
                 }
             ]
@@ -26645,49 +26267,30 @@
             "regional": "none",
             "generation": "Paldea",
             "generation_number": "9",
-            "base_form": "normal",
+            "base_form": "Curly Form",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
                 {
-                    "form": "normal",
-                    "key": "XWzADvKn",
-                    "normal": {
-                        "image": "PokeImgs/pm0978.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    }
-                },
-                {
                     "form": "Curly Form",
                     "key": "Al4OtO6a",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0978.fCURLY.icon.png"
                     }
                 },
                 {
                     "form": "Droopy Form",
                     "key": "Gv1jL5SA",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0978.fDROOPY.icon.png"
                     }
                 },
                 {
                     "form": "Stretchy Form",
                     "key": "6VmnExfG",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0978.fSTRETCHY.icon.png"
                     }
                 }
             ]
@@ -26736,6 +26339,27 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0980.s.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0982",
+            "name": "Dudunsparce",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": false,
+            "xxl": false,
+            "hundo": false,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "0fxbXWfS",
+                    "normal": {
+                        "image": "PokeImgs/pm0982.icon.png"
                     }
                 }
             ]
@@ -26862,10 +26486,10 @@
                     "form": "9th anniv. coin",
                     "key": "gJjE7hqg",
                     "normal": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0999.fCOIN_A1.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                        "image": "PokeImgs/pm0999.fCOIN_A1.s.icon.png"
                     }
                 }
             ]
