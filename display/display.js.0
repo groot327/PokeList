@@ -1,0 +1,136 @@
+/* --- display/display.js --- */
+function debugLog(msg, isError = false) {
+    const logDiv = document.getElementById('loading');
+    if (logDiv) {
+        const span = document.createElement('div');
+        span.style.color = isError ? '#ff4444' : '#2ecc71';
+        span.style.fontSize = '13px';
+        span.innerText = `> ${msg}`;
+        logDiv.appendChild(span);
+    }
+}
+
+let pokemonData = null;
+let cellStates = {}; 
+
+const fixImagePath = (path) => {
+    if (!path) return '';
+    if (path.startsWith('http')) return path;
+    return window.location.origin + path;
+};
+
+const updateGrid = () => {
+    let cols = window.innerWidth < 601 ? 3 : (window.innerWidth > 1024 ? 7 : 5);
+    document.documentElement.style.setProperty('--cells-for-screen', cols);
+    return cols;
+};
+let cellsForScreen = updateGrid();
+window.addEventListener('resize', () => { cellsForScreen = updateGrid(); });
+
+// INITIALIZATION
+fetch('../pokemon.json')
+    .then(r => r.json())
+    .then(data => {
+        pokemonData = data;
+        loadSharedData();
+    })
+    .catch(err => debugLog("ERROR: Master list failed to load", true));
+
+async function loadSharedData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const shareId = urlParams.get('s');
+    
+    if (!shareId) return debugLog("ERROR: No ID found", true);
+
+    if (!window.fs) {
+        setTimeout(loadSharedData, 500);
+        return;
+    }
+
+    try {
+        const docRef = window.fs.doc(window.db, "shares", shareId);
+        const docSnap = await window.fs.getDoc(docRef);
+        
+        if (docSnap.exists()) {
+            const docData = docSnap.data();
+            let compressed = docData.data || "";
+
+            if (!compressed && docData.longUrl) {
+                const urlParts = docData.longUrl.split('data=');
+                if (urlParts.length > 1) compressed = urlParts[1];
+            }
+
+            const decompressed = LZString.decompressFromEncodedURIComponent(compressed);
+            cellStates = JSON.parse(decompressed);
+            
+            document.getElementById('loading').style.display = 'none';
+            renderSharedContent();
+        } else {
+            debugLog("ERROR: Record not found", true);
+        }
+    } catch (e) {
+        debugLog(`CRITICAL ERROR: ${e.message}`, true);
+    }
+}
+
+function renderSharedContent() {
+    const content = document.getElementById('content');
+    if(!content || !pokemonData) return;
+    
+    content.innerHTML = '';
+    const generations = {};
+    pokemonData.pokemon.forEach(p => {
+        if (!generations[p.generation_number]) generations[p.generation_number] = [];
+        generations[p.generation_number].push(p);
+    });
+
+    // Helper to identify the tab prefix from the data
+    const firstKey = Object.keys(cellStates)[0] || "";
+    const prefix = firstKey.split('-')[0] || 'shiny';
+
+    Object.keys(generations).sort((a,b)=>a-b).forEach(num => {
+        const pks = generations[num];
+        const table = document.createElement('table');
+        let row = table.insertRow();
+        let cellCount = 0;
+
+        pks.forEach(p => {
+            p.forms.forEach(f => {
+                let state = null;
+                let isShiny = prefix === 'shiny';
+
+                // PRIORITY 1: Specific key (f.key)
+                if (cellStates[`${prefix}-${f.key}`]) {
+                    state = cellStates[`${prefix}-${f.key}`];
+                } 
+                // PRIORITY 2: Legacy ID key (p.id) - ONLY for Normal forms
+                else if (f.form === 'normal' && cellStates[`${prefix}-${p.id}`]) {
+                    state = cellStates[`${prefix}-${p.id}`];
+                }
+
+                if (state) {
+                    if (cellCount > 0 && cellCount % cellsForScreen === 0) row = table.insertRow();
+                    const cell = row.insertCell();
+                    cell.className = state;
+                    
+                    const img = isShiny ? f.shiny.image : f.normal.image;
+                    
+                    cell.innerHTML = `
+                        <div class="pokemon-number">#${p.id}</div>
+                        <img class="pokemon-image" src="${fixImagePath(img)}" loading="lazy">
+                        <div class="pokemon-name">${p.name}</div>
+                        <div class="pokemon-form">${f.form === 'normal' ? '' : f.form}</div>
+                    `;
+                    cellCount++;
+                }
+            });
+        });
+
+        if (cellCount > 0) {
+            const h2 = document.createElement('h2');
+            h2.innerText = `Gen ${num}`;
+            content.appendChild(h2);
+            content.appendChild(table);
+        }
+    });
+}

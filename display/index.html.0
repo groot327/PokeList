@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Tracker - Display Only</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <h1>Pokémon Tracker - Display Only</h1>
+            <div class="search-container">
+                <input id="searchInput" type="text" placeholder="Search..." class="search-input" />
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="loading">Loading...</div>
+        <div id="content"></div>
+        <div id="debug" class="debug"></div>
+    </main>
+
+    <script type="module">
+        // Added doc and getDoc to the imports
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
+        import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBBnkPe5qKDHWrPtgCBcAl4teU9W1h1qW0",
+            authDomain: "g-url-shortener-64c6e.firebaseapp.com",
+            projectId: "g-url-shortener-64c6e",
+            storageBucket: "g-url-shortener-64c6e.firebasestorage.app",
+            messagingSenderId: "786040303042",
+            appId: "1:786040303042:web:d5cd682d1ef4c2ba56ba5b",
+            measurementId: "G-DJYYW10D48"
+        };
+
+        try {
+            const app = initializeApp(firebaseConfig);
+            window.db = getFirestore(app);
+            // CRITICAL: We must attach these functions to window.fs for the display script to work
+            window.fs = { doc, getDoc };
+            console.log('Firebase initialized successfully');
+        } catch (error) {
+            console.error('Firebase initialization failed:', error);
+            document.getElementById('debug').innerHTML = `Firebase Init Error: ${error.message}`;
+        }
+    </script>
+    
+    <script type="module" src="display.js"></script>
+
+    <footer>
+        <div class="footer-text">
+            Pokémon data is copyrighted by The Pokémon Company.<br />
+            This dataset is a fan page for non-commercial use only.<br />
+            Data sourced from user-provided files and Pokémon GO event information.
+        </div>
+    </footer>
+</body>
+</html>

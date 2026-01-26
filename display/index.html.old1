@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Tracker - Display Only</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <h1>Pokémon Tracker - Display Only</h1>
+            <div id="form-filter"></div>
+        </div>
+    </header>
+    <div id="loading">Loading...</div>
+    <div id="content"></div>
+    <div id="debug" class="debug"></div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBBnkPe5qKDHWrPtgCBcAl4teU9W1h1qW0",
+            authDomain: "g-url-shortener-64c6e.firebaseapp.com",
+            projectId: "g-url-shortener-64c6e",
+            storageBucket: "g-url-shortener-64c6e.firebasestorage.app",
+            messagingSenderId: "786040303042",
+            appId: "1:786040303042:web:d5cd682d1ef4c2ba56ba5b",
+            measurementId: "G-DJYYW10D48"
+        };
+
+        try {
+            const app = initializeApp(firebaseConfig);
+            window.db = getFirestore(app);
+            console.log('Firebase initialized successfully');
+        } catch (error) {
+            console.error('Firebase initialization failed:', error);
+            document.getElementById('debug').innerHTML = ``;
+        }
+    </script>
+    <script type="module" src="display.js"></script>
+    <footer>
+        <div class="footer-text">
+            Pokémon data is copyrighted by The Pokémon Company.<br />
+            This dataset is a fan page for non-commercial use only.<br />
+            Data sourced from user-provided files and Pokémon GO event information.
+        </div>
+    </footer>
+</body>
+</html>
