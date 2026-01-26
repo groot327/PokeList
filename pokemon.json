@@ -1139,6 +1139,16 @@
                     }
                 },
                 {
+                    "form": "Flying",
+                    "key": "5W11hHCp",
+                    "normal": {
+                        "image": "PokeImgs/pm0025.fCOSTUME_2020.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0025.fCOSTUME_2020.s.icon.png"
+                    }
+                },
+                {
                     "form": "Libre",
                     "key": "GbtfV0QJ",
                     "normal": {
@@ -1332,10 +1342,10 @@
                     "form": "Indonesia Batik Shirt",
                     "key": "L3KffHea",
                     "normal": {
-                        "image": "PokeImgs/pm0025.fTSHIRT_01.icon.png"
+                        "image": "PokeImgs/pm0025.fTSHIRT_03.icon.png"
                     },
                     "shiny": {
-                        "image": "PokeImgs/pm0025.fTSHIRT_01.s.icon.png"
+                        "image": "PokeImgs/pm0025.fTSHIRT_03.s.icon.png"
                     }
                 },
                 {
@@ -1596,6 +1606,26 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0025.fWCS_2024.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Indonesia Jersey",
+                    "key": "DZsowdGc",
+                    "normal": {
+                        "image": "PokeImgs/pm0025.cINDONESIA_2025_NOEVOLVE.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0025.cINDONESIA_2025_NOEVOLVE.s.icon.png"
+                    }
+                },
+                {
+                    "form": "WC Varsity",
+                    "key": "vTqM0IWI",
+                    "normal": {
+                        "image": "PokeImgs/pm0025.fWCS_2025.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0025.fWCS_2025.s.icon.png"
                     }
                 }
             ]
@@ -2759,6 +2789,16 @@
                     "shiny": {
                         "image": "PokeImgs/pm0058.s.icon.png"
                     }
+                },
+                {
+                    "form": "Hisuian",
+                    "key": "XyW0aIlL",
+                    "normal": {
+                        "image": "PokeImgs/pm0058.fHISUIAN.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0058.fHISUIAN.s.icon.png"
+                    }
                 }
             ]
         },
@@ -2782,16 +2822,6 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0059.s.icon.png"
-                    }
-                },
-                {
-                    "form": "Hisuian",
-                    "key": "5ALKJhVm",
-                    "normal": {
-                        "image": "PokeImgs/pm0059.fHISUIAN.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0059.fHISUIAN.s.icon.png"
                     }
                 },
                 {
@@ -5411,16 +5441,6 @@
                     }
                 },
                 {
-                    "form": "Wild",
-                    "key": "SfitLPkU",
-                    "normal": {
-                        "image": "PokeImgs/pm0143.fWILDAREA_2024.icon.png"
-                    },
-                    "shiny": {
-                        "image": "PokeImgs/pm0143.fWILDAREA_2024.s.icon.png"
-                    }
-                },
-                {
                     "form": "Studded Jacket",
                     "key": "4mKTP9pS",
                     "normal": {
@@ -6616,6 +6636,16 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0185.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Christmas",
+                    "key": "Ocb3bau6",
+                    "normal": {
+                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -7820,6 +7850,16 @@
                     },
                     "shiny": {
                         "image": "PokeImgs/pm0216.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Halloween Witch Hat",
+                    "key": "ooCAO6eE",
+                    "normal": {
+                        "image": "PokeImgs/POKE_QUESTION.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
@@ -23437,11 +23477,21 @@
             "regional": "none",
             "generation": "Alola",
             "generation_number": "7",
-            "base_form": "Dusk Mane",
+            "base_form": "normal",
             "xxs": true,
             "xxl": true,
             "hundo": true,
             "forms": [
+                {
+                    "form": "normal",
+                    "key": "p862wKsv",
+                    "normal": {
+                        "image": "PokeImgs/pm0800.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0800.s.icon.png"
+                    }
+                },
                 {
                     "form": "Dawn Wings",
                     "key": "xfHqAPta",
@@ -24160,6 +24210,69 @@
             ]
         },
         {
+            "id": "0837",
+            "name": "Rolycoly",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "XlrJAIaX",
+                    "normal": {
+                        "image": "PokeImgs/pm0837.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0838",
+            "name": "Carkol",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "dQW5fUMg",
+                    "normal": {
+                        "image": "PokeImgs/pm0838.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0839",
+            "name": "Coalossal",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "N2OynlNc",
+                    "normal": {
+                        "image": "PokeImgs/pm0839.icon.png"
+                    }
+                }
+            ]
+        },
+        {
             "id": "0840",
             "name": "Applin",
             "rarity": "standard",
@@ -24339,6 +24452,9 @@
                     "key": "qPSDTpiq",
                     "normal": {
                         "image": "PokeImgs/pm0854.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0854.s.icon.png"
                     }
                 }
             ]
@@ -24360,6 +24476,9 @@
                     "key": "XFM3C2rO",
                     "normal": {
                         "image": "PokeImgs/pm0855.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0855.s.icon.png"
                     }
                 }
             ]
@@ -24381,6 +24500,9 @@
                     "key": "FartxR0J",
                     "normal": {
                         "image": "PokeImgs/pm0856.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0856.s.icon.png"
                     }
                 }
             ]
@@ -24402,6 +24524,9 @@
                     "key": "sgDAN0zT",
                     "normal": {
                         "image": "PokeImgs/pm0857.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0857.s.icon.png"
                     }
                 }
             ]
@@ -24423,6 +24548,9 @@
                     "key": "jwHm5sTR",
                     "normal": {
                         "image": "PokeImgs/pm0858.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0858.s.icon.png"
                     }
                 }
             ]
@@ -24435,15 +24563,18 @@
             "generation": "Galar",
             "generation_number": "8",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
                     "key": "2fieCS8X",
                     "normal": {
                         "image": "PokeImgs/pm0859.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0859.s.icon.png"
                     }
                 }
             ]
@@ -24456,15 +24587,42 @@
             "generation": "Galar",
             "generation_number": "8",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
                     "key": "UM8jqpz3",
                     "normal": {
                         "image": "PokeImgs/pm0860.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0860.s.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0861",
+            "name": "Grimmsnarl",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "T787cYBT",
+                    "normal": {
+                        "image": "PokeImgs/pm0861.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0861.s.icon.png"
                     }
                 }
             ]
@@ -24648,6 +24806,48 @@
             ]
         },
         {
+            "id": "0872",
+            "name": "Snom",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "FhZChin6",
+                    "normal": {
+                        "image": "PokeImgs/pm0872.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0873",
+            "name": "Frosmoth",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "T5SWHAw1",
+                    "normal": {
+                        "image": "PokeImgs/pm0873.icon.png"
+                    }
+                }
+            ]
+        },
+        {
             "id": "0874",
             "name": "Stonjourner",
             "rarity": "standard",
@@ -24669,6 +24869,40 @@
             ]
         },
         {
+            "id": "0876",
+            "name": "Indeedee",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Galar",
+            "generation_number": "8",
+            "base_form": "Male",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "Male",
+                    "key": "WuexMWO2",
+                    "normal": {
+                        "image": "PokeImgs/pm0876.fMALE.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0876.fMALE.s.icon.png"
+                    }
+                },
+                {
+                    "form": "Female",
+                    "key": "IILGJyWb",
+                    "normal": {
+                        "image": "PokeImgs/pm0876.fFEMALE.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0876.fFEMALE.s.icon.png"
+                    }
+                }
+            ]
+        },
+        {
             "id": "0877",
             "name": "Morpeko",
             "rarity": "standard",
@@ -24685,6 +24919,9 @@
                     "key": "Bszt1Sav",
                     "normal": {
                         "image": "PokeImgs/pm0877.fFULL_BELLY.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0877.fFULL_BELLY.s.icon.png"
                     }
                 },
                 {
@@ -24692,6 +24929,9 @@
                     "key": "OOdsZIfm",
                     "normal": {
                         "image": "PokeImgs/pm0877.fHANGRY.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0877.fHANGRY.s.icon.png"
                     }
                 }
             ]
@@ -24835,9 +25075,9 @@
             "generation": "Galar",
             "generation_number": "8",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
@@ -24905,9 +25145,9 @@
             "generation": "Galar",
             "generation_number": "8",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
@@ -25430,15 +25670,18 @@
             "generation": "Paldea",
             "generation_number": "9",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
                     "key": "E2sRqhcS",
                     "normal": {
                         "image": "PokeImgs/pm0920.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0920.s.icon.png"
                     }
                 }
             ]
@@ -25590,6 +25833,9 @@
                     "key": "11cEh2Ih",
                     "normal": {
                         "image": "PokeImgs/pm0926.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0926.s.icon.png"
                     }
                 }
             ]
@@ -25611,6 +25857,9 @@
                     "key": "a2TpsV2f",
                     "normal": {
                         "image": "PokeImgs/pm0927.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0927.s.icon.png"
                     }
                 }
             ]
@@ -25716,9 +25965,9 @@
             "generation": "Paldea",
             "generation_number": "9",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
@@ -25737,9 +25986,9 @@
             "generation": "Paldea",
             "generation_number": "9",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
@@ -25758,9 +26007,9 @@
             "generation": "Paldea",
             "generation_number": "9",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
@@ -25860,6 +26109,9 @@
                     "key": "bvFbimK6",
                     "normal": {
                         "image": "PokeImgs/pm0938.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0938.s.icon.png"
                     }
                 }
             ]
@@ -25881,6 +26133,51 @@
                     "key": "4hYNME6r",
                     "normal": {
                         "image": "PokeImgs/pm0939.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0939.s.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0940",
+            "name": "Wattrel",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "JdH0hzLN",
+                    "normal": {
+                        "image": "PokeImgs/pm0940.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0941",
+            "name": "Kilowattrel",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "MbGEIrfg",
+                    "normal": {
+                        "image": "PokeImgs/pm0941.icon.png"
                     }
                 }
             ]
@@ -25970,6 +26267,27 @@
             ]
         },
         {
+            "id": "0950",
+            "name": "Klawf",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "YUVnrJVd",
+                    "normal": {
+                        "image": "PokeImgs/pm0950.icon.png"
+                    }
+                }
+            ]
+        },
+        {
             "id": "0957",
             "name": "Tinkatink",
             "rarity": "standard",
@@ -25986,6 +26304,9 @@
                     "key": "ks5VNdzi",
                     "normal": {
                         "image": "PokeImgs/pm0957.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0957.s.icon.png"
                     }
                 }
             ]
@@ -26007,6 +26328,9 @@
                     "key": "VloahWrA",
                     "normal": {
                         "image": "PokeImgs/pm0958.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0958.s.icon.png"
                     }
                 }
             ]
@@ -26028,6 +26352,9 @@
                     "key": "vX4YjHCT",
                     "normal": {
                         "image": "PokeImgs/pm0959.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0959.s.icon.png"
                     }
                 }
             ]
@@ -26163,6 +26490,9 @@
                     "key": "kiSy0CaF",
                     "normal": {
                         "image": "PokeImgs/pm0971.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0971.s.icon.png"
                     }
                 }
             ]
@@ -26184,6 +26514,30 @@
                     "key": "ERZTieQi",
                     "normal": {
                         "image": "PokeImgs/pm0972.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/pm0972.s.icon.png"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0973",
+            "name": "Flamigo",
+            "rarity": "standard",
+            "regional": "none",
+            "generation": "Paldea",
+            "generation_number": "9",
+            "base_form": "normal",
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
+            "forms": [
+                {
+                    "form": "normal",
+                    "key": "NtgbcBQr",
+                    "normal": {
+                        "image": "PokeImgs/pm0973.icon.png"
                     }
                 }
             ]
@@ -26351,15 +26705,18 @@
             "generation": "Paldea",
             "generation_number": "9",
             "base_form": "normal",
-            "xxs": false,
-            "xxl": false,
-            "hundo": false,
+            "xxs": true,
+            "xxl": true,
+            "hundo": true,
             "forms": [
                 {
                     "form": "normal",
                     "key": "0fxbXWfS",
                     "normal": {
                         "image": "PokeImgs/pm0982.icon.png"
+                    },
+                    "shiny": {
+                        "image": "PokeImgs/POKE_QUESTION.icon.png"
                     }
                 }
             ]
