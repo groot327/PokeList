@@ -1,6 +1,7 @@
 let pokemonData = null;
 let currentTab = localStorage.getItem('currentTab') || 'shiny';
 let cellStates = JSON.parse(localStorage.getItem('pokemonCellStates') || '{}');
+let currentFilter = 'all'; 
 
 const updateGrid = () => {
     let cols = window.innerWidth < 601 ? 3 : (window.innerWidth > 1024 ? 7 : 5);
@@ -43,6 +44,7 @@ function initApp() {
     initMenu();
     initTabs();
     initGenTabs();
+    initFilters();
     initSearch();
     initModal();
     switchTab(currentTab);
@@ -116,12 +118,26 @@ function initModal() {
 
       try {
         const filtered = {};
-        const prefix = `${currentTab}-`;
         
-        for (const [key, value] of Object.entries(cellStates)) {
-          if (key.startsWith(prefix) && value === selectedColor) {
-            filtered[key] = value;
-          }
+        // FIX: Iterate through actual Pokemon Data to catch implicit 'grey' items
+        if (pokemonData && pokemonData.pokemon) {
+            pokemonData.pokemon.forEach(p => {
+                let forms = (currentTab === 'shiny') ? p.forms : p.forms.filter(f => f.form === p.base_form);
+                
+                forms.forEach(f => {
+                    // Skip invalid forms for current tab
+                    if (currentTab === 'shiny' && !f.shiny) return;
+                    if (currentTab !== 'shiny' && !f.normal) return;
+
+                    const key = `${currentTab}-${f.key}`;
+                    // Resolve state: Use saved state, or default to 'grey'
+                    const state = cellStates[key] || 'grey';
+
+                    if (state === selectedColor) {
+                        filtered[key] = state;
+                    }
+                });
+            });
         }
 
         if (Object.keys(filtered).length === 0) {
@@ -152,6 +168,25 @@ function initTabs() {
     ['shiny', 'xxl', 'xxs', 'hundo'].forEach(t => {
         const btn = document.getElementById(`tab${t.charAt(0).toUpperCase() + t.slice(1)}`);
         if(btn) btn.onclick = () => switchTab(t);
+    });
+}
+
+function initFilters() {
+    ['grey', 'yellow', 'blue', 'red'].forEach(color => {
+        const btn = document.getElementById(`filter${color.charAt(0).toUpperCase() + color.slice(1)}`);
+        if (btn) {
+            btn.onclick = () => {
+                if (currentFilter === color) {
+                    currentFilter = 'all';
+                    btn.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.filter-button').forEach(b => b.classList.remove('active'));
+                    currentFilter = color;
+                    btn.classList.add('active');
+                }
+                renderTabContent();
+            };
+        }
     });
 }
 
@@ -215,30 +250,23 @@ function renderTabContent() {
         let cellCount = 0;
 
         pks.forEach(p => {
-            // Determine which forms to iterate over based on the tab
             let forms = (currentTab === 'shiny') ? p.forms : p.forms.filter(f => f.form === p.base_form);
             
             forms.forEach(f => {
-                // Update 1: Check if the required data exists for the current tab.
-                // If looking for shiny, and f.shiny is missing (e.g. Enamorus), skip this form entirely.
-                if (currentTab === 'shiny' && !f.shiny) {
-                    return;
-                }
-
-                // If looking for normal tabs, and f.normal is missing, skip (safety check).
-                if (currentTab !== 'shiny' && !f.normal) {
-                    return;
-                }
+                if (currentTab === 'shiny' && !f.shiny) return;
+                if (currentTab !== 'shiny' && !f.normal) return;
 
                 const key = `${currentTab}-${f.key}`;
                 const state = cellStates[key] || 'grey';
+
+                if (currentFilter !== 'all' && state !== currentFilter) {
+                    return;
+                }
 
                 if (cellCount > 0 && cellCount % cellsForScreen === 0) row = table.insertRow();
                 const cell = row.insertCell();
                 cell.className = state;
                 
-                // Update 2: Robust image retrieval. 
-                // We know the object (f.shiny or f.normal) exists due to the check above.
                 const imgSource = (currentTab === 'shiny') ? f.shiny.image : f.normal.image;
                 const img = imgSource || 'PokeImgs/POKE_QUESTION.icon.png';
                 
@@ -253,15 +281,19 @@ function renderTabContent() {
                     const cycle = {'grey':'yellow','yellow':'blue','blue':'red','red':'grey'};
                     const newState = cycle[cellStates[key] || 'grey'];
                     cellStates[key] = newState;
-                    cell.className = newState;
+                    
+                    if (currentFilter !== 'all' && newState !== currentFilter) {
+                        cell.style.display = 'none';
+                        renderTabContent();
+                    } else {
+                        cell.className = newState;
+                    }
                     localStorage.setItem('pokemonCellStates', JSON.stringify(cellStates));
                 };
                 cellCount++;
             });
         });
         
-        // Update 3: Only append the section if there are actually cells in it.
-        // This prevents empty Gen headers if a Gen has Pokemon but none match the current filter (e.g. no shinies yet).
         if (cellCount > 0) { 
             section.appendChild(table); 
             content.appendChild(section); 
