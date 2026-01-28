@@ -134,9 +134,13 @@ h1 {
     align-self: flex-end;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     color: #666;
+}
+.close-menu span {
+    font-size: 1.2rem;
 }
 
 .hamburger {
@@ -322,4 +326,103 @@ footer {
     .filter-label {
         font-size: 12px;
     }
+}
+
+/* --- Info Popup Styles --- */
+
+/* The dark background overlay */
+.info-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Configurable dimming amount */
+    z-index: 2000; /* High z-index to sit on top of everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.info-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* The actual window */
+.info-popup {
+    background-color: #1a4a1a; /* Configurable Dark Green Background */
+    color: #ffffff;            /* Configurable White Text */
+    width: 90%;                /* Configurable Width */
+    max-width: 800px;
+    height: 85%;               /* Configurable Height (just smaller than full screen) */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;          /* Prevents whole window scroll */
+    border: 2px solid #2e6e2e;
+}
+
+/* Header bar inside the popup */
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker header area */
+    border-bottom: 1px solid #2e6e2e;
+}
+
+.info-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Close button styling */
+.info-close-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.info-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.info-close-btn span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Scrollable content area */
+.info-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Internal scrolling only */
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Scrollbar styling for the popup (optional, makes it look nicer on webkit) */
+.info-content::-webkit-scrollbar {
+    width: 8px;
+}
+.info-content::-webkit-scrollbar-track {
+    background: #113311;
+}
+.info-content::-webkit-scrollbar-thumb {
+    background: #4caf50;
+    border-radius: 4px;
 }

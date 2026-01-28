@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+    <script src="info.js" defer></script>
 </head>
 <body>
     <header class="header">
         <button id="hamburger" class="hamburger" aria-label="Open side menu">☰</button>
         
         <div id="side-menu" class="side-menu">
-            <button id="closeMenu" class="close-menu" aria-label="Close side menu">✖</button>
+            <button id="closeMenu" class="close-menu" aria-label="Close side menu">Close <span>&#10006;</span></button>
             <span class="side-menu-header">Share with others</span>
             <button id="menuShareButton" class="menu-button">Share</button>
             
@@ -24,6 +25,7 @@
             <button id="menuExportButton" class="menu-button">Export</button>
             <button id="menuImportButton" class="menu-button">Import</button>
             <input type="file" id="importFile" accept=".json" style="display: none;">
+            <button id="menuInfoButton" class="menu-button">Info</button>
         </div>
 
         <div class="container">

@@ -1,0 +1,170 @@
+<h3>About This Tracker</h3>
+<p>
+  This tool helps track Shiny, XXL, XXS, and Hundo (100% IV) collections in Pokémon GO.<br />
+  One goal of this tracker is to help the user prepare for trades and complete their Pokédex 
+  (<strong>Dex</strong>).<br />
+  Here are a few notes before moving forward:
+  <ul>
+    <li>All progress and changes are automatically saved locally in the browser as Pokémon are 
+        clicked on-screen.</li>
+    <li>Options to save data externally from the page are described below in the <strong>On the Page > 
+        Slide-Out Menu</strong> section.</li>
+  </ul>
+</p>
+
+<h3>A Very Short Background</h3>
+<p>
+  The idea for this page is the result of a conversation with a Pokémon Community Ambassador (CA) 
+  in 2025. While it has had rolling requirements and many revisions, what is presented here is the
+  culmination of lots of work.
+</p>
+
+<h3>On the Page</h3>
+<p>
+  <details>
+    <summary>Main Tabs</summary>
+    <p>
+      There are four <em>main tabs</em> on the page: Shiny, XXL, XXS, Hundo. This page helps the user
+      keep track of those Pokémon they have, and those they need to complete their Pokédex. 
+      <ul>
+        <li><strong>Shiny</strong> - A page of all the <strong>SHINY</strong> Pokémon, with all their forms
+            and costumes.</li>
+        <li><strong>XXL</strong> - Along with <strong>SHINY</strong>, <strong>XXL</strong> is one of the 
+            types recorded in, and required if the user is going to complete, the 
+            "<strong>Dex</strong>".</li>
+        <li><strong>XXS</strong> - Like <strong>XXL</strong>, <strong>XXS</strong> is required to 
+            <em>complete</em> the <em><strong>Dex</strong></em>. Between the <strong>XXS</strong> and 
+            <strong>XXL</strong>, the collections can be very difficult to complete.</li>
+        <li><strong>Hundo</strong> - The Holy Grail of Pokémon! Beside the <em><strong>SHINY</strong></em>
+            Pokémon, the <strong>HUNDO</strong> is what everyone wants in this game!</li>
+      </ul>
+    </p>
+  </details>
+  <details>
+    <summary>Generation Tabs</summary>
+    <p>
+      There are currently nine generations of Pokémon currently available in Pokémon GO. The 
+      number of active Pokémon in the game is >1000, so navigating through the tabs, listed 
+      in the previous section, can be tedious. To help alleviate some of the scrolling, buttons 
+      for each generation have been provided under the main tabs. These generation buttons allow 
+      for a jump to the generation on the page; they do not stay highlighted, as they are simply 
+      jump points.
+    </p>
+  </details>
+  <details>
+    <summary>Individual Pokémon Cells</summary>
+    <p>
+      As mentioned above, the intent of this page is to help the user complete their 
+      <strong>Dex</strong>, and promote trading by sharing visual lists of "<em>needs</em>". 
+      To that end, the cells on this page provide a clickable means to visualize the user's 
+      collection. 
+      <ul>
+        <li>Each Pokémon gets its own cell on each tab on the page.</li>
+        <li>Each cell (Pokémon) has four states: Grey (default), Yellow, Blue, and Red.</li>
+        <li>These "states" can mean whatever the user wants them to mean. In the <string>How 
+            to Use</strong> section, there are examples of potential use scenarios.</li>
+        <li>The clicked state of each cell is separate for each of the four tabs discussed 
+            above.</li>
+        <li>The states are saved in the browser for later recall, edits, and sharing, (see 
+            next section).</li>
+      </ul>
+    </p>
+  </details>
+  <details>
+    <summary>Slide-Out Menu</summary>
+    <p>
+      There is a slide-out menu on the left of the page, activated with the hamburger icon 
+      (&#9776;) in the upper left corner of the page. On that menu are a number of buttons, 
+      explained here. 
+      <dl>
+        <dt><strong>&bull; Share</strong></dt>
+        <dd>This button allows the user to share the contents (selected cells) of one of the 
+            filters on one of the tabs, and the use will be prompted for the filter color to 
+            share. This button will create a "short URL" that will automatically be copied to 
+            the user's clipboard and may be shared with others (think potential trading, 
+            bragging about a collection, etc.). Note that this "sharing" option is 
+            <strong>read only</strong> for anyone accessing the URL. This is the only 
+            non-destructive save or sharing option available, and it's safe for sharing with 
+            others; they will not have access to your actual collection. There it's currently
+            a 30 day lifespan on these URLs, which may change depending on overall usage.</dd>
+
+        <dt><strong>&bull; Save</strong></dt>
+        <dd>To make the save more permanent, the "Save" button will create a very
+            long URL that, when accessed, will load the contents of the URL, replacing 
+            whatever is currently saved in the browser. This is helpful for point-in-time 
+            saves or quick transfers between browsers. This <em><strong>is</strong></em> 
+            a destructive URL and will replace current contents.</dd>
+
+        <dt><strong>&bull; Clear</strong></dt>
+        <dd>Simple, but destructive, clearing of all data currently in the browser. 
+            Allows for a clean start on all tabs in cases where this is needed. Imagine 
+            having to "unclick" potentially hundreds of cells to start over! This is the 
+            safety net for that type of situation.</dd>
+
+        <dt><strong>&bull; Export</strong> and <strong>Import</strong></dt>
+        <dd>These buttons are another more permanent way to allow the user to save their 
+            configuration and import it elsewhere. This method is the best and safest way 
+            to create a save of the data. The JSON file will be downloaded to the user's 
+            device to be available for "import" to other browsers, or sent to other devices 
+            for use elsewhere.</dd>
+
+        <dt><strong>&bull; Info</strong></dt>
+        <dd>The Info button how this page/information was displayed. Simple yet hopefully
+            effective guidance for the tool.</dd>
+        <hr />
+      </dl>
+    </p>
+  </details>
+</p>
+
+<h3>How to Use</h3>
+<p>
+  There is no "right" or "wrong" way to think about or use this tool. The user is completely 
+  free to define their own manner of use. Below are some examples for how the tool 
+  <em>could</em> be used to visualize a collection.
+</p>
+<details>
+  <summary>Example 1: "Caught"</summary>
+  This example uses the filters as "caught indicators", meaning that the Pokémon clicked
+  have been caught (can be seen in the in-game inventory and/or <strong>Dex</strong>).
+  <ol>
+    <li><strong>Choose</strong> a tab; for this example <strong>SHINY</strong> is 
+      selected.</li>
+    <li><strong>Click</strong> a Pokémon to cycle its status color.
+      <ul>
+        <li><strong>Grey:</strong> Uncaught</li>
+        <li><strong>Yellow:</strong> Caught</li>
+        <li><strong>Blue:</strong> Traded (also caught)</li>
+        <li><strong>Red:</strong> Lucky / Special (also caught)</li>
+      </ul>
+    </li>
+    <li><strong>Share</strong> the grey filter with others as "needs" for your 
+      <strong>Shiny Dex</strong>.</li>
+  </ol>
+</details>
+<details>
+  <summary>Example 2: "Need"</summary>
+  This example is different from the the first, in that the user clicks on Pokémon they
+  want or need, rather than those they have caught. In this example, the actual filter 
+  color used is of no importance, but only one would be used, at least in theory, if the
+  user is creating a "needs" list with the filter.
+  <ol>
+    <li><strong>Choose</strong> a tab; this example is using the <strong>Hundo</strong> 
+      tab and the <strong>YELLOW</strong> filter.</li>
+    <li><strong>Click</strong> a Pokémon once to highlight with yellow status color.</li>
+    <li><strong>Share</strong> the yellow filter with others as "needs" for your 
+      <strong>Hundo Dex</strong>.</li>
+  </ol>
+</details>
+
+<h3>Future</h3>
+<p>
+The project will be updated from time to time as needs arise. <br />
+This includes new images, Pokémon forms, and generations, should they become available.
+</p>
+
+<!--
+<p style="margin-top:20px; font-size: 0.9em; color: #ccc;">
+    Version 1.0 - Created by groot327
+</p>
+-->
